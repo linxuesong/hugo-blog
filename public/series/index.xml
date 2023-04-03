@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Series on NewBee</title>
-    <link>https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/series/</link>
-    <description>Recent content in Series on NewBee</description>
+    <title>Series on 网站标题</title>
+    <link>/series/</link>
+    <description>Recent content in Series on 网站标题</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh_CN</language><atom:link href="/series/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

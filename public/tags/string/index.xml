@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on 网站标题</title>
+    <link>/tags/string/</link>
+    <description>Recent content in String on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 08 Apr 2021 16:02:34 +0000</lastBuildDate><atom:link href="/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JAVA String和StringBuilder常用方法</title>
+      <link>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 08 Apr 2021 16:02:34 +0000</pubDate>
+      
+      <guid>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>一、String不可变字符串 1.int compareTo(String other) 比较两字符串大小 2.boolean equals(Object object)比较两字符串是否其内容一致 ==比较运算符比较的是引用位置是否相等，而非其内容
+3.boolean endsWith(String suffix)和Boolean startsWith(String prefix)以指定字符串开始或结尾返回true 4.int indexOf(String str)返回与指定字符串匹配的首个位置 如果还要其他要求，是有函数重载的
+5.int length()字符串长度 6.String toLowerCase()和String toUpperCase()大小写转换 7.String trim()删除原始字符串头部和尾部的空格 更多方法可以参考Java的官网api文档
+二、StringBuilder string问题是每次做字符串拼接都会产生一个新的String对象，这样既耗时又费空间
+使用StringBuilder则可以避免这个问题发生
+1.String toString()转为字符串 2.StringBuilder insert(int offset， String str) 指定位置插入自负传 3.void setCharAt(int i， char c)设置指定位置字符 4.StringBuilder append（String str）追加字符串在尾部 </description>
+    </item>
+    
+  </channel>
+</rss>

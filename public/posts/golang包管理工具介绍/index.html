@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+     <meta charset="utf-8">
+     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+     
+     <title>golang包管理工具介绍</title>
+     
+     
+     
+       <meta name="baidu-site-verification" content="code-Mh5omtSUnt" />
+     
+     
+     
+     
+       <meta name="google-site-verification" content="-b5rAEo2_d1dn4CdJ27sSIEfxMSzkUiRaDuNU2phVn8" />
+     
+     
+
+     
+     <title itemprop="name">
+        雪華
+        記憶
+    </title>
+     
+     
+     
+
+     
+     
+     <meta http-equiv="x-dns-prefetch-control" content="on">
+     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+     
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+     
+     <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+     
+     <link rel="stylesheet" href="/css/lib.min.css" media="all">
+     <link rel="stylesheet" href="/css/font.css" media="all">
+     
+     <link rel="stylesheet" href="/css/insight.css" media="all">
+     
+     <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+     
+     <link rel="stylesheet" href="/css/zoom.css" media="all">
+     
+     <link rel="stylesheet" href="/css/tagcloud.css" media="all">
+     
+     
+     <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+
+      
+      <link rel="stylesheet" type="text/css" href="/css/search/algolia.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+     
+     <script>
+       
+      var mashiro_option = new Object();
+      var mashiro_global = new Object(); 
+      mashiro_option.NProgressON = true;
+      var copy_right = new Object(); 
+      copy_right.enable =  false ;
+      copy_right.minCharNumber =  120 ; 
+      copy_right.description = "本文章著作权归作者所有，任何形式的转载都请注明出处。";
+
+      var search = new Object();
+      var algolia = new Object();
+      algolia.enable = "false";
+      algolia.appId = "UMAQ9IJSOT";
+      algolia.indexName = "hugoblog";
+      algolia.apiKey = "0f3b78aed4ad1466e2658a546d1b7e99";
+      algolia.perPage =  20 ;
+      algolia.placeholder = "请输入关键字...";
+      
+      search.algolia = algolia;
+
+
+      
+
+      mashiro_option.search = search;
+      mashiro_option.copy_right = copy_right;
+      mashiro_option.email_domain = "";
+      mashiro_option.email_name = "";
+      mashiro_option.cookie_version_control = "";
+      mashiro_option.qzone_autocomplete = false;
+      mashiro_option.site_name = "雪華記憶";
+      mashiro_option.author_name = "lean";
+      mashiro_option.site_url = "";
+      mashiro_option.v_appId = "<%= theme.v_appId %>";
+      mashiro_option.v_appKey = "<%= theme.v_appKey %>";
+      mashiro_option.mathjax = "<%= theme.mathjax %>";
+      mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+      mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+    
+      
+      
+    
+       
+    </script>
+
+     
+     <script type="text/javascript">
+          var bg ="/imgs/homepage/bgcover/cover(0).jpg,/imgs/homepage/bgcover/cover(1).jpg".split(",");
+          var bgindex = Math.floor(Math.random()*bg.length);
+          if (!!window.ActiveXObject || "ActiveXObject" in window) { 
+              alert('朋友，IE浏览器未适配哦~');
+          }
+     </script>
+
+  
+  <style type="text/css">
+    .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+  
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d67a00154871861401ec8c26b0bdaf5d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'">
+  <script async src="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script>
+  
+  <meta name="generator" content="Hexo 5.4.0">
+  <link rel="alternate" href="/atom.xml" title="楓の葉小窝" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar"></div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+    
+    
+<div class="headertop filter-dot" style="height: auto;">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/linxuesong">
+          <img src="/imgs/avator/avatar%280%29.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+       <p>"Be Water, My Friend."</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/imgs/other/next-b.svg">
+          </li>
+          
+            
+                
+                  <li>
+                    <a href="http://github.com/linxuesong" target="_blank" class="social-github" title="github">
+                      <img src="/imgs/social/github.png">
+                    </a>                    
+                  </li>
+                
+            
+                
+                  <li>
+                    <a href="https://blog.csdn.net/lsxa123" target="_blank" class="social-github" title="csdn">
+                      <img src="/imgs/social/csdn.png">
+                    </a>                    
+                  </li>
+                
+            
+          
+          <li id="bg-next">
+            <img src="/imgs/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive"></div>
+    <div id="video-add"></div>
+    <div class="video-stu"></div>
+  </div>
+  
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </span>
+  </div>
+</div><div id="page" class="site wrapper">
+        
+<header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding"> 
+      <span class="site-title"> 
+        <span class="logolink moe-mashiro"> 
+          <a href="" alt="雪花的记忆">
+            <ruby>
+              <span class="sakuraso">雪華</span>
+              <span class="no">の</span>
+              <span class="shironeko">記憶</span>
+              <rp></rp>
+              <rt class="chinese-font">雪花的记忆</rt>
+              <rp></rp>
+            </ruby> 
+          </a> 
+        </span> 
+      </span>
+    </div>
+
+
+ 
+  
+<div class="searchbox search-form-submit">
+    <i class="iconfont js-toggle-search iconsearch icon-search">
+    </i>
+  </div>
+
+  <div id="show-nav" class="showNav mobile-fit">
+    <div class="line line1">
+    </div>
+    <div class="line line2">
+    </div>
+    <div class="line line3">
+    </div>
+  </div>
+ 
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        
+        <div id="searchbox" class="ins-input-wrapper">
+            
+             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container">
+                
+                <header class="ins-section-header">Posts</header>
+                 <section id="post_hits"></section> 
+                
+                 
+            </div>
+        </div>
+    </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+/>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '',
+        CONTENT_URL: '网站的json文件', 
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-home'></i>
+                    主页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/posts">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-book'></i>
+                    文章
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/categories">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-folder-open'></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-tags'></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-info-circle'></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+                
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    
+    <img class="pattern-attachment-img lazyload" style="background-image: url();" src=""
+      data-src="/imgs/postpage/postcover/default.jpg">
+    </img>
+
+    <header class="pattern-header single-header">
+        <h1 class="entry-title">golang包管理工具介绍</h1>
+        <p class="entry-census">
+          <span>
+            <a href="https://github.com/linxuesong">
+              <img src="/imgs/avator/avatar%280%29.jpg">
+            </a>
+          </span>
+        <span>
+          <a href="https://github.com/linxuesong">lean</a>
+        </span>
+        <span class="bull">·</span>2021年3月31日<span class="bull">·</span>
+        
+        <span class="post-meta-item">
+          <span class="post-meta-item-icon">
+            <i class="iconfont icon-attention"></i>
+          </span>
+          <span class="waline-pageview-count" data-path="/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/"></span>
+          <span class="post-meta-item-text">人看过</span>	
+        <span class="bull">·</span>
+        
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-book"></i>
+            <span class="post-count">204字</span>
+          </span>
+          <span class="bull">·</span>
+        </span>        
+        
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-book"></i>
+            <span class="waline-comment-count" data-path="/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/"></span>
+            <span class="post-count">条评论</span>
+          </span>
+          <span class="bull">·</span>
+        </span>        
+        			
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-coffee"></i>
+            <span class="post-meta-item-text">预计</span>
+            <span class="post-count">1分钟</span>
+          </span>
+        </span>
+    </header>
+  </div>
+  
+  <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
+        <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+          <div class="toc"></div>
+          
+          <div class="entry-content">
+            <p>参考博客</p>
+<p>Go管理工具的使用</p>
+<h1 id="0没有包管理工具的情况">0.没有包管理工具的情况</h1>
+<h2 id="01寻找依赖的路径">0.1寻找依赖的路径：</h2>
+<p>1⃣️在GOROOT目录下查找</p>
+<p>2⃣️在GOPATH/src下面查找包</p>
+<h2 id="02获取依赖">0.2获取依赖</h2>
+<pre tabindex="0"><code>go get 依赖地址 // 依赖包会存放到gopath下面两个位置，pkg里面.a文件和src下面的.go文件
+</code></pre><h1 id="1govendor">1.govendor</h1>
+<h2 id="11管理方式">1.1管理方式</h2>
+<p>寻找依赖的路径：</p>
+<p>1⃣️在$GOPATH/src/当前包文件/vendor目录</p>
+<p>2⃣️向当前包目录的上级目录查找知道找到src下的vendor</p>
+<p>3⃣️在GOROOT目录下查找</p>
+<p>4⃣️在GOPATH下面查找包</p>
+<h2 id="12安装">1.2安装</h2>
+<pre tabindex="0"><code>go get -u github.com/kardianos/govendor
+</code></pre><p>安装完成后为方便使用加入到环境变量</p>
+<pre tabindex="0"><code>export PATH=&quot;$GOPATH/bin:$PATH&quot;
+</code></pre><h2 id="13使用">1.3使用</h2>
+<p>0⃣️如果不是从git上拉取已有vendor.json的项目，而是<strong>本地新建项目</strong>，则要初始化本地项目</p>
+<p>初始化项目目录，生成vendor目录和vendor.json文件</p>
+<pre tabindex="0"><code>govendor init
+</code></pre><p>1⃣️下载项目依赖，这里以引入</p>
+<p>依赖为例</p>
+<p>从远程拉去下来依赖并放入当前vendor文件夹，记录到vendor.json,在gopath下不会有依赖包</p>
+<pre tabindex="0"><code>govendor fetch &quot;包链接&quot;
+// 举例：govendor fetch &quot;github.com/labstack/echo/...&quot;  //这里三个点表示文件夹下的所有文件，或者echo后面不要有斜杠，标识拉取项目
+</code></pre><p>🐻踩坑：i.对于无法从网上下载下里的包，只能从git上自己手动下载，放到vendor下面 ii.有时需要加上三个点标识所有文件，不然会下载下一个空文件夹</p>
+<p>2⃣️提交到<strong>git上只需要提交vendor.json</strong>即可,不需要把所有的vendor依赖文件夹提交上去</p>
+<p>从git上拉起他人项目，项目中含有vendor.json文件，通过如下命令安装依赖包</p>
+<pre tabindex="0"><code>govendor sync
+</code></pre><h2 id="14其他">1.4其他</h2>
+<p>常用命令</p>
+<pre tabindex="0"><code>govendor list // 列出代码中所有被引用到的包及其状态
+</code></pre><pre tabindex="0"><code>govendor fetch // 从远程仓库添加或更新某个包
+</code></pre><table>
+<thead>
+<tr>
+<th>子命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init</td>
+<td>初始化一个新项目，生成vendor文件夹</td>
+</tr>
+<tr>
+<td>list</td>
+<td>根据当前项目文件的import列出所有依赖包</td>
+</tr>
+<tr>
+<td>add</td>
+<td></td>
+</tr>
+<tr>
+<td>update</td>
+<td></td>
+</tr>
+<tr>
+<td>remove</td>
+<td></td>
+</tr>
+<tr>
+<td>status</td>
+<td></td>
+</tr>
+<tr>
+<td>fetch</td>
+<td>从远程仓库拉取依赖包</td>
+</tr>
+<tr>
+<td>sync</td>
+<td></td>
+</tr>
+<tr>
+<td>migrate</td>
+<td></td>
+</tr>
+<tr>
+<td>get</td>
+<td></td>
+</tr>
+<tr>
+<td>license</td>
+<td></td>
+</tr>
+<tr>
+<td>shell</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>状态参数</p>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>缩写</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+local</td>
+<td>l</td>
+<td>本地包，即项目内部编写的包</td>
+</tr>
+<tr>
+<td>+external</td>
+<td>e</td>
+<td>外部包，即在 <code>GOPATH</code> 中、却不在项目 <code>vendor</code> 目录</td>
+</tr>
+<tr>
+<td>+vendor</td>
+<td>v</td>
+<td>已在 <code>vendor</code> 目录下的包</td>
+</tr>
+<tr>
+<td>+std</td>
+<td>s</td>
+<td>标准库里的包</td>
+</tr>
+<tr>
+<td>+excluded</td>
+<td>x</td>
+<td>明确被排除的外部包</td>
+</tr>
+<tr>
+<td>+unused</td>
+<td>u</td>
+<td>未使用的包，即在 <code>vendor</code> 目录下，但项目中并未引用到</td>
+</tr>
+<tr>
+<td>+missing</td>
+<td>m</td>
+<td>被引用了但却找不到的包</td>
+</tr>
+<tr>
+<td>+program</td>
+<td>p</td>
+<td>主程序包，即可被编译为执行文件的包</td>
+</tr>
+<tr>
+<td>+outside</td>
+<td></td>
+<td>相当于状态为 <code>+external +missing</code></td>
+</tr>
+<tr>
+<td>+all</td>
+<td></td>
+<td>所有包</td>
+</tr>
+</tbody>
+</table>
+<p>支持状态参数的子命令有：<code>list</code>、<code>add</code>、<code>update</code>、<code>remove</code>、<code>fetch</code></p>
+<h1 id="2gomod">2.gomod</h1>
+<p>前沿:go1.13版本会默认开启mod，1.11版本后才支持mod</p>
+<h2 id="20前期准备设置go环境参数使其支持mod">2.0前期准备,设置go环境参数使其支持mod</h2>
+<pre tabindex="0"><code>go env -w GO111MODULE=on // 启用go mod，之后可以用go env 命令展示一下go的配置
+</code></pre><h2 id="21管理方式">2.1管理方式</h2>
+<p>模块:多个包package的集合</p>
+<p>当<code>GO111MODULE</code>=<code>on</code>时，那么就会使用<code>modules</code>功能:这种模式下，<code>$GOPATH</code>不再作为build时导入的角色，依赖包会存放在<code>$GOPATH/pkg/mod</code>目录下。工程中的依赖包也会从此目录下查找.</p>
+<h2 id="22初始化一个新项目">2.2初始化一个新项目</h2>
+<pre tabindex="0"><code>go mod init &lt;项目名&gt; //项目名不填写则是gopath/src后的相对路径名，填的话一般为github.com/your name/project name
+</code></pre><h2 id="23添加依赖">2.3添加依赖</h2>
+<h3 id="a先编写程序improt依赖包">a.先编写程序improt依赖包</h3>
+<p>其实当go run执行时会自动下载依赖包，当然也可以不运行而是只去下载依赖包</p>
+<h3 id="b下载依赖包">b.下载依赖包</h3>
+<pre tabindex="0"><code>go mod tidy 	// 检测并下载本项目的module所依赖的文件，同时会移除不需要的模块
+</code></pre><p>依赖包的存放位置是$GoPath/pkg/mod/</p>
+<h3 id="c修改gomod文件可以使用其他依赖路径如for的仓库本地的拷贝">C.修改go.mod文件可以使用其他依赖路径如：for的仓库、本地的拷贝</h3>
+<p>例如go.mod的内容乳腺癌</p>
+<pre tabindex="0"><code>replace example.com/project/foo =&gt; ../foo
+</code></pre><h3 id="dgomod文件的介绍">d.go.mod文件的介绍</h3>
+<p>go.mod 提供了module, require、replace和exclude 四个命令</p>
+<ul>
+<li><code>module</code> 语句指定包的名字（路径）</li>
+<li><code>require</code> 语句指定的依赖项模块</li>
+<li><code>replace</code> 语句可以替换依赖项模块</li>
+<li><code>exclude</code> 语句可以忽略依赖项模块</li>
+</ul>
+<h2 id="24其他命令">2.4其他命令</h2>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>vendor</td>
+<td>将依赖复制到vendor下</td>
+</tr>
+<tr>
+<td>graph</td>
+<td>打印模块依赖图</td>
+</tr>
+<tr>
+<td>verify</td>
+<td>验证依赖是否正确</td>
+</tr>
+<tr>
+<td>edit</td>
+<td>编辑go.mod文件</td>
+</tr>
+<tr>
+<td>download</td>
+<td>下载私有仓库的依赖到本地cache</td>
+</tr>
+</tbody>
+</table>
+<p>🐻在国内访问<code>golang.org/x</code>的各个包都需要翻墙，你可以在<code>go.mod</code>中使用<code>replace</code>替换成github上对应的库。形式如下：</p>
+<pre tabindex="0"><code>replace (
+	golang.org/x/crypto v0.0.0-20180820150726-614d502a4dac =&gt; github.com/golang/crypto v0.0.0-20180820150726-614d502a4dac
+	golang.org/x/net v0.0.0-20180821023952-922f4815f713 =&gt; github.com/golang/net v0.0.0-20180826012351-8a410e7b638d
+	golang.org/x/text v0.3.0 =&gt; github.com/golang/text v0.3.0
+)
+</code></pre>
+          </div>
+          
+          
+          <div class="single-reward">
+            <div class="reward-open">赏
+              <div class="reward-main">
+                <ul class="reward-row">
+                  <li class="alipay-code"><img src="/img/sponsor/AliPayQR.jpg"></li>
+                  <li class="wechat-code"><img src="/img/sponsor/WeChanSQ.jpg"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+          <footer class="post-footer">
+            <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+            <div class="post-share">
+              <div class="social-share sharehidden share-component"></div>
+              <i class="iconfont show-share icon-forward"></i>
+            </div>
+          </footer>
+        </article>
+
+  
+  <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcloud.js') %>"></script>
+  <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcanvas.js') %>"></script>
+    <div class="post-tags">
+      <div class="tag-cloud">
+        <div class="tag-cloud-title">标签云</div>
+        <div class="tag-cloud-tags">
+          
+
+ 
+
+    
+    
+    
+    
+            
+            
+            
+            
+            
+            
+            <a href="/tags/c&#43;&#43;/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                c&#43;&#43;
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/go/" style="font-size: 5.333333333333333px; font-weight: 1066.6666666666665; color: #f66">
+                go
+                <sup><strong><sup>2</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/golang/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                golang
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/hexo/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                hexo
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/java/" style="font-size: 6.333333333333333px; font-weight: 1266.6666666666665; color: #f66">
+                java
+                <sup><strong><sup>5</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/leetcode/" style="font-size: 8.666666666666666px; font-weight: 1733.3333333333333; color: #f66">
+                leetcode
+                <sup><strong><sup>12</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/linux/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                linux
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/mac%E8%BD%AF%E4%BB%B6/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                mac软件
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/markdown/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                markdown
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/nginx/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                nginx
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/protobuf/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                protobuf
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/reids/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                reids
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/sakura/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                sakura
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/string/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                string
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/web/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                web
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" style="font-size: 9.666666666666668px; font-weight: 1933.3333333333335; color: #f66">
+                主题美化
+                <sup><strong><sup>15</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                包管理工具
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%BD%92%E7%B1%BB/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                博客归类
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                多线程
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%BC%82%E5%B8%B8/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                异常
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                悦读
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                感悟
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 9px; font-weight: 1800; color: #f66">
+                数组
+                <sup><strong><sup>13</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                文件读取
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E7%AE%80%E5%8D%95/" style="font-size: 8.666666666666666px; font-weight: 1733.3333333333333; color: #f66">
+                简单
+                <sup><strong><sup>12</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 5.333333333333333px; font-weight: 1066.6666666666665; color: #f66">
+                算法
+                <sup><strong><sup>2</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                资料整理
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                软件安装
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                面试
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  
+        
+        <div class="toc" style="background: none;"></div>
+        <section class="post-squares nextprev">
+          
+            
+              <div class="post-nepre half previous">
+            
+              <a href="/posts/mac%E9%85%8D%E7%BD%AEiterm2/" rel="prev">
+                <div class="background">
+                  <img class="lazyload" src="" 
+                  data-src="/imgs/postpage/postcover/default.jpg" 
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                </div>
+                <span class="label">
+                Previous Post</span>
+                <div class="info">
+                  <h3>mac自带终端美化不用iterm2</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+          
+          
+            
+              <div class="post-nepre half next">
+            
+              <a href="/posts/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="" 
+                  data-src="/imgs/postpage/postcover/default.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                </div>
+                <span class="label">
+                  Next Post
+                </span>
+                <div class="info">
+                  <h3>Redis常用命令整理</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+          
+        </section>
+
+        
+        
+
+  <div id="waline"></div>
+
+        
+        <section class="author-profile">
+          <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+            <a href="https://github.com/linxuesong" class="profile gravatar"><img src="/imgs/avator/avatar%280%29.jpg" itemprop="image" alt="lean" height="70" width="70"></a>
+            <div class="meta">
+              <span class="title">Author</span>
+              <h3 itemprop="name">
+              <a href="https://github.com/linxuesong" itemprop="url" rel="author">lean</a>
+              </h3>
+            </div>
+          </div>
+          <hr>
+          <p><i class="iconfont icon-write"></i>Be Water, My Friend.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+  
+
+    </div>
+
+      <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+      <div class="footertext">
+        <div class="img-preload">
+          <img src="/imgs/other/post-loading.svg">
+          <img src="/imgs/other/disqus-preloader.svg">
+        </div>
+        <p style="color: #666666;">&copy 2018</p>
+      </div>
+      
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #ff9999;padding-left: 20px;">
+                  
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <span id="time" align="center">载入时间中...</span>
+                  <script>
+                    var now = new Date(); 
+                    function createtime() { 
+                          var grt= new Date("2023-03-01 22:08:46");
+                          now.setTime(now.getTime()+250); 
+                          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                          document.getElementById("time").innerHTML = "小破站在各种灾难中生存了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+                      } 
+                      setInterval("createtime()",250);
+                  </script>
+              </span> 
+            </p>
+          </div>
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;padding-left: 20px;">
+                
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">待支持</span>字
+              </span>
+                
+                
+              <span>
+                <i class="fa book"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i>  
+                <span class="post-count" style="color:#ff9999;">待支持</span>篇文章
+              </span>
+                
+                  <span style="padding-left: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i>
+                    <span id="busuanzi_container_site_uv">
+                      总访问人数： 
+                      <span class="waline-pageview-count" style="color:#ff9999;"data-path="/" />人
+                    </span>
+                  </span>
+              </span>
+            </p>
+          </div>
+
+
+          
+        
+          <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">lean</a>, Powered by Hugoo, Hosted by Coding Pages</a>
+              </span>
+            </p>
+          </div>
+        
+    </div>
+  </footer>
+  
+  
+  
+  
+
+
+
+
+  <script type="text/javascript" src="/js/lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="/js/zoom.min.js"></script>
+  <script type="text/javascript" src="/js/sakura-app.js"></script>
+  <script src="/js/search.js"></script>
+  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+    <script src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/live2d_qianduan/live2d-widget-master/autoload.js"></script>
+    
+      
+    
+      
+    
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/meme.js"></script>
+    <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/fireworks.js"></script> 
+    
+      
+
+
+
+
+
+
+  
+  
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+      init({
+        el: '#waline',
+        serverURL: 'www.snowday.cn',
+        reaction:  true ,
+        pageview: true, 
+        comment: true, 
+      });
+    </script>
+  
+  
+  <script src="/js/botui.js"></script>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  
+  
+  <script type="text/javascript">
+     
+    
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"close"},"windowheight":"fixed","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    } else {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"open"},"windowheight":"auto","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    }
+     
+    </script>
+  
+    
+      
+        
+     <script  src="/js/search/algolia/autocomplete.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.16.0/algoliasearch-lite.umd.js" integrity="sha512-0GlicHH3hOwOxa2fHjIdkv0rKFPuPZE+qGSI2HxStLemOkPAJbNRAfw6Rb9WXGp6oYzOv9ZHGZlgHFxjJ7b6RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.53.0/instantsearch.production.min.js" integrity="sha512-DvD+hDgJDdTGGsmfrbAQ96+ny9elfbO5vHi5ODzvFvHLmJEjyERWRGitt9s0InNDqiAXOxqnO7tWdStdyL9dOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script  src="/js/search/algolia/search.js"></script>
+      
+    <script src="/js/search/fusejsSearch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+<script>
+  $(document).ready(function() {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { 
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -400,
+            scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -85,
+            scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+  </script>
+  
+  
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/7e5676fe.js","daovoice");
+      daovoice('init', {
+        app_id: "7e5676fe"
+      });
+      daovoice('update');
+    </script>
+
+   
+  
+  <div class="openNav no-select" style="height: 50px;">
+        <div class="iconflat no-select" style="width: 50px; height: 50px;">
+          <div class="icon"></div>
+        </div>
+        <div class="site-branding search-form-submit">
+          <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+        </div>
+      </div>
+    </section>  
+  <div id="mo-nav" class="">
+  
+  <div class="m-avatar">
+    <img src="/imgs/avator/avatar%280%29.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">雪華</p>
+  
+  <p style="text-align: center; word-spacing: 20px;">
+    
+        
+        <a href="http://github.com/linxuesong" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://github.com/linxuesong" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-home'></i> 主页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/posts">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-book'></i> 文章
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/categories">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-folder-open'></i> 分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/tags">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-tags'></i> 标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-info-circle'></i> 关于
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+        
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <style>
+        .aplayer .aplayer-lrc {
+            height: 35px;
+        }
+        .aplayer .aplayer-lrc p{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px !important;
+        }
+        .aplayer .aplayer-lrc p.aplayer-lrc-current{
+            color: #FF1493;
+        }
+        .aplayer.aplayer-narrow .aplayer-body{
+            left: -66px !important;
+        }
+        .aplayer.aplayer-fixed .aplayer-lrc {
+            display: none;
+        }
+        .aplayer .aplayer-lrc.aplayer-lrc-hide {
+            display:none !important;
+        }
+        .aplayer.aplayer-fixed .lrc-show {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <meting-js
+        id = "2660651585" 
+        server = "netease" 
+        type= "playlist" 
+        fixed = "true" 
+        autoplay = "false" 
+        loop = "all" 
+        order = "random" 
+        preload = "auto" 
+        list-folder = "true" 
+        volume = "0.7" 
+        mutex = "true" 
+        list-max-height = "350px" 
+    >
+    </meting-js>
+    <script>
+    $(function(){
+        $('body').on('click', '.aplayer', function(){
+        if($('.aplayer-button').hasClass('aplayer-play')) {
+            $('.aplayer-lrc').removeClass('lrc-show');
+        } else {
+            $('.aplayer-lrc').addClass('lrc-show');
+        }
+        })
+    });
+    </script>
+
+      
+      
+         
+
+
+
+      
+      
+      <a onclick="switchNightMode()" id="sma"> 
+          <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themechris') === '1') {
+              document.body.classList.add('themechris');
+          }
+          else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+              document.body.classList.add('themechris');
+          }
+      </script>
+      <a onclick="switchChrisThemes()" id="switchchristmas">
+          <img class="theme-buttonchrismas" src="/imgs/theme/pendant/christmas-img/7.png" title="圣诞模式">
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themespring') === '1') {
+              document.body.classList.add('themespring');
+          }
+          else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+              document.body.classList.add('themespring');
+          }
+      </script>
+      <div onclick="switchSpringThemes()" id="switchspring">
+          <img class="theme-button" src="/imgs/theme/pendant/spring-img/3.png" title="春节模式">
+      </div>
+    
+      
+          <div class="denglong">
+          <div class="deng-box">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">喜迎</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+          <div class="deng-box1">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">元旦</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+      </div>
+      
+      
+      <div class="caishendengsd">        
+          <div class="caishenxiansd">
+              <img class="caishenpicsd" src="/imgs/theme/pendant/christmas-img/2.png">
+          </div>              
+      </div>
+
+      <div class="caishendeng">        
+          <div class="caishenxianleft">
+              <img class="caishenpic fudai" src="/imgs/theme/pendant/spring-img/3.png">
+          </div>            
+      </div>
+         <script>
+         
+         function switchNightMode() {
+              var body = document.body; 
+              if(body.classList.contains('dark')){ 
+                  document.body.classList.remove('dark'); 
+                  localStorage.setItem('dark','0'); 
+                  $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o"); 
+                  return; 
+              } else {
+                  document.body.classList.add('dark'); 
+                  localStorage.setItem('dark','1'); 
+                  $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o"); 
+                  return; 
+              } 
+         }
+             
+      
+      function switchSpringThemes() {
+          var body = document.body;
+          if(body.classList.contains('themechris')){
+              document.body.classList.remove('themechris');
+              localStorage.setItem('themechris','0');
+              document.body.classList.add('themespring');
+              localStorage.setItem('themespring','1');
+              return;
+          }
+          if(body.classList.contains('themespring')){
+          document.body.classList.remove('themespring');
+          localStorage.setItem('themespring','0');
+          return;
+          } else {
+          document.body.classList.add('themespring');
+          localStorage.setItem('themespring','1');
+          
+          return;
+          }
+      };
+  
+      
+      function switchChrisThemes() {
+          var body = document.body;
+          if(body.classList.contains('themespring')){
+              document.body.classList.remove('themespring');
+              localStorage.setItem('themespring','0');
+              document.body.classList.add('themechris');
+              localStorage.setItem('themechris','1');
+              return;
+          }
+          if(body.classList.contains('themechris')){
+          document.body.classList.remove('themechris');
+          localStorage.setItem('themechris','0');
+          return;
+          } else {
+          document.body.classList.add('themechris');
+          localStorage.setItem('themechris','1');
+          return;
+          }
+      };
+      </script>
+  </body>
+  </html>

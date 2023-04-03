@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>算法 on 网站标题</title>
+    <link>/tags/%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 算法 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Wed, 20 Jan 2021 11:07:57 +0000</lastBuildDate><atom:link href="/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>回溯算法刷题整理总结</title>
+      <link>/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 20 Jan 2021 11:07:57 +0000</pubDate>
+      
+      <guid>/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86%E6%80%BB%E7%BB%93/</guid>
+      <description>一、回溯算法理解 本质是以深度遍历的方式遍历决策树
+但因为没有具体的TreeNode构成树，所以回溯与DFS遍历树很像，但不同的是回溯要多一步退回选择的操作
+典型问题:全排列、N皇后问题
+回溯算法的构成要素:
+①选择列表
+②已选路径或已做出的选择(trace或used)
+③结束条件
+回溯算法的模板如下:
+def backTrace(已选路径, 选择列表) {if(结束条件) {return ; // 对于return 如果只问是否有解则返回bool即可;如果要所有的解则用全局变量数组保存所有找到的解}for 某选择:选择列表 {if(不必要选择) {continue;}做选择:某选择加入已选路径，下一步选择列表是否变化backTrace(已选路径, 选择列表)回退选择:某选择退出已选路径，回退后选择列表是否需要恢复}}回溯算法的思路如下:
+画决策树，决策树节点的属性就是 选择和当前路径 我们的backTrace函数在树的各个节点游走，知道遇到结束条件</description>
+    </item>
+    
+    <item>
+      <title>动态规划刷题整理</title>
+      <link>/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 10 Dec 2020 20:04:41 +0000</pubDate>
+      
+      <guid>/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86/</guid>
+      <description>LeetCode刷题集锦 5. 最长回文子串 题目描述 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+示例 1：输入: &amp;quot;babad&amp;quot;输出: &amp;quot;bab&amp;quot;注意: &amp;quot;aba&amp;quot; 也是一个有效答案。示例 2：输入: &amp;quot;cbbd&amp;quot;输出: &amp;quot;bb&amp;quot;解题思路 ①想到最优子结构
+大字符串是回文，把首尾字符取去掉后小字符串也是回文 aba是回文，取首尾后子串b也是
+②最小子问题
+只有一个字母，必定是回文
+有两个子母且两个字母相等才是回文
+③状态转移方程 最小子问题如何推出大问题 $$ dp(i,j)=\begin{cases} true &amp;amp; i==j只有一个字母 \
+str[j]==str[i] &amp;amp; j-i==1两个子母 \
+dp(i+1,j-1)且str[j]==str[i] &amp;amp;j-i&amp;gt;1 大于两个字母 \end{cases} $$ ④实现动态规划</description>
+    </item>
+    
+  </channel>
+</rss>

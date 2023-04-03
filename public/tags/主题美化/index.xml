@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>主题美化 on 网站标题</title>
+    <link>/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/</link>
+    <description>Recent content in 主题美化 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Fri, 04 Jun 2021 19:56:09 +0000</lastBuildDate><atom:link href="/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>主题优化增加网页百度统计功能</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 04 Jun 2021 19:56:09 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>1.开通百度统计账号
+2.获取跟踪代码
+3.将跟踪代码放到head末尾位置 本主题的head路径为themes/Sakura/layout/_partial/head.ejs
+TODO: 继续优化将其变成一个站点配置功能，使用指定的百度提供代码中的key作为区分不同的统计
+# Baidu Analytics IDbaidu_analytics: 上面步骤中记录的百度统计里用户的key值。4.效果截图
+参考代码http://www.jcsama.com/2016/01/25/hexo-baido-analytics/</description>
+    </item>
+    
+    <item>
+      <title>博客美化增加瀑布流相册</title>
+      <link>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E7%9B%B8%E5%86%8C/</link>
+      <pubDate>Tue, 26 Jan 2021 14:53:03 +0000</pubDate>
+      
+      <guid>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E7%9B%B8%E5%86%8C/</guid>
+      <description>参考链接:
+来源: itsNekoDeng 文章作者: NekoDeng 文章链接: https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html#toc-heading-9
+自己经过修改后移植到sakura主题
+1.增加相册界面和相册详情页面 1.1新建gallery界面(相册概览) hexo new &amp;quot;gallery&amp;quot;在博客目录/source/gallery可以看到index.md文件，修改内容如下
+---title: gallerycomments: falsedate: 2021-01-25 19:40:18keywords:description:photos:layout: &amp;quot;gallery&amp;quot;---1.2增加相册详情页
+在博客目录创建/source/gallery/test/index.md
+创test文件夹
+及其下面的index.md文件index内容为
+---title: testdate: 2020-10-02 23:00:17 type: &amp;quot;galleries&amp;quot; layout: &amp;quot;galleries&amp;quot; password:---1.2相册加密功能（选用） 在上面index.md文件中，可以实现加密功能，加密使用SHA256加密，所以在加密前需要先将你的密码转换成SHA256格式然后输入到最上面的创建相片页面的index.md的password里面。至于SHA256加密，请自行网上搜索在线生成，例如: http://www.ttmd5.com/hash.php?type=9
+编辑主题导航栏加入相册按钮 2.新增布局样式文件 在博客目录/themes/sakura/layout/位置下新增两个文件gallery.ejs、galleries.ejs</description>
+    </item>
+    
+    <item>
+      <title>主题美化添加文章阅读计数统计和网站运行事件</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E8%AE%A1%E6%95%B0%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Sat, 26 Dec 2020 20:31:05 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E8%AE%A1%E6%95%B0%E7%BB%9F%E8%AE%A1/</guid>
+      <description>在主题目录/layout/_partial/footer.ejs中 &amp;lt;div class=&amp;ldquo;footer-device&amp;rdquo;&amp;gt;和&amp;lt;div class=&amp;ldquo;site-info&amp;rdquo;&amp;gt;的下面之间加入如下代码
+ &amp;lt;!-- 网站数据统计 --&amp;gt;&amp;lt;div class=&amp;quot;footer-device&amp;quot;&amp;gt;&amp;lt;p style=&amp;quot;font-family: &#39;Ubuntu&#39;, sans-serif;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #ff9999;padding-left: 20px;&amp;quot;&amp;gt;&amp;lt;!-- 网站运行时间统计 --&amp;gt;&amp;lt;i class=&amp;quot;fa fa-clock-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;span id=&amp;quot;time&amp;quot; align=&amp;quot;center&amp;quot;&amp;gt;载入时间中...&amp;lt;/span&amp;gt;&amp;lt;script&amp;gt;var now = new Date(); function createtime() { var grt= new Date(&amp;quot;&amp;lt;%- theme.siteBuildingTime %&amp;gt;&amp;quot;);//在此处修改你的建站时间now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.</description>
+    </item>
+    
+    <item>
+      <title>hexo&#43;valine搭建博客评论系统</title>
+      <link>/posts/hexo&#43;valine%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Sat, 26 Dec 2020 10:26:53 +0000</pubDate>
+      
+      <guid>/posts/hexo&#43;valine%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+      <description>hexo+valine搭建博客评论系统 1.注册LeanCloud
+2.在leanCloud中创建应用
+3.拿到appid和appkey
+然后 进入应用-&amp;gt;设置-&amp;gt;应用key
+拿到你的appid和appkey之后，打开主题配置文件 搜索 valine，填入appid 和 appkey
+4.修改hexo博客主题目录themes/Skaura/_config.yml配置文件中的valine部分内容
+# Valinevaline: truev_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHszv_appKey: mgOpfzbkHYqU92CV4IDlAUHQ5.记得在Leancloud -&amp;gt; 设置 -&amp;gt; 安全中心 -&amp;gt; Web 安全域名 把你的域名加进去
+最后当我们发送一条评论后可以在leanCloud中的 存储/结构化数据/comment看到评论信息
+PS:valine还可以美化评论背景样式、增加评论邮件通知等等的功能
+参考博客:https://blog.csdn.net/cungudafa/article/details/104281764
+PS:可以在https://en.gravatar.com/网站上注册头像呦，这样就可以在评论时显示自己邮箱绑定的头像了</description>
+    </item>
+    
+    <item>
+      <title>博客增加建站日志页</title>
+      <link>/posts/%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Tue, 22 Dec 2020 11:16:18 +0000</pubDate>
+      
+      <guid>/posts/%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%E9%A1%B5%E9%9D%A2/</guid>
+      <description>1.主题目录/layout/sitelog.ejs &amp;lt;div class=&amp;quot;blank&amp;quot; style=&amp;quot;padding-top: 75px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;% if (page.photos) { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.lazyloadImg %&amp;gt;&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot; style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;% } else { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= theme.bg[Math.floor(Math.random() * theme.bg.length + 1)-1] %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.</description>
+    </item>
+    
+    <item>
+      <title>增加文章统计折线图、饼状图</title>
+      <link>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E6%8A%98%E7%BA%BF%E5%9B%BE%E9%A5%BC%E7%8A%B6%E5%9B%BE/</link>
+      <pubDate>Fri, 18 Dec 2020 18:03:16 +0000</pubDate>
+      
+      <guid>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E6%8A%98%E7%BA%BF%E5%9B%BE%E9%A5%BC%E7%8A%B6%E5%9B%BE/</guid>
+      <description>1.sakura/layout/analytics.ejs &amp;lt;div class=&amp;quot;pattern-center-blank&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;https://cdn.jsdelivr.net/gh/drew233/cdn/20200303155335.webp&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot;class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot;style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;#contentss {position: relative;width: 800px;height: 900px;max-height: 1200px;text-align: center;border: 0;color: rgba(0, 0, 0, .87);background: rgba(255, 255, 255, .</description>
+    </item>
+    
+    <item>
+      <title>主题美化添加自己的书单页面</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%A6%E5%8D%95%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Fri, 18 Dec 2020 10:58:12 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%A6%E5%8D%95%E9%A1%B5%E9%9D%A2/</guid>
+      <description>参考
+https://blog.csdn.net/qq_44846853/article/details/104563887
+0.准备安装hexo-douban插件 npm install hexo-douban --save 1.修改主站目录(非主题目录)的_config.yml 博客目录/_config.yml下新建books.ejs
+内容如下
+douban: user: 252345665 #这个需要修改为你个人的id builtin: false #如果想生成豆瓣页面，这个需要设置为truebook: title: &#39;This is my book title&#39; quote: &#39;This is my book quote&#39; movie: title: &#39;This is my movie title&#39; quote: &#39;This is my movie quote&#39; game: title: &#39;This is my game title&#39; quote: &#39;This is my game quote&#39; timeout: 10000说明:</description>
+    </item>
+    
+    <item>
+      <title>如何调整顶部导航栏的整体长度以放入更多导航项</title>
+      <link>/posts/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%95%B4%E4%BD%93%E9%95%BF%E5%BA%A6%E4%BB%A5%E6%94%BE%E5%85%A5%E6%9B%B4%E5%A4%9A%E5%AF%BC%E8%88%AA%E9%A1%B9/</link>
+      <pubDate>Thu, 17 Dec 2020 16:09:35 +0000</pubDate>
+      
+      <guid>/posts/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%95%B4%E4%BD%93%E9%95%BF%E5%BA%A6%E4%BB%A5%E6%94%BE%E5%85%A5%E6%9B%B4%E5%A4%9A%E5%AF%BC%E8%88%AA%E9%A1%B9/</guid>
+      <description>修改主题目录/source/css/style.css文件 搜到如下内容按自己需要修改
+属性： min-width越大一行所容纳的个数越多
+​	left:值越大离左侧的距离越远，这里是以整个屏幕的百分比进行衡量的</description>
+    </item>
+    
+    <item>
+      <title>主题博客增加天气插件</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Fri, 11 Dec 2020 20:59:21 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</guid>
+      <description>效果预览：
+1.注册和风天气账号 官方网址如下https://www.qweather.com/
+2.导入生成的插件代码 博客目录\themes\Sakura\layout_partial\header.ejs 嵌入到代码的最尾部</description>
+    </item>
+    
+    <item>
+      <title>增加文章贡献日历</title>
+      <link>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E8%B4%A1%E7%8C%AE%E6%97%A5%E5%8E%86/</link>
+      <pubDate>Fri, 11 Dec 2020 20:59:21 +0000</pubDate>
+      
+      <guid>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E8%B4%A1%E7%8C%AE%E6%97%A5%E5%8E%86/</guid>
+      <description>https://blog.csdn.net/cungudafa/article/details/106420842</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura标签云分类云</title>
+      <link>/posts/hexo-sakura%E6%A0%87%E7%AD%BE%E4%BA%91%E5%88%86%E7%B1%BB%E4%BA%91/</link>
+      <pubDate>Wed, 12 Aug 2020 14:23:37 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E6%A0%87%E7%AD%BE%E4%BA%91%E5%88%86%E7%B1%BB%E4%BA%91/</guid>
+      <description>本文参考博客https://www.sakura521.cn/technology/sakurameihua.html
+添加优美的标签页 效果图如下：
+概览 我们要创建四个文件，修改一个文件,最后新生成一个标签页面
+新建文件1 博客目录\themes\Sakura\layout\tages.ejs ⚠：不是tag是tags
+其内容如下：
+&amp;lt;div class=&amp;quot;blank&amp;quot; style=&amp;quot;padding-top: 75px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;% if (page.photos) { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.lazyloadImg %&amp;gt;&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot; style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;% } else { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= theme.</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura如何写新博客</title>
+      <link>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%86%99%E6%96%B0%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 11 Aug 2020 20:15:41 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%86%99%E6%96%B0%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hexo-Sakura如何写新博客 1.创建文章 $ hexo new [layout] &amp;lt;title&amp;gt;//例$ hexo new page &amp;quot;我的页面&amp;quot;//布局有三种：post（文章）、draft（草稿）、page（页面）2.编辑文章样式 在博客根目录/source/_posts下找到生成的博客文件
+根据自己的需要修改，一般添加photo的url tag keywords categories 即可，其他可在布局文件中默认设置，自定义布局过程程如下
+在博客根目录/scaffolds/下有三个布局的文件
+我们根据自己的需求更改
+3.编辑文本内容 使用markdown格式编写内容，期间涉及代码块样式、插入图片等技巧可查看本站其他文章</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura如何博客迁移到不同电脑</title>
+      <link>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91/</link>
+      <pubDate>Tue, 11 Aug 2020 20:10:14 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91/</guid>
+      <description>Hexo-Sakura博客迁移前期准备 1.将所有的博客项目文件(可以在执行hexo clean 后，这样文件少一点)上传到GitHub的仓库
+这里是上传到linxuesong / **linxuesong.github.io**的hexo分支
+下面开始迁移：
+步骤一：本地初始化hexo博客环境 详见hexo搭建个人博客教程
+要求：hexo s后可以本地看到默认页面
+步骤二：用我们上传的博客项目文件替换初始化的默认文件 1.下载上传的所有博客项目文件
+2.替换默认文件
+步骤三：启用需插件功能 下载不同功能所需对应的hexo插件
+1.本地搜索功能
+npm install hexo-generator-json-content --save2.启用自定义代码块背景
+npm i -S hexo-prism-plugin如何选用hexo-prism-plugin的代码块样式主题，可以本站搜索
+3.添加RSS订阅的网站
+https://blog.csdn.net/cungudafa/article/details/104320396
+4.添加豆瓣hexo-douban插件生成书单、电影等页面
+npm install hexo-douban --save 然后在博客站点目录下的node_modules文件夹下找到hexo-douban/lib，文件夹下有三个js文件，分别为：books-generator.js 、games-generator.js 、movies-generator.js，用文本编辑器打开这三个文件，并将其文件内容末尾的代码修改为一下内容：
+/* 原文件内容为 layout: [`page`, `post`] ，将其修改为下面的内容*/ layout: [`douban`] 5.添加sitemap站点地图生成插件
+用于谷歌、百度收录本网站
+npm install hexo-generator-sitemap --save6.</description>
+    </item>
+    
+    <item>
+      <title>Hexo博客md文件插入图片（以Typora编辑器为例）</title>
+      <link>/posts/hexo%E5%8D%9A%E5%AE%A2md%E6%96%87%E4%BB%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%BB%A5typora%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%BA%E4%BE%8B/</link>
+      <pubDate>Tue, 28 Jul 2020 14:13:54 +0000</pubDate>
+      
+      <guid>/posts/hexo%E5%8D%9A%E5%AE%A2md%E6%96%87%E4%BB%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%BB%A5typora%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%BA%E4%BE%8B/</guid>
+      <description>Typora插入Base64图片 在Typora中插入图片常用的处理方法是：
+将本地的图片地址传入 将网络上的图片地址传入 这两种方式都存在一个问题：链接不可用时，图片就展示不出来了！
+解决方法 方法一 首先将图片通过在线转码工具转换成base64的编码，并用以下格式嵌入即可，格式如下：
+![image] (base64) 但是由于这base64编码往往都很长，很占篇幅，因此我们可以给图片编号，并将所有的图片base64编码放在文档的最后即可，格式如下： 在插入图片的地方使用：![image] [图片编号] 在文档最后使用：[图片编号]:base64编码 这样即可完成图片的永久插入！
+———————————————— 版权声明：本文为CSDN博主「听雨眠_sun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/baidu_31492511/java/article/details/90704123
+方法二 图片素材按官方教程说法，可统一放置在source/images目录中，并以 ![](/images/image.jpg) 方式引用
+或者在 _config.yml 打开 post_asset_folder 功能，将当前文章所用的图片放置到source目录下的文章同名资源目录下，以 ![](image.jpg) 方式引用
+————————————————
+作者：Wavky 链接：https://www.jianshu.com/p/925fa86ccc95 来源：简书 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura主题优化：jsDelivr &#43; Github 搭建免费CDN（生成自己资源的url）</title>
+      <link>/posts/hexo-sakura%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96jsdelivr-github-%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9cdn%E7%94%9F%E6%88%90%E8%87%AA%E5%B7%B1%E8%B5%84%E6%BA%90%E7%9A%84url/</link>
+      <pubDate>Tue, 28 Jul 2020 14:11:26 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96jsdelivr-github-%E6%90%AD%E5%BB%BA%E5%85%8D%E8%B4%B9cdn%E7%94%9F%E6%88%90%E8%87%AA%E5%B7%B1%E8%B5%84%E6%BA%90%E7%9A%84url/</guid>
+      <description>主题优化：jsDelivr + Github 搭建免费CDN（生成自己资源的url）
+使用效果：
+以一个仓库存放我们网络资源文件，在写网页或者修改配置时可以使用我们自己的网上资源
+如：https://cdn.jsdelivr.net/gh/linxuesong/cdn
+创建方法
+1.创建github存储库，记得要选public
+2.发布仓库
+发布成功后
+3.
+通过 jsDelivr 引用资源 格式：https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径 例如：https://cdn.jsdelivr.net/gh/heruo/CDN@1.1/blog_medias/avatar.png 在文件夹末尾以/结束，可以显示资源目录 例如：https://cdn.jsdelivr.net/gh/heruo/CDN@1.1/blog_medias/reward/</description>
+    </item>
+    
+  </channel>
+</rss>

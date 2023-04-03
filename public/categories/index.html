@@ -1,225 +1,387 @@
 <!DOCTYPE html>
-<html><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+  <head>
+     
+     <meta charset="utf-8">
+     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+     
+     <title>Categories</title>
+     
+     
+     
+       <meta name="baidu-site-verification" content="code-Mh5omtSUnt" />
+     
+     
+     
+     
+       <meta name="google-site-verification" content="-b5rAEo2_d1dn4CdJ27sSIEfxMSzkUiRaDuNU2phVn8" />
+     
+     
 
-    <title>NewBee | Categories</title>
-    <meta name="description" content=" ">
-    <link rel="canonical" href="https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/categories/" />
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <meta property="og:title" content="Categories" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/categories/" />
+     
+     <title itemprop="name">
+        雪華
+        記憶
+    </title>
+     
+     
+     
 
-    <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Categories"/>
-<meta name="twitter:description" content=""/>
+     
+     
+     <meta http-equiv="x-dns-prefetch-control" content="on">
+     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+     
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+     
+     <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+     
+     <link rel="stylesheet" href="/css/lib.min.css" media="all">
+     <link rel="stylesheet" href="/css/font.css" media="all">
+     
+     <link rel="stylesheet" href="/css/insight.css" media="all">
+     
+     <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+     
+     <link rel="stylesheet" href="/css/zoom.css" media="all">
+     
+     <link rel="stylesheet" href="/css/tagcloud.css" media="all">
+     
+     
+     <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
 
-    
-        
-    
-    <link rel="stylesheet" href='/css/style.css' />
-    <link rel="stylesheet" href='/css/search.css' />
-    <link rel="stylesheet" href='/css/md_nb.css' />
-    <link rel="stylesheet" href='/css/list.css' />
-    <link rel="stylesheet" href='/css/terms.css' />
-    <link rel="stylesheet" href='/css/taxonomy.css' />
-    <link rel="stylesheet" href='/css/home.css' />
-    <link rel="stylesheet" href='/css/syntax.css' />
-    
-    <link rel="stylesheet" href='/css/shortcode.css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <link rel="stylesheet" href='/css/_custom.css' />
-    <style>
-         
-    </style>
-    
-    
-    <script>
-    MathJax = {
-      tex: {
-        inlineMath: [["\\(", "\\)"]],
-      },
-      displayMath: [
-        ["$$", "$$"],
-        ["\[\[", "\]\]"],
-      ],
-      svg: {
-        fontCache: "global",
-      },
-    };
-</script>
-<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script>
+      
+      <link rel="stylesheet" type="text/css" href="/css/search/algolia.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+     
+     <script>
+       
+      var mashiro_option = new Object();
+      var mashiro_global = new Object(); 
+      mashiro_option.NProgressON = true;
+      var copy_right = new Object(); 
+      copy_right.enable =  false ;
+      copy_right.minCharNumber =  120 ; 
+      copy_right.description = "本文章著作权归作者所有，任何形式的转载都请注明出处。";
+
+      var search = new Object();
+      var algolia = new Object();
+      algolia.enable = "false";
+      algolia.appId = "UMAQ9IJSOT";
+      algolia.indexName = "hugoblog";
+      algolia.apiKey = "0f3b78aed4ad1466e2658a546d1b7e99";
+      algolia.perPage =  20 ;
+      algolia.placeholder = "请输入关键字...";
+      
+      search.algolia = algolia;
 
 
-    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
-    <script src="/js/lazysizes.min.js" async=""></script>
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="/js/search.js"></script>
-    <script src="/js/md_nb.js"></script>
+      
+
+      mashiro_option.search = search;
+      mashiro_option.copy_right = copy_right;
+      mashiro_option.email_domain = "";
+      mashiro_option.email_name = "";
+      mashiro_option.cookie_version_control = "";
+      mashiro_option.qzone_autocomplete = false;
+      mashiro_option.site_name = "雪華記憶";
+      mashiro_option.author_name = "lean";
+      mashiro_option.site_url = "";
+      mashiro_option.v_appId = "<%= theme.v_appId %>";
+      mashiro_option.v_appKey = "<%= theme.v_appKey %>";
+      mashiro_option.mathjax = "<%= theme.mathjax %>";
+      mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+      mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
     
-    <script src="/js/yes.js"></script>
+      
+      
+    
+       
+    </script>
+
+     
+     <script type="text/javascript">
+          var bg ="/imgs/homepage/bgcover/cover(0).jpg,/imgs/homepage/bgcover/cover(1).jpg".split(",");
+          var bgindex = Math.floor(Math.random()*bg.length);
+          if (!!window.ActiveXObject || "ActiveXObject" in window) { 
+              alert('朋友，IE浏览器未适配哦~');
+          }
+     </script>
+
+  
+  <style type="text/css">
+    .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+  
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d67a00154871861401ec8c26b0bdaf5d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'">
+  <script async src="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script>
+  
+  <meta name="generator" content="Hexo 5.4.0">
+  <link rel="alternate" href="/atom.xml" title="楓の葉小窝" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar"></div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
     
     
-        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    
-</head><body style="font-family: ,'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;">
-        <div class="loading">
-            <div class="loading-bg"></div>
-            <div class="loading-long">
-                <div class="loading-short"></div>
-            </div>
+<div class="headertop filter-dot" style="height: auto;">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/linxuesong">
+          <img src="/imgs/avator/avatar%280%29.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+       <p>"Be Water, My Friend."</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/imgs/other/next-b.svg">
+          </li>
+          
+            
+                
+                  <li>
+                    <a href="http://github.com/linxuesong" target="_blank" class="social-github" title="github">
+                      <img src="/imgs/social/github.png">
+                    </a>                    
+                  </li>
+                
+            
+                
+                  <li>
+                    <a href="https://blog.csdn.net/lsxa123" target="_blank" class="social-github" title="csdn">
+                      <img src="/imgs/social/csdn.png">
+                    </a>                    
+                  </li>
+                
+            
+          
+          <li id="bg-next">
+            <img src="/imgs/other/next-b.svg">
+          </li>
         </div>
-
-        <header>
-    <nav class="navbar">
-        <div class="navbar-brand">
-            <a href="/">
-                <span class="logo">NewBee</span>
-            </a>
-        </div>
-        <div class="navbar-menu">
-            
-                <a href="/">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-home'></i> Home</div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="/posts">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-book'></i> Posts</div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="/categories">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-folder-open'></i> Categories</div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="/tags">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-tags'></i> Tags</div>
-                        </div>
-                    </div>
-                </a>
-            
-                <a href="/about">
-                    <div class="menu-item">
-                        <div class="hengtiao-root">
-                            <div class="hengtiao"></div>
-                            <div class="name text-wbd-reverse"><i class='fa fa-info-circle'></i> About</div>
-                        </div>
-                    </div>
-                </a>
-            
-            <div class="navbar-burger">
-                <div class="burger-btn"><span><i class="fa fa-navicon"></i></span></div>
-            </div>
-            
-            
-            <div class="search-in"><span><i class="fa fa-search"></i></span></div>
-            
-                <div class="mode">
-                    <span class="sun"><i class="fa fa-sun-o"></i></span>
-                    <span class="moon"><i class="fa fa-moon-o"></i></span>
-                </div>
-            
-        </div>
-    </nav>
-    <div class="burger-items">
-        
-        <a href="/">
-            <div class="burger-item">
-                <i class='fa fa-home'></i> Home
-            </div>
-        </a>
-        
-        <a href="/posts">
-            <div class="burger-item">
-                <i class='fa fa-book'></i> Posts
-            </div>
-        </a>
-        
-        <a href="/categories">
-            <div class="burger-item">
-                <i class='fa fa-folder-open'></i> Categories
-            </div>
-        </a>
-        
-        <a href="/tags">
-            <div class="burger-item">
-                <i class='fa fa-tags'></i> Tags
-            </div>
-        </a>
-        
-        <a href="/about">
-            <div class="burger-item">
-                <i class='fa fa-info-circle'></i> About
-            </div>
-        </a>
-        
+      </div>
     </div>
-    <div class="header-rest"></div>
+  </figure>
+
+  
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive"></div>
+    <div id="video-add"></div>
+    <div class="video-stu"></div>
+  </div>
+  
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </span>
+  </div>
+</div><div id="page" class="site wrapper">
+        
+<header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding"> 
+      <span class="site-title"> 
+        <span class="logolink moe-mashiro"> 
+          <a href="" alt="雪花的记忆">
+            <ruby>
+              <span class="sakuraso">雪華</span>
+              <span class="no">の</span>
+              <span class="shironeko">記憶</span>
+              <rp></rp>
+              <rt class="chinese-font">雪花的记忆</rt>
+              <rp></rp>
+            </ruby> 
+          </a> 
+        </span> 
+      </span>
+    </div>
+
+
+ 
+  
+<div class="searchbox search-form-submit">
+    <i class="iconfont js-toggle-search iconsearch icon-search">
+    </i>
+  </div>
+
+  <div id="show-nav" class="showNav mobile-fit">
+    <div class="line line1">
+    </div>
+    <div class="line line2">
+    </div>
+    <div class="line line3">
+    </div>
+  </div>
+ 
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        
+        <div id="searchbox" class="ins-input-wrapper">
+            
+             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container">
+                
+                <header class="ins-section-header">Posts</header>
+                 <section id="post_hits"></section> 
+                
+                 
+            </div>
+        </div>
+    </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+/>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '',
+        CONTENT_URL: '网站的json文件', 
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-home'></i>
+                    主页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/posts">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-book'></i>
+                    文章
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/categories">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-folder-open'></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-tags'></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-info-circle'></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+                
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
 </header>
 
-
-        <div id="content">
-    
-
-
-
-
-
-
-    
-        
-        
-        
-    
-
-
-
-
-    <div class="hero">
-        
-            <div class="hero-img">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/categories.jpg" alt="">
-            </div>
-        
-        <div class="hero-content">
-            <div class="hero-title">Categories</div>
-            <div>description of categories page</div>
-        </div>
-    </div>
-
-
-
-
-<div class="zhuti-0">
-    <div class="container">
-        <div class="zhuti">
-            <div class="zhuti-l">
+        <div class="blank" style="padding-top: 75px;"></div>
+        <div class="pattern-center ">
+          <div class="pattern-attachment-img">
+            
+                <img src="/imgs/homepage/bgcover/cover%280%29.jpg" src="" data-src="<%= page.photos %>" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
+            
+            <header class="pattern-header ">
+              <h1 class="entry-title">文章分类
                 
+              </h1>
+            </header>
+          </div>
+        </div>
+        <div id="content" class="site-content">
+          <div id="main">
+            <div id="main-part">
+              
+              
+              <div id="category-cloud" class="container chip-container">
+                <div class="card">
+                    <div class="card-content">
+                      <header class="page-header">
+                        <h1 class="cat-title">分类云</h1>
+                        <span class="cat-des">
+                          <p>Tags: 7</p>
+                        </span>
+                      </header>
+                        <div class="tag-chips">
+                             
+
+
+
 
 
 
@@ -227,202 +389,598 @@
     
 
 
-<div class="taxo-body">
-    <div class="long">
-        <button class="tosides-1 text-wbd">
-            <i class="fa fa-arrow-right"></i>
-        </button>
-        <button class="tosides-2 text-wbd">
-            <i class="fa fa-arrow-left"></i>
-        </button>
-        <button class="toup text-wbd">
-            <i class="fa fa-arrow-up"></i>
-        </button>
-    </div>
-    
-        <div class='taxo-row '>
-            
-                
 
+                <div class="tag-chips">
+                    
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/categories/%E4%B8%BB%E9%A2%98/" title="主题: 10">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #F9EBEA;"> 
+                                主题
+                                <span class="tag-length">10</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E5%B7%A5%E4%BD%9C/" title="工作: 1">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #F5EEF8;"> 
+                                工作
+                                <span class="tag-length">1</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E6%8A%80%E6%9C%AF/" title="技术: 44">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #D5F5E3;"> 
+                                技术
+                                <span class="tag-length">44</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E6%9C%9F%E6%9C%9B/" title="期望: 1">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #E8F8F5;"> 
+                                期望
+                                <span class="tag-length">1</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E7%94%9F%E6%B4%BB/" title="生活: 1">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #FEF9E7;"> 
+                                生活
+                                <span class="tag-length">1</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E8%B5%84%E6%BA%90/" title="资源: 1">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #F8F9F9;"> 
+                                资源
+                                <span class="tag-length">1</span>
+                            </span>
+                        </a>
+                            
+                        
+                        
+                        
+                        <a href="/categories/%E8%BD%AC%E8%BD%BD/" title="转载: 2">
+                            
+                            <span class="chip center-align waves-effect waves-light chip-default"
+                                style="background-color: #82E0AA;"> 
+                                转载
+                                <span class="tag-length">2</span>
+                            </span>
+                        </a>
+                            
+                        
+                    
+                </div>
 
-            
-        </div>
-    
-</div>
-
-
-            </div>
-            <div class="zhuti-r">
-                
-<div class="zhuti-r-0">
-    <div class="zhuti-r-1">
-        
-        <div id="r1">
-            
-
-<div class="about-zuozhe">
-    <div class="zuozhe">
-        
-            <div class="datou">
-                <img class="lazyload" src="/images/thumbnail.gif" data-src="/images/author.jpeg" alt="">
-            </div>
-        
-        <div class="name-jianjie">
-            <div class="name">xioyito</div>
-            <div class="jianjie">
-                Be Water, My Friend.
-            </div>
-        </div>
-    </div>
-
-    <div class="type">
-        <a href='
-                    /posts/
-                '>
-            <p>posts</p>
-            <p>0</p>
-        </a>
-        <a href='
-                    /categories/
-                '>
-            <p>categories</p>
-            <p>0</p>
-        </a>
-        <a href='
-                    /tags/
-                '>
-            <p>tags</p>
-            <p>0</p>
-        </a>
-    </div>
-
-    <a href="https://github.com/xioyito">
-        <div class="follow">Follow Me</div>
-    </a>
-    <div class="link">
-        
-        <a href="https://github.com/xioyito" class="link-item is-hidden-desktop" title="GitHub">
-            <span class="icon"><i class='fa fa-github'></i></span>
-        </a>
-        
-        <a href="https://www.youtube.com" class="link-item is-hidden-desktop" title="YouTube">
-            <span class="icon"><i class='fa fa-youtube'></i></span>
-        </a>
-        
-    </div>
-</div>
-            <div class="mulu">
-    <div class="dong"></div>
-    <div class="zhi">
-        <div class="wenzi">
-            <div class="zhi-mulu text-wbd">Table of Contents</div>
-            <div class="mulu-items">
-            </div>
-        </div>
-    </div>
-</div>
-            
-
-
-
-
-<div class="other">
-    <div class="other-up">
-        <div class="other-qita text-wbd">latest Posts</div>
-        <div class="xian"></div>
-    </div>
-    <div class="list">
-        
-    </div>
-</div>
-        </div>
-        <div id="r2">
-            
-        </div> 
-    </div>
-</div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
-
-        </div>
-
-        <footer class="footer">
-    
-        <div class="container">
-            <div class="footer-items">
-                
-                    <div class="footer-item">
-                        <i class="fa fa-user"></i> <span id="busuanzi_value_site_pv"></span> |
-                        <i class="fa fa-eye"></i> <span id="busuanzi_value_site_uv"></span>
+                        </div>
                     </div>
-                
-                
-                    <div class="footer-item">
-                        © 2022-2023 <a href="https://github.com/xioyito">xioyito</a>
+                  </div>
+                </div>
+               
+              分类雷达图待实现
+              
+              <section class="author-profile">
+                <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+                    <a href="/about/" class="profile gravatar"><img src="/imgs/avator/avatar%280%29.jpg" itemprop="image" alt="hojun" height="70" width="70"></a>
+                    <div class="meta">
+                    <span class="title">Author</span>
+                    <h3 itemprop="name"><a href="" itemprop="url" rel="author">lean</a></h3>
                     </div>
-                
-                
-                    <div class="footer-item">
-                        Theme by <a href="https://github.com/xioyito/NewBee">NewBee</a> | Powered by <a href="https://gohugo.io/">Hugo</a>
-                    </div>
-                
-            </div>
+                </div>
+                <p id="showStr">随机打开一个，也许有你感兴趣的呦!</p>
+              </section>
+           </div>
         </div>
-    
 
-    
-</footer>
-
-
-        
-        <div class="search-root">
-    <div class="search-zz"></div>
-    <div class="search">
-        <div class="sheader anniu">
-            <div class="sh-l">
-                <input type="text" placeholder='Enter a KeyWord' id="search-key">
-                <span class="sclear"><i class="fa fa-close"></i></span>
-            </div>
-            <div class="sh-r">
-                <button>search</button>
-            </div>
-        </div>
-        <div class="sbody">
-            <div class="sbody-1">
-                <div class="stip"></div>
-            </div>
-        </div>
     </div>
+
+      <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+      <div class="footertext">
+        <div class="img-preload">
+          <img src="/imgs/other/post-loading.svg">
+          <img src="/imgs/other/disqus-preloader.svg">
+        </div>
+        <p style="color: #666666;">&copy 2018</p>
+      </div>
+      
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #ff9999;padding-left: 20px;">
+                  
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <span id="time" align="center">载入时间中...</span>
+                  <script>
+                    var now = new Date(); 
+                    function createtime() { 
+                          var grt= new Date("2023-03-01 22:08:46");
+                          now.setTime(now.getTime()+250); 
+                          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                          document.getElementById("time").innerHTML = "小破站在各种灾难中生存了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+                      } 
+                      setInterval("createtime()",250);
+                  </script>
+              </span> 
+            </p>
+          </div>
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;padding-left: 20px;">
+                
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">待支持</span>字
+              </span>
+                
+                
+              <span>
+                <i class="fa book"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i>  
+                <span class="post-count" style="color:#ff9999;">待支持</span>篇文章
+              </span>
+                
+                  <span style="padding-left: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i>
+                    <span id="busuanzi_container_site_uv">
+                      总访问人数： 
+                      <span class="waline-pageview-count" style="color:#ff9999;"data-path="/" />人
+                    </span>
+                  </span>
+              </span>
+            </p>
+          </div>
+
+
+          
+        
+          <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">lean</a>, Powered by Hugoo, Hosted by Coding Pages</a>
+              </span>
+            </p>
+          </div>
+        
+    </div>
+  </footer>
+  
+  
+  
+  
+
+
+
+
+  <script type="text/javascript" src="/js/lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="/js/zoom.min.js"></script>
+  <script type="text/javascript" src="/js/sakura-app.js"></script>
+  <script src="/js/search.js"></script>
+  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+    <script src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/live2d_qianduan/live2d-widget-master/autoload.js"></script>
+    
+      
+    
+      
+    
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/meme.js"></script>
+    <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/fireworks.js"></script> 
+    
+      
+
+
+
+
+
+
+  
+  
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+      init({
+        el: '#waline',
+        serverURL: 'www.snowday.cn',
+        reaction:  true ,
+        pageview: true, 
+        comment: true, 
+      });
+    </script>
+  
+  
+  <script src="/js/botui.js"></script>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  
+  
+  <script type="text/javascript">
+     
+    
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"close"},"windowheight":"fixed","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    } else {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"open"},"windowheight":"auto","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    }
+     
+    </script>
+  
+    
+      
+        
+     <script  src="/js/search/algolia/autocomplete.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.16.0/algoliasearch-lite.umd.js" integrity="sha512-0GlicHH3hOwOxa2fHjIdkv0rKFPuPZE+qGSI2HxStLemOkPAJbNRAfw6Rb9WXGp6oYzOv9ZHGZlgHFxjJ7b6RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.53.0/instantsearch.production.min.js" integrity="sha512-DvD+hDgJDdTGGsmfrbAQ96+ny9elfbO5vHi5ODzvFvHLmJEjyERWRGitt9s0InNDqiAXOxqnO7tWdStdyL9dOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script  src="/js/search/algolia/search.js"></script>
+      
+    <script src="/js/search/fusejsSearch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+<script>
+  $(document).ready(function() {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { 
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -400,
+            scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -85,
+            scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+  </script>
+  
+  
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/7e5676fe.js","daovoice");
+      daovoice('init', {
+        app_id: "7e5676fe"
+      });
+      daovoice('update');
+    </script>
+
+   
+  
+  <div class="openNav no-select" style="height: 50px;">
+        <div class="iconflat no-select" style="width: 50px; height: 50px;">
+          <div class="icon"></div>
+        </div>
+        <div class="site-branding search-form-submit">
+          <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+        </div>
+      </div>
+    </section>  
+  <div id="mo-nav" class="">
+  
+  <div class="m-avatar">
+    <img src="/imgs/avator/avatar%280%29.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">雪華</p>
+  
+  <p style="text-align: center; word-spacing: 20px;">
+    
+        
+        <a href="http://github.com/linxuesong" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://github.com/linxuesong" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-home'></i> 主页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/posts">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-book'></i> 文章
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/categories">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-folder-open'></i> 分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/tags">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-tags'></i> 标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-info-circle'></i> 关于
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
         
 
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <style>
+        .aplayer .aplayer-lrc {
+            height: 35px;
+        }
+        .aplayer .aplayer-lrc p{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px !important;
+        }
+        .aplayer .aplayer-lrc p.aplayer-lrc-current{
+            color: #FF1493;
+        }
+        .aplayer.aplayer-narrow .aplayer-body{
+            left: -66px !important;
+        }
+        .aplayer.aplayer-fixed .aplayer-lrc {
+            display: none;
+        }
+        .aplayer .aplayer-lrc.aplayer-lrc-hide {
+            display:none !important;
+        }
+        .aplayer.aplayer-fixed .lrc-show {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <meting-js
+        id = "2660651585" 
+        server = "netease" 
+        type= "playlist" 
+        fixed = "true" 
+        autoplay = "false" 
+        loop = "all" 
+        order = "random" 
+        preload = "auto" 
+        list-folder = "true" 
+        volume = "0.7" 
+        mutex = "true" 
+        list-max-height = "350px" 
+    >
+    </meting-js>
+    <script>
+    $(function(){
+        $('body').on('click', '.aplayer', function(){
+        if($('.aplayer-button').hasClass('aplayer-play')) {
+            $('.aplayer-lrc').removeClass('lrc-show');
+        } else {
+            $('.aplayer-lrc').addClass('lrc-show');
+        }
+        })
+    });
+    </script>
+
+      
+      
+         
 
 
 
+      
+      
+      <a onclick="switchNightMode()" id="sma"> 
+          <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themechris') === '1') {
+              document.body.classList.add('themechris');
+          }
+          else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+              document.body.classList.add('themechris');
+          }
+      </script>
+      <a onclick="switchChrisThemes()" id="switchchristmas">
+          <img class="theme-buttonchrismas" src="/imgs/theme/pendant/christmas-img/7.png" title="圣诞模式">
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themespring') === '1') {
+              document.body.classList.add('themespring');
+          }
+          else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+              document.body.classList.add('themespring');
+          }
+      </script>
+      <div onclick="switchSpringThemes()" id="switchspring">
+          <img class="theme-button" src="/imgs/theme/pendant/spring-img/3.png" title="春节模式">
+      </div>
+    
+      
+          <div class="denglong">
+          <div class="deng-box">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">喜迎</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+          <div class="deng-box1">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">元旦</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+      </div>
+      
+      
+      <div class="caishendengsd">        
+          <div class="caishenxiansd">
+              <img class="caishenpicsd" src="/imgs/theme/pendant/christmas-img/2.png">
+          </div>              
+      </div>
 
-
-
-
-<script type="text/javascript">
-    var mode_custom = "auto";
-    var postsCount =  0 ;
-    var arrPosts = [];
-    var search_theEnd = "The End";
-    var search_nothing = "Nothing was found";
-    var search_found = "Found";
-    var search_result = "result";
-    var search_results = "results";
-</script>
-
-
-
-
-
-    </body>
-</html>
-
+      <div class="caishendeng">        
+          <div class="caishenxianleft">
+              <img class="caishenpic fudai" src="/imgs/theme/pendant/spring-img/3.png">
+          </div>            
+      </div>
+         <script>
+         
+         function switchNightMode() {
+              var body = document.body; 
+              if(body.classList.contains('dark')){ 
+                  document.body.classList.remove('dark'); 
+                  localStorage.setItem('dark','0'); 
+                  $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o"); 
+                  return; 
+              } else {
+                  document.body.classList.add('dark'); 
+                  localStorage.setItem('dark','1'); 
+                  $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o"); 
+                  return; 
+              } 
+         }
+             
+      
+      function switchSpringThemes() {
+          var body = document.body;
+          if(body.classList.contains('themechris')){
+              document.body.classList.remove('themechris');
+              localStorage.setItem('themechris','0');
+              document.body.classList.add('themespring');
+              localStorage.setItem('themespring','1');
+              return;
+          }
+          if(body.classList.contains('themespring')){
+          document.body.classList.remove('themespring');
+          localStorage.setItem('themespring','0');
+          return;
+          } else {
+          document.body.classList.add('themespring');
+          localStorage.setItem('themespring','1');
+          
+          return;
+          }
+      };
+  
+      
+      function switchChrisThemes() {
+          var body = document.body;
+          if(body.classList.contains('themespring')){
+              document.body.classList.remove('themespring');
+              localStorage.setItem('themespring','0');
+              document.body.classList.add('themechris');
+              localStorage.setItem('themechris','1');
+              return;
+          }
+          if(body.classList.contains('themechris')){
+          document.body.classList.remove('themechris');
+          localStorage.setItem('themechris','0');
+          return;
+          } else {
+          document.body.classList.add('themechris');
+          localStorage.setItem('themechris','1');
+          return;
+          }
+      };
+      </script>
+  </body>
+  </html>

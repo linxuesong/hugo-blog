@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MarkDown on 网站标题</title>
+    <link>/tags/markdown/</link>
+    <description>Recent content in MarkDown on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Sat, 26 Dec 2020 20:54:07 +0000</lastBuildDate><atom:link href="/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown语法整理</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0/</link>
+      <pubDate>Sat, 26 Dec 2020 20:54:07 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0/</guid>
+      <description>MarkDown快速查询转移字符 公式块部分 举例
+$$dp[i]=\begin{cases}计算式1 &amp;amp;计算式条件 \\换行计算式2 &amp;amp;计算式条件 \\换行\end{cases}$$详细表格
+   公式块 \begin{cases} 内容 \end{cases} 大公式表达式     \big[ 比较大的左中括号    \bigg[ 再大一点    \Big[ 比big大一点    \Bigg[ 比bigg大一点    a_2 a下标2 a^3 a上标3 上标下标    \sum ：∑ \int ：∫ \oint ：∮ \prod：∏ 求和、求导    \alpha： α \beta： β \gamma：γ \Phi ： Φ \Omega：Ω \Delta： Δ \delta： δ 希腊字母     代码块部分 代码块折叠语法如下</description>
+    </item>
+    
+  </channel>
+</rss>

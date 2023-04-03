@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术 on 网站标题</title>
+    <link>/categories/%E6%8A%80%E6%9C%AF/</link>
+    <description>Recent content in 技术 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 11 Nov 2021 19:38:04 +0000</lastBuildDate><atom:link href="/categories/%E6%8A%80%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hexo-butterfly-tag-plugins-plus插件样式测试文章</title>
+      <link>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Thu, 11 Nov 2021 19:38:04 +0000</pubDate>
+      
+      <guid>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</guid>
+      <description>参考文章https://akilar.top/posts/615e2dec/ #行内文本text {% u 文本内容 %} {% emp 文本内容 %} {% wavy 文本内容 %} {% del 文本内容 %} {% kbd 文本内容 %} {% psw 文本内容 %}
+#行内文本span
+ 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% span center logo large, Volantis %} {% span center small, A Wonderful Theme for Hexo %} #段落文本p 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% p center logo large, Volantis %} {% p center small, A Wonderful Theme for Hexo %} #提示块 #动态标签  {% tip warning faa-horizontal animated %}warning{% endtip %} {% tip ban faa-flash animated %}ban{% endtip %}</description>
+    </item>
+    
+    <item>
+      <title>gson的常规使用</title>
+      <link>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 03 Sep 2021 00:17:28 +0000</pubDate>
+      
+      <guid>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang 字符串常见处理</title>
+      <link>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 23 Jul 2021 11:20:04 +0000</pubDate>
+      
+      <guid>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</guid>
+      <description>一、截取子串
+</description>
+    </item>
+    
+    <item>
+      <title>文章样式测试</title>
+      <link>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 12 Jul 2021 15:02:36 +0000</pubDate>
+      
+      <guid>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</guid>
+      <description>[toc]
+基本快捷键 1、通用操作 Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。所以以下最基本操作很好理解：
+Command-Z 撤销　Command-X 剪切　Command-C 拷贝（Copy）　Command-V 粘贴　Command-A 全选（All）　Command-S 保存（Save)　Command-F 查找（Find）
+2.截图 Command-Shift-4 截取所选屏幕区域到一个文件　Command-Shift-3 截取全部屏幕到文件　Command-Shift-Control-3 截取全部屏幕到剪贴板　Command-Shift-4 截取所选屏幕区域到一个文件，或追加按空格键仅捕捉一个窗口　Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗
+3、在应用程序中： Command-Option-esc 打开强制退出窗口　Command-H 隐藏（Hide）当前正在运行的应用程序窗口　Command-Option-H 隐藏（Hide）其他应用程序窗口　Command-Q 退出（Quit）最前面的应用程序　Command-Shift-Z 重做，也就是撤销的逆向操作　Command-Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）　Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出
+4、文本处理： Command-右箭头 将光标移至当前行的行尾　Command-B 切换所选文字粗体（Bold）显示　fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除　fn-上箭头 向上滚动一页（Page Up）　fn-下箭头 向下滚动一页（Page Down）　fn-左箭头 滚动至文稿开头（Home）　fn-右箭头 滚动至文稿末尾（End）　Command-右箭头 将光标移至当前行的行尾　Command-左箭头 将光标移至当前行的行首　Command-下箭头 将光标移至文稿末尾　Command-上箭头 将光标移至文稿开头　Option-右箭头 将光标移至下一个单词的末尾　Option-左箭头 将光标移至上一个单词的开头　Control-A 移至行或段落的开头</description>
+    </item>
+    
+    <item>
+      <title>hexo博客推广计划，如何让更多人知道</title>
+      <link>/posts/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E8%AE%A9%E6%9B%B4%E5%A4%9A%E4%BA%BA%E7%9F%A5%E9%81%93/</link>
+      <pubDate>Tue, 06 Jul 2021 21:08:12 +0000</pubDate>
+      
+      <guid>/posts/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E8%AE%A9%E6%9B%B4%E5%A4%9A%E4%BA%BA%E7%9F%A5%E9%81%93/</guid>
+      <description>搜索如何将自己的站点加入到百度、谷歌等搜索引擎，让更多的人发现你</description>
+    </item>
+    
+    <item>
+      <title>Go性能分析工具</title>
+      <link>/posts/go%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Thu, 17 Jun 2021 20:42:37 +0000</pubDate>
+      
+      <guid>/posts/go%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</guid>
+      <description>一、GODEBUG参数 特别方便，无需下载第三方工具，无需修改程序 代码
+分析协程调度情况
+https://segmentfault.com/a/1190000020108079
+二、Trace 特点 无需下载第三方工具，需要修改程序代码
+https://segmentfault.com/a/1190000019736288
+如何用 修改代码,加入trace
+import (&amp;quot;os&amp;quot;&amp;quot;runtime/trace&amp;quot;)func main() {trace.Start(os.Stderr)defer trace.Stop() //一定要这一行执行后才会有trace文件ch := make(chan string)go func() {ch &amp;lt;- &amp;quot;EDDYCJY&amp;quot;}()&amp;lt;-ch}生成跟踪文件：
+$ go run main.go 2&amp;gt; trace.out // 运行生成追踪文件 分析追踪文件
+$ go tool trace trace.</description>
+    </item>
+    
+    <item>
+      <title>主题优化增加网页百度统计功能</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 04 Jun 2021 19:56:09 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>1.开通百度统计账号
+2.获取跟踪代码
+3.将跟踪代码放到head末尾位置 本主题的head路径为themes/Sakura/layout/_partial/head.ejs
+TODO: 继续优化将其变成一个站点配置功能，使用指定的百度提供代码中的key作为区分不同的统计
+# Baidu Analytics IDbaidu_analytics: 上面步骤中记录的百度统计里用户的key值。4.效果截图
+参考代码http://www.jcsama.com/2016/01/25/hexo-baido-analytics/</description>
+    </item>
+    
+    <item>
+      <title>protobuf学习整理</title>
+      <link>/posts/protobuf%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 03 Jun 2021 19:53:54 +0000</pubDate>
+      
+      <guid>/posts/protobuf%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</guid>
+      <description>一、ProtoBuf简介 语言平台无关的、灵活、高效、自动化的序列化机制
+类似协议：XML、JSON
+区别点：XML、JSON关注人类可读性，通常用于双方交互的协议；ProtoBuf更关注压缩效率、传输速度，人类可读性差(指序列化之后的文件)二、如何用？ 2.1golang语言 2.1.0环境准备 需要如下两个工具
+1.protoc:可以执行不同语言的api，生成不同语言版本的结构体文件
+2.protoc-gen-go:go版本的生成程序可以生成go语言的结构体
+以上工具不同版本生成的文件是不一样的，所以安需要下载指定版本
+安装最新版本
+1.安装最新的protoc-gen-go, 在gopath路径下执行如下命令go get github.com/golang/protobuf/protoc-gen-go // protoc-gen-go会安到$gopath/bin下,如果自己下载编译，也要放到这个路径下2.安装最新的protobufhttps://github.com/protocolbuffers/protobuf/releases //下载后解压，可以做其他的部分 安装之前的版本
+1.安装之前版本的protoc-gen-go, 在gopath路径下执行如下命令GIT_TAG=&amp;quot;v1.2.0&amp;quot;go get -d -u github.com/golang/protobuf/protoc-gen-gogit -C &amp;quot;$(go env GOPATH)&amp;quot;/src/github.com/golang/protobufcheckout $GIT_TAGgo install github.com/golang/protobuf/protoc-gen-go2.安装之前版本的protobufhttps://github.com/protocolbuffers/protobuf/releases2.2.1准备原协议.proto文件 message xxx {// 字段规则：required -&amp;gt; 字段只能也必须出现 1 次// 字段规则：optional -&amp;gt; 字段可出现 0 次或1次// 字段规则：repeated -&amp;gt; 字段可出现任意多次（包括 0）// 类型：int32、int64、sint32、sint64、string、32-bit .</description>
+    </item>
+    
+    <item>
+      <title>mac快捷键整理</title>
+      <link>/posts/mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 25 May 2021 14:14:02 +0000</pubDate>
+      
+      <guid>/posts/mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</guid>
+      <description>基本快捷键 1、通用操作 Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。所以以下最基本操作很好理解：
+Command-Z 撤销　Command-X 剪切　Command-C 拷贝（Copy）　Command-V 粘贴　Command-A 全选（All）　Command-S 保存（Save)　Command-F 查找（Find）
+2.截图 Command-Shift-4 截取所选屏幕区域到一个文件　Command-Shift-3 截取全部屏幕到文件　Command-Shift-Control-3 截取全部屏幕到剪贴板　Command-Shift-4 截取所选屏幕区域到一个文件，或追加按空格键仅捕捉一个窗口　Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗
+3、在应用程序中： Command-Option-esc 打开强制退出窗口　Command-H 隐藏（Hide）当前正在运行的应用程序窗口　Command-Option-H 隐藏（Hide）其他应用程序窗口　Command-Q 退出（Quit）最前面的应用程序　Command-Shift-Z 重做，也就是撤销的逆向操作　Command-Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）　Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出
+4、文本处理： Command-右箭头 将光标移至当前行的行尾　Command-B 切换所选文字粗体（Bold）显示　fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除　fn-上箭头 向上滚动一页（Page Up）　fn-下箭头 向下滚动一页（Page Down）　fn-左箭头 滚动至文稿开头（Home）　fn-右箭头 滚动至文稿末尾（End）　Command-右箭头 将光标移至当前行的行尾　Command-左箭头 将光标移至当前行的行首　Command-下箭头 将光标移至文稿末尾　Command-上箭头 将光标移至文稿开头　Option-右箭头 将光标移至下一个单词的末尾　Option-左箭头 将光标移至上一个单词的开头　Control-A 移至行或段落的开头</description>
+    </item>
+    
+    <item>
+      <title>MarkDown快速查询转移字符</title>
+      <link>/posts/markdown%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Tue, 25 May 2021 14:13:33 +0000</pubDate>
+      
+      <guid>/posts/markdown%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/</guid>
+      <description>MarkDown快速查询转移字符 公式块部分 举例
+$$dp[i]=\begin{cases}计算式1 &amp;amp;计算式条件 \\换行计算式2 &amp;amp;计算式条件 \\换行\end{cases}$$详细表格
+   公式块 \begin{cases} 内容 \end{cases} 大公式表达式      \big [ //比较大的左中括号    \bigg[ //再大一点    \Big[ //比big大一点    \Bigg[ //比bigg大一点    a_2 a下标2 a^3 a上标3 上标下标    \sum ：∑ \int ：∫ \oint ：∮ \prod：∏ 求和、求导    \alpha： α \beta： β \gamma：γ \Phi ： Φ \Omega：Ω \Delta： Δ \delta： δ 希腊字母    代码块部分 文本部分 表格部分 如果markdown语法对应的表格在hexo上无法显示可以直接插入html代码</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令整理</title>
+      <link>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 25 May 2021 14:12:56 +0000</pubDate>
+      
+      <guid>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <description>Linux常用命令整理 一、文件操作 移动:mv
+复制:cp
+删除:rm
+创建文件夹:mkdir -p参数是即使父目录不存在，递归创建出来文件夹
+查找: find 路径 -name 文件名
+二、进程管理 1.ps命令 ps - aux|(grep 命令名) 显示所有进程信息，连同命令行
+显示结果说明:
+主要参数:
+   USER 用户账号     PID 当前进程ID   CPU 进程占用CPU   MEM 进程占用内存   VSZ 虚拟内存量Kbytes   RSS 物理内存量KBytes   TTY 于哪一终端运作,如果与终端机无关显示?</description>
+    </item>
+    
+    <item>
+      <title>Golang日志第三方库的使用</title>
+      <link>/posts/golang%E6%97%A5%E5%BF%97%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 20 May 2021 10:44:05 +0000</pubDate>
+      
+      <guid>/posts/golang%E6%97%A5%E5%BF%97%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.第三方日志库的对比 2.Zap 2.1简单实例-会把日志打印到控制台 //1.快速创建Zap.logger的方法，使用预先写好的配置创建日志变量//NewExample(Option...)//NewDevelopment(Option...)//NewProductionlogger, _ := zap.NewProduction() defer logger.Sync() // flushes buffer, if any//2.创建日志对象后可以打印日志了，有两种打印日志的方式//2.1效率低一点，但自由度更高sugar := logger.Sugar()sugar.Infow(&amp;quot;failed to fetch URL&amp;quot;,// Structured context as loosely typed key-value pairs.&amp;quot;url&amp;quot;, url,&amp;quot;attempt&amp;quot;, 3,&amp;quot;backoff&amp;quot;, time.Second,)sugar.Infof(&amp;quot;Failed to fetch URL: %s&amp;quot;, url)//2.2效率高一点，要指定类型defer logger.</description>
+    </item>
+    
+    <item>
+      <title>JAVA异常机制</title>
+      <link>/posts/java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/</link>
+      <pubDate>Wed, 14 Apr 2021 17:16:25 +0000</pubDate>
+      
+      <guid>/posts/java%E5%BC%82%E5%B8%B8%E6%9C%BA%E5%88%B6/</guid>
+      <description>一、异常 异常有两种选择：throws和catch，一种是抛给调用者，另一种是在本方法中捕获处理。
+选择标准：如果知道如何处理就catch，不知道如何处理就throws
+异常种类：Throwable是父类， 1⃣️Error子类是系统错误不可控，所以不用抛出、不用处理2⃣️Exception/RuntimeException是可控的要被控制,我们的代码不应有数组越界等错误 3⃣️Exception/IOException是文件读写错误，类加载错误1⃣️2⃣️是不需要throws和catech的，3⃣️是需要throws或catch的,并且如果throws要列出所有可能抛出的IOException
+public static void func1() throws IOException {//列出所有可能抛出的的IOExceptiontry{//检测代码}catch(FileNotFoundException | UnKonwHostException) {// 处理捕获异常throw new ServeletException(&amp;quot;xx&amp;quot;); //也可以再次抛出异常}finally {//最后一定执行的代码，常做一些关闭文件，释放资源的事情， 对于close也可能爆出异常，对此可以用带资源的try语句，保证最后关闭资源}}二、日志 将提示信息按照不同级别打印到指定文件中
+1.JDK的Logging import java.io.UnsupportedEncodingException;import java.util.logging.Logger;public class Main {public static void main(String[] args) Logger logger = Logger.</description>
+    </item>
+    
+    <item>
+      <title>Java中祖先类Object提供的基础方法</title>
+      <link>/posts/java%E4%B8%AD%E7%A5%96%E5%85%88%E7%B1%BBobject%E6%8F%90%E4%BE%9B%E7%9A%84%E5%9F%BA%E7%A1%80%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 09 Apr 2021 15:28:30 +0000</pubDate>
+      
+      <guid>/posts/java%E4%B8%AD%E7%A5%96%E5%85%88%E7%B1%BBobject%E6%8F%90%E4%BE%9B%E7%9A%84%E5%9F%BA%E7%A1%80%E6%96%B9%E6%B3%95/</guid>
+      <description>   函数声明 Object中作用 子类重写作用     boolean equals (Object other) 两个对象的引用是否相等，而非其实例域 比较子类的两个对象其内容是否相等   String hashCode() 由对象导出的散列码    String toString () 返回对象类名和散列码 方便打印对象变量的实际内容，在JAVA语句中+x或x可以自动转为x.toString()   Class getClass () 返回包含对象信息的类对象    String getName() 获取类名字     </description>
+    </item>
+    
+    <item>
+      <title>Java重写完美的equals方法</title>
+      <link>/posts/java%E9%87%8D%E5%86%99%E5%AE%8C%E7%BE%8E%E7%9A%84equals%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 09 Apr 2021 15:08:57 +0000</pubDate>
+      
+      <guid>/posts/java%E9%87%8D%E5%86%99%E5%AE%8C%E7%BE%8E%E7%9A%84equals%E6%96%B9%E6%B3%95/</guid>
+      <description>示例代码：
+ @Overridepublic boolean equals(Object otherObject) {// 1.判断是否引用自身，小优化可以提前避免后面的实例比较if(this == otherObject) {return true;}// 2.比较this和otherObject是否为同一个类,此处有两种选择：// a. this.getClass()==otherObject.getClass(),各个子类中的语义不一致// b. otherObject instanceof ClassName,各个子类中的语义一致if (this.getClass() != otherObject.getClass()) {return false;}// 如果步骤2中按b分支，既比较双方可以转为通用父类，则多下面一步转换// 按照a分支则无需此步骤// ClassName other = (ClassName) otherObject;Father other = (Father) otherObject;// 3.</description>
+    </item>
+    
+    <item>
+      <title>JAVA中数组的常见操作</title>
+      <link>/posts/java%E4%B8%AD%E6%95%B0%E7%BB%84%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</link>
+      <pubDate>Thu, 08 Apr 2021 16:34:03 +0000</pubDate>
+      
+      <guid>/posts/java%E4%B8%AD%E6%95%B0%E7%BB%84%E7%9A%84%E5%B8%B8%E8%A7%81%E6%93%8D%E4%BD%9C/</guid>
+      <description>一、普通数组int[] 深拷贝 类似C++中的数组指针，使用等号赋值只是浅拷贝，深拷贝需要用Arrays类的如下方法
+Static type copyOf(type a[], int length) // 深拷贝出一个新的数组Static type copyOfRange(type a[], int start, int end)排序 int[] a = new int[1000];Arrays.sort(a); // 使用优化后的快速排序方法对数组进行排序判断是否相等 直接用等号判断是判断引用是否为同一处，如果要判断具体值要用Arrays类的如下方法
+static boolean equals(type[] a, type[] b)二、泛型数组列表ArrayList&amp;lt;type&amp;gt; 使用 // 构建 ArrayList&amp;lt;Empolyee&amp;gt; staff = new ArrayList&amp;lt;Employee&amp;gt;(); // 声明并构造 // 增删改查 staff.add(new Emplyee(&amp;#34;xxx&amp;#34;)); // 尾部添加元素,也可以指定位置 Employee e = staff.</description>
+    </item>
+    
+    <item>
+      <title>JAVA String和StringBuilder常用方法</title>
+      <link>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 08 Apr 2021 16:02:34 +0000</pubDate>
+      
+      <guid>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>一、String不可变字符串 1.int compareTo(String other) 比较两字符串大小 2.boolean equals(Object object)比较两字符串是否其内容一致 ==比较运算符比较的是引用位置是否相等，而非其内容
+3.boolean endsWith(String suffix)和Boolean startsWith(String prefix)以指定字符串开始或结尾返回true 4.int indexOf(String str)返回与指定字符串匹配的首个位置 如果还要其他要求，是有函数重载的
+5.int length()字符串长度 6.String toLowerCase()和String toUpperCase()大小写转换 7.String trim()删除原始字符串头部和尾部的空格 更多方法可以参考Java的官网api文档
+二、StringBuilder string问题是每次做字符串拼接都会产生一个新的String对象，这样既耗时又费空间
+使用StringBuilder则可以避免这个问题发生
+1.String toString()转为字符串 2.StringBuilder insert(int offset， String str) 指定位置插入自负传 3.void setCharAt(int i， char c)设置指定位置字符 4.StringBuilder append（String str）追加字符串在尾部 </description>
+    </item>
+    
+    <item>
+      <title>Redis常用命令整理</title>
+      <link>/posts/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 01 Apr 2021 14:59:02 +0000</pubDate>
+      
+      <guid>/posts/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <description>0.前言及Redis的链接 redis缓存数据库，主要存放key-value键值对，其中key为字符串，value可为多种类型字符串、列表、集合、字典
+1.设置字符串 set key valueget key value2.设置列表 lpsuh key childElement // 头部插入lpop key // 头部删除lrang key 0 10 // 从头部开始查询到10// 注：尾部操作则将lpush替换成rpush// 头部插入的下表说明，头部入A、B、C下标: 0、 1、 2元素: A、 B、 C下标: -3、 -2、 -13.设置集合 集合分为无序集合和有序集合(元素含权重)，集合元素个数为2的32次方-1个
+无序集合
+sadd key member // 添加元素smemebers key // 查询所有元素scard key // 获取集合中元素个数sdiff key1 key2 // 差集sinter key1 key2 // 集合的交集运算sunion key1 key2 // 集合的补集有序集合（元素含权重）</description>
+    </item>
+    
+    <item>
+      <title>golang包管理工具介绍</title>
+      <link>/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Wed, 31 Mar 2021 19:34:09 +0000</pubDate>
+      
+      <guid>/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</guid>
+      <description>参考博客
+Go管理工具的使用
+0.没有包管理工具的情况 0.1寻找依赖的路径： 1⃣️在GOROOT目录下查找
+2⃣️在GOPATH/src下面查找包
+0.2获取依赖 go get 依赖地址 // 依赖包会存放到gopath下面两个位置，pkg里面.a文件和src下面的.go文件1.govendor 1.1管理方式 寻找依赖的路径：
+1⃣️在$GOPATH/src/当前包文件/vendor目录
+2⃣️向当前包目录的上级目录查找知道找到src下的vendor
+3⃣️在GOROOT目录下查找
+4⃣️在GOPATH下面查找包
+1.2安装 go get -u github.com/kardianos/govendor安装完成后为方便使用加入到环境变量
+export PATH=&amp;quot;$GOPATH/bin:$PATH&amp;quot;1.3使用 0⃣️如果不是从git上拉取已有vendor.json的项目，而是本地新建项目，则要初始化本地项目
+初始化项目目录，生成vendor目录和vendor.json文件
+govendor init1⃣️下载项目依赖，这里以引入
+依赖为例
+从远程拉去下来依赖并放入当前vendor文件夹，记录到vendor.json,在gopath下不会有依赖包
+govendor fetch &amp;quot;包链接&amp;quot;// 举例：govendor fetch &amp;quot;github.com/labstack/echo/...&amp;quot; //这里三个点表示文件夹下的所有文件，或者echo后面不要有斜杠，标识拉取项目🐻踩坑：i.对于无法从网上下载下里的包，只能从git上自己手动下载，放到vendor下面 ii.有时需要加上三个点标识所有文件，不然会下载下一个空文件夹
+2⃣️提交到git上只需要提交vendor.json即可,不需要把所有的vendor依赖文件夹提交上去
+从git上拉起他人项目，项目中含有vendor.json文件，通过如下命令安装依赖包
+govendor sync1.4其他 常用命令</description>
+    </item>
+    
+    <item>
+      <title>mac迁移软件经历</title>
+      <link>/posts/mac%E8%BF%81%E7%A7%BB%E8%BD%AF%E4%BB%B6%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Sat, 20 Mar 2021 11:10:25 +0000</pubDate>
+      
+      <guid>/posts/mac%E8%BF%81%E7%A7%BB%E8%BD%AF%E4%BB%B6%E7%BB%8F%E5%8E%86/</guid>
+      <description>Mac工作软件安装踩坑记录
+1.Idea 先下载idea，在idea里面下载jdk，这样避免配置jdk
+1.1下载idea 1.2在idea内部安装jdk ![使用idea安装jdk](https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img/截屏2021-03-19 下午7.45.35.png)
+1.3修改maven配置 主要解决：解决maven包拉取不下来
+打开一个项目文件，在配置中将原来电脑的setting.xml做替换，更新maven即可
+2.goland 2.1安装goland 2.2在goland中安装go环境 ![截屏2021-03-19 下午7.53.10](/Users/linxuesong/Desktop/截屏2021-03-19 下午7.53.10.png)
+3.邮件 3.1关闭腾讯企业邮箱的安全登录 登录腾讯企业邮箱官网，设置-》账户，将账户安全修改如下：
+3.2mac邮件添加邮箱账户 选填加其他邮箱账户
+电子邮件和密码是公司提供的，确认后进入如下界面
+这个配置的填写参考腾讯邮箱 设置-》客户端设置界面配置tls端口时要先关闭“自动管理链接设置”
+参考博客：使用Mac自带邮箱添加腾讯企业邮箱 https://www.jianshu.com/p/2eb79645d94f</description>
+    </item>
+    
+    <item>
+      <title>ubuntu中apt-get安装的默认路径</title>
+      <link>/posts/ubuntu%E4%B8%ADapt-get%E5%AE%89%E8%A3%85%E7%9A%84%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84/</link>
+      <pubDate>Mon, 01 Mar 2021 11:12:51 +0000</pubDate>
+      
+      <guid>/posts/ubuntu%E4%B8%ADapt-get%E5%AE%89%E8%A3%85%E7%9A%84%E9%BB%98%E8%AE%A4%E8%B7%AF%E5%BE%84/</guid>
+      <description>博客源地址：https://blog.csdn.net/yanhx1204/article/details/54893581
+一、apt-get 安装 deb是debian linus的安装格式，跟red hat的rpm非常相似，最基本的安装命令是：dpkg -i file.deb或者直接双击此文件
+dpkg 是Debian Package的简写，是为Debian 专门开发的套件管理系统，方便软件的安装、更新及移除。所有源自Debian的Linux发行版都使用dpkg，例如Ubuntu、Knoppix 等。 以下是一些 Dpkg 的普通用法：
+1、dpkg -i 安装一个 Debian 软件包，如你手动下载的文件。
+2、dpkg -c 列出 的内容。
+3、dpkg -I 从 中提取包裹信息。
+4、dpkg -r 移除一个已安装的包裹。
+5、dpkg -P 完全清除一个已安装的包裹。和 remove 不同的是，remove 只是删掉数据和可执行文件，purge 另外还删除所有的配制文件。
+6、dpkg -L 列出 安装的所有文件清单。同时请看 dpkg -c 来检查一个 .deb 文件的内容。
+7、dpkg -s 显示已安装包裹的信息。同时请看 apt-cache 显示 Debian 存档中的包裹信息，以及 dpkg -I 来显示从一个 .</description>
+    </item>
+    
+    <item>
+      <title>编程开发技术学习资源整理</title>
+      <link>/posts/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</link>
+      <pubDate>Fri, 26 Feb 2021 14:19:14 +0000</pubDate>
+      
+      <guid>/posts/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</guid>
+      <description>0.大纲概览 主要介绍一下，本片文章涉及到的内容
+1.编程语言,含c++、go、java
+1.编程语言语法 1.1 C++ 1.2 Golang ①W3Cschool https://www.w3cschool.cn/yqbmht/7rcvwcqm.html 描述：前几章可以做入门使用，之后几章多了一些网络通信的编程
+②https://draveness.me/golang/入门级学习
+③https://draveness.me/golang/docs/part1-prerequisite/ch01-prepare/golang-debug/ 更加底层的学习go语言，设计到汇编，内容细致，干活多
+1.3 Java 2.Linux命令速查 https://blog.csdn.net/waitig1992/article/details/51884653 描述：通过预览页快速定位到http://www.linuxdaxue.com/，快速定位把
+3.Nginx学习 源码学习：
+https://www.kancloud.cn/digest/understandingnginx/202587 章节式学习，有些枯燥
+https://segmentfault.com/a/1190000016922188 单独对nginx配置文件解析过程进行的分析
+4.算法 https://labuladong.gitbook.io/algo/内容生动，总结力强，是提升效率的好文章，主讲算法刷题套路、算法框架总结</description>
+    </item>
+    
+    <item>
+      <title>博客美化增加瀑布流相册</title>
+      <link>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E7%9B%B8%E5%86%8C/</link>
+      <pubDate>Tue, 26 Jan 2021 14:53:03 +0000</pubDate>
+      
+      <guid>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%80%91%E5%B8%83%E6%B5%81%E7%9B%B8%E5%86%8C/</guid>
+      <description>参考链接:
+来源: itsNekoDeng 文章作者: NekoDeng 文章链接: https://nekodeng.gitee.io/posts/waterfall-flow-photo-album.html#toc-heading-9
+自己经过修改后移植到sakura主题
+1.增加相册界面和相册详情页面 1.1新建gallery界面(相册概览) hexo new &amp;quot;gallery&amp;quot;在博客目录/source/gallery可以看到index.md文件，修改内容如下
+---title: gallerycomments: falsedate: 2021-01-25 19:40:18keywords:description:photos:layout: &amp;quot;gallery&amp;quot;---1.2增加相册详情页
+在博客目录创建/source/gallery/test/index.md
+创test文件夹
+及其下面的index.md文件index内容为
+---title: testdate: 2020-10-02 23:00:17 type: &amp;quot;galleries&amp;quot; layout: &amp;quot;galleries&amp;quot; password:---1.2相册加密功能（选用） 在上面index.md文件中，可以实现加密功能，加密使用SHA256加密，所以在加密前需要先将你的密码转换成SHA256格式然后输入到最上面的创建相片页面的index.md的password里面。至于SHA256加密，请自行网上搜索在线生成，例如: http://www.ttmd5.com/hash.php?type=9
+编辑主题导航栏加入相册按钮 2.新增布局样式文件 在博客目录/themes/sakura/layout/位置下新增两个文件gallery.ejs、galleries.ejs</description>
+    </item>
+    
+    <item>
+      <title>回溯算法刷题整理总结</title>
+      <link>/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Wed, 20 Jan 2021 11:07:57 +0000</pubDate>
+      
+      <guid>/posts/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86%E6%80%BB%E7%BB%93/</guid>
+      <description>一、回溯算法理解 本质是以深度遍历的方式遍历决策树
+但因为没有具体的TreeNode构成树，所以回溯与DFS遍历树很像，但不同的是回溯要多一步退回选择的操作
+典型问题:全排列、N皇后问题
+回溯算法的构成要素:
+①选择列表
+②已选路径或已做出的选择(trace或used)
+③结束条件
+回溯算法的模板如下:
+def backTrace(已选路径, 选择列表) {if(结束条件) {return ; // 对于return 如果只问是否有解则返回bool即可;如果要所有的解则用全局变量数组保存所有找到的解}for 某选择:选择列表 {if(不必要选择) {continue;}做选择:某选择加入已选路径，下一步选择列表是否变化backTrace(已选路径, 选择列表)回退选择:某选择退出已选路径，回退后选择列表是否需要恢复}}回溯算法的思路如下:
+画决策树，决策树节点的属性就是 选择和当前路径 我们的backTrace函数在树的各个节点游走，知道遇到结束条件</description>
+    </item>
+    
+    <item>
+      <title>博客美化增加任务清单页面</title>
+      <link>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Mon, 11 Jan 2021 20:04:09 +0000</pubDate>
+      
+      <guid>/posts/%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%BB%E5%8A%A1%E6%B8%85%E5%8D%95%E9%A1%B5%E9%9D%A2/</guid>
+      <description>参考链接:https://nekodeng.gitee.io/posts/todolist-page.html#toc-heading-1
+1.新建todolist页面 hexo new page &amp;quot;todolist&amp;quot;2.配置该页面跳过渲染 这次添加的页面是一个html页面，需要配置跳过渲染后不会使用主题的layout对网页进行渲染
+在主站的配置文件的skip:render种配置
+skip_render: - &amp;quot;todolist/**&amp;quot;3.修改todolist界面 博客目录下/source/todolist/index.md 改为index.html， 文件内容如下:
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt; &amp;lt;title&amp;gt;Title&amp;lt;/title&amp;gt; &amp;lt;script src=&amp;quot;https://cdn.bootcss.com/vue/2.6.10/vue.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;style&amp;gt; body{ margin:0;background-color:#fafafa;font:14px &#39;Helvetica Neue&#39;,Helvetica,Arial,sans-serif} h2{margin:0;font-size:12px} a{color:#000;text-decoration:none} input{outline:0} button{margin:0;padding:0;border:0;background:0;font-size:100%;vertical-align:baseline;font-family:inherit;font-weight:inherit;color:inherit;outline:0} ul{padding:0;margin:0;list-style:none} .page-top{width:100%;height:40px;background-color:#db4c3f} .page-content{width:50%;margin:0 auto} .page-content h2{line-height:40px;font-size:18px;color:#fff} .main{width:50%;margin:0 auto;box-sizing:border-box} .task-input{width:99%;height:30px;outline:0;border:1px solid #ccc} .task-count{display:flex;margin:10px 0} .task-count li{padding-left:10px;flex:1;color:#dd4b39} .</description>
+    </item>
+    
+    <item>
+      <title>Markdown语法整理</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0/</link>
+      <pubDate>Sat, 26 Dec 2020 20:54:07 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E5%A2%9E%E5%8A%A0%E4%BB%A3%E7%A0%81%E5%9D%97%E6%8A%98%E5%8F%A0/</guid>
+      <description>MarkDown快速查询转移字符 公式块部分 举例
+$$dp[i]=\begin{cases}计算式1 &amp;amp;计算式条件 \\换行计算式2 &amp;amp;计算式条件 \\换行\end{cases}$$详细表格
+   公式块 \begin{cases} 内容 \end{cases} 大公式表达式     \big[ 比较大的左中括号    \bigg[ 再大一点    \Big[ 比big大一点    \Bigg[ 比bigg大一点    a_2 a下标2 a^3 a上标3 上标下标    \sum ：∑ \int ：∫ \oint ：∮ \prod：∏ 求和、求导    \alpha： α \beta： β \gamma：γ \Phi ： Φ \Omega：Ω \Delta： Δ \delta： δ 希腊字母     代码块部分 代码块折叠语法如下</description>
+    </item>
+    
+    <item>
+      <title>主题美化添加文章阅读计数统计和网站运行事件</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E8%AE%A1%E6%95%B0%E7%BB%9F%E8%AE%A1/</link>
+      <pubDate>Sat, 26 Dec 2020 20:31:05 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E8%AE%A1%E6%95%B0%E7%BB%9F%E8%AE%A1/</guid>
+      <description>在主题目录/layout/_partial/footer.ejs中 &amp;lt;div class=&amp;ldquo;footer-device&amp;rdquo;&amp;gt;和&amp;lt;div class=&amp;ldquo;site-info&amp;rdquo;&amp;gt;的下面之间加入如下代码
+ &amp;lt;!-- 网站数据统计 --&amp;gt;&amp;lt;div class=&amp;quot;footer-device&amp;quot;&amp;gt;&amp;lt;p style=&amp;quot;font-family: &#39;Ubuntu&#39;, sans-serif;&amp;quot;&amp;gt;&amp;lt;span style=&amp;quot;color: #ff9999;padding-left: 20px;&amp;quot;&amp;gt;&amp;lt;!-- 网站运行时间统计 --&amp;gt;&amp;lt;i class=&amp;quot;fa fa-clock-o&amp;quot; aria-hidden=&amp;quot;true&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;span id=&amp;quot;time&amp;quot; align=&amp;quot;center&amp;quot;&amp;gt;载入时间中...&amp;lt;/span&amp;gt;&amp;lt;script&amp;gt;var now = new Date(); function createtime() { var grt= new Date(&amp;quot;&amp;lt;%- theme.siteBuildingTime %&amp;gt;&amp;quot;);//在此处修改你的建站时间now.setTime(now.getTime()+250); days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.</description>
+    </item>
+    
+    <item>
+      <title>hexo&#43;valine搭建博客评论系统</title>
+      <link>/posts/hexo&#43;valine%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Sat, 26 Dec 2020 10:26:53 +0000</pubDate>
+      
+      <guid>/posts/hexo&#43;valine%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F/</guid>
+      <description>hexo+valine搭建博客评论系统 1.注册LeanCloud
+2.在leanCloud中创建应用
+3.拿到appid和appkey
+然后 进入应用-&amp;gt;设置-&amp;gt;应用key
+拿到你的appid和appkey之后，打开主题配置文件 搜索 valine，填入appid 和 appkey
+4.修改hexo博客主题目录themes/Skaura/_config.yml配置文件中的valine部分内容
+# Valinevaline: truev_appId: GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHszv_appKey: mgOpfzbkHYqU92CV4IDlAUHQ5.记得在Leancloud -&amp;gt; 设置 -&amp;gt; 安全中心 -&amp;gt; Web 安全域名 把你的域名加进去
+最后当我们发送一条评论后可以在leanCloud中的 存储/结构化数据/comment看到评论信息
+PS:valine还可以美化评论背景样式、增加评论邮件通知等等的功能
+参考博客:https://blog.csdn.net/cungudafa/article/details/104281764
+PS:可以在https://en.gravatar.com/网站上注册头像呦，这样就可以在评论时显示自己邮箱绑定的头像了</description>
+    </item>
+    
+    <item>
+      <title>博客增加建站日志页</title>
+      <link>/posts/%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Tue, 22 Dec 2020 11:16:18 +0000</pubDate>
+      
+      <guid>/posts/%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%BB%BA%E7%AB%99%E6%97%A5%E5%BF%97%E9%A1%B5%E9%9D%A2/</guid>
+      <description>1.主题目录/layout/sitelog.ejs &amp;lt;div class=&amp;quot;blank&amp;quot; style=&amp;quot;padding-top: 75px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;% if (page.photos) { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.lazyloadImg %&amp;gt;&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot; style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;% } else { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= theme.bg[Math.floor(Math.random() * theme.bg.length + 1)-1] %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.</description>
+    </item>
+    
+    <item>
+      <title>nginx编写自定义http模块过程整理</title>
+      <link>/posts/nginx%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89http%E6%A8%A1%E5%9D%97%E8%BF%87%E7%A8%8B%E6%95%B4%E7%90%86/</link>
+      <pubDate>Mon, 21 Dec 2020 17:22:22 +0000</pubDate>
+      
+      <guid>/posts/nginx%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89http%E6%A8%A1%E5%9D%97%E8%BF%87%E7%A8%8B%E6%95%B4%E7%90%86/</guid>
+      <description>一、整体过程梳理 1.编写nginx_http_module_t变量nginx_http_hello_module
+2.挂载到处理http请求过程种
+3.
+二、具体编写 我们编写过程采用总分的结构，先写整体,再具体每一个成员
+1.定义自定义http模块变量 ngx_http_hello_module 1.1模板结构体ngx_http_module_t成员说明 说明 ♥是重点变量
+ngx_http_module_t ngx_http_hello_module {ngx_uint_t ctx_index; // 该模块在当前类别(http类别，core event mail)中的排名序号 nginx框架用到ngx_uint_t index; // 该模块在所有类别模块中的排名序号 nginx框架用到ngx_uint_t spare0;//一共四个sapre保留变量暂未用ngx_uint_t spare1;ngx_uint_t spare2;ngx_uint_t spare3;ngx_uint_t version; // 模块版本 包含当前变量在内之前的共7个变量可以用提供好的#define NGX_MODULE_V1去填充void *ctx; // 模块的上下文结构 一个非常重要的变量,主要作用:1.设置读取配置文件完成前后的回调函数，①对不同配置值如何处理②设置该模块挂载到http流程的方式③是处理http请求并返回http响应的一个位置，可以以按阶段处理的方式挂在到http处理流程中2.设置不同级别配置项创建方法，供nginx框架遇到模块感兴趣的配置项时调用创建响应的自定义配置项信息结构体 ♥ngx_command_t *commands; // 指令集合,当和配置文件某项匹配后 执行自定义的指令函数 主要作用:遇到配置项文件后执行自定义函数，函数可以①读取配置文件内容；②是一个处理http请求的位置，以按需分配的方式挂载到http处理流程中♥ngx_uint_t type; //模块类型 core event http mail ♥ngx_int_t (*init_master)(ngx_log_t *log); // 初始化master执行ngx_int_t (*init_module)(ngx_cycle_t *cycle); // 初始化module执行ngx_int_t (*init_process)(ngx_cycle_t *cycle); ngx_int_t (*init_thread)(ngx_cycle_t *cycle);void (*exit_thread)(ngx_cycle_t *cycle);void (*exit_process)(ngx_cycle_t *cycle);void (*exit_master)(ngx_cycle_t *cycle); // 退出master执行uintptr_t spare_hook0; // 保留字段未用,可以用提供好的#define NGX_MODULE_V1_PADDING取填充8个变量uintptr_t spare_hook1;uintptr_t spare_hook2;uintptr_t spare_hook3;uintptr_t spare_hook4;uintptr_t spare_hook5;uintptr_t spare_hook6;uintptr_t spare_hook7;}1.</description>
+    </item>
+    
+    <item>
+      <title>nginx安装过程及相关使用命令</title>
+      <link>/posts/nginx%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 21 Dec 2020 17:12:00 +0000</pubDate>
+      
+      <guid>/posts/nginx%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>一、安装过程 Nginx安装过程
+这里提供两种方式，快速使用
+如果是ubuntu可以直接用下面命令安装
+ apt install nginx这里详细说一下第二种方式:
+0.前期准备(重要，不然会导致下面第3步失败) 安装所需的gcc和依赖库
+4.1、GCC——GNU编译器集合 ubuntu: apt-get install gcc linux: yum install gcc-c++ 4.2、PCRE库 ubuntu:apt-get install libpcre3 libpcre3-devlinux: yum install -y pcre pcre-devel4.3、zlib库 ubuntu: apt-get install zlib1g zlib1g-devlinux: yum install -y zlib zlib-devel4.4、OpenSSL库 ubuntu:apt-get install openssl openssl-devlinux: yum install -y openssl openssl-devel1.</description>
+    </item>
+    
+    <item>
+      <title>增加文章统计折线图、饼状图</title>
+      <link>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E6%8A%98%E7%BA%BF%E5%9B%BE%E9%A5%BC%E7%8A%B6%E5%9B%BE/</link>
+      <pubDate>Fri, 18 Dec 2020 18:03:16 +0000</pubDate>
+      
+      <guid>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BB%9F%E8%AE%A1%E6%8A%98%E7%BA%BF%E5%9B%BE%E9%A5%BC%E7%8A%B6%E5%9B%BE/</guid>
+      <description>1.sakura/layout/analytics.ejs &amp;lt;div class=&amp;quot;pattern-center-blank&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;img src=&amp;quot;https://cdn.jsdelivr.net/gh/drew233/cdn/20200303155335.webp&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot;class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot;style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;style type=&amp;quot;text/css&amp;quot;&amp;gt;#contentss {position: relative;width: 800px;height: 900px;max-height: 1200px;text-align: center;border: 0;color: rgba(0, 0, 0, .87);background: rgba(255, 255, 255, .</description>
+    </item>
+    
+    <item>
+      <title>使用主题的个人插件在文章中插入B站外链视频和图片</title>
+      <link>/posts/%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5b%E7%AB%99%E5%A4%96%E9%93%BE%E8%A7%86%E9%A2%91%E5%92%8C%E5%9B%BE%E7%89%87/</link>
+      <pubDate>Fri, 18 Dec 2020 11:20:10 +0000</pubDate>
+      
+      <guid>/posts/%E4%BD%BF%E7%94%A8%E4%B8%BB%E9%A2%98%E7%9A%84%E4%B8%AA%E4%BA%BA%E6%8F%92%E4%BB%B6%E5%9C%A8%E6%96%87%E7%AB%A0%E4%B8%AD%E6%8F%92%E5%85%A5b%E7%AB%99%E5%A4%96%E9%93%BE%E8%A7%86%E9%A2%91%E5%92%8C%E5%9B%BE%E7%89%87/</guid>
+      <description>写文章配置 主题集成了个人插件hexo-tag-bili和hexo-tag-fancybox_img。其中hexo-tag-bili用来在文章或单页面中插入B站外链视频，使用语法如下：
+{% bili video_id [page] %} 详细使用教程详见hexo-tag-bili。
+hexo-tag-fancybox_img用来在文章或单页面中图片，使用语法如下：
+{% fb_img src [caption] %} 详细使用教程详见hexo-tag-fancybox_img</description>
+    </item>
+    
+    <item>
+      <title>主题美化添加自己的书单页面</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%A6%E5%8D%95%E9%A1%B5%E9%9D%A2/</link>
+      <pubDate>Fri, 18 Dec 2020 10:58:12 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%B7%B1%E7%9A%84%E4%B9%A6%E5%8D%95%E9%A1%B5%E9%9D%A2/</guid>
+      <description>参考
+https://blog.csdn.net/qq_44846853/article/details/104563887
+0.准备安装hexo-douban插件 npm install hexo-douban --save 1.修改主站目录(非主题目录)的_config.yml 博客目录/_config.yml下新建books.ejs
+内容如下
+douban: user: 252345665 #这个需要修改为你个人的id builtin: false #如果想生成豆瓣页面，这个需要设置为truebook: title: &#39;This is my book title&#39; quote: &#39;This is my book quote&#39; movie: title: &#39;This is my movie title&#39; quote: &#39;This is my movie quote&#39; game: title: &#39;This is my game title&#39; quote: &#39;This is my game quote&#39; timeout: 10000说明:</description>
+    </item>
+    
+    <item>
+      <title>将博客网站生成手机app获取下载安装码</title>
+      <link>/posts/%E5%B0%86%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E6%89%8B%E6%9C%BAapp%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E7%A0%81/</link>
+      <pubDate>Thu, 17 Dec 2020 16:15:26 +0000</pubDate>
+      
+      <guid>/posts/%E5%B0%86%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99%E7%94%9F%E6%88%90%E6%89%8B%E6%9C%BAapp%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E7%A0%81/</guid>
+      <description>一门App网站 https://www.yimenapp.com/
+这个比较靠谱，实惠</description>
+    </item>
+    
+    <item>
+      <title>如何调整顶部导航栏的整体长度以放入更多导航项</title>
+      <link>/posts/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%95%B4%E4%BD%93%E9%95%BF%E5%BA%A6%E4%BB%A5%E6%94%BE%E5%85%A5%E6%9B%B4%E5%A4%9A%E5%AF%BC%E8%88%AA%E9%A1%B9/</link>
+      <pubDate>Thu, 17 Dec 2020 16:09:35 +0000</pubDate>
+      
+      <guid>/posts/%E5%A6%82%E4%BD%95%E8%B0%83%E6%95%B4%E9%A1%B6%E9%83%A8%E5%AF%BC%E8%88%AA%E6%A0%8F%E7%9A%84%E6%95%B4%E4%BD%93%E9%95%BF%E5%BA%A6%E4%BB%A5%E6%94%BE%E5%85%A5%E6%9B%B4%E5%A4%9A%E5%AF%BC%E8%88%AA%E9%A1%B9/</guid>
+      <description>修改主题目录/source/css/style.css文件 搜到如下内容按自己需要修改
+属性： min-width越大一行所容纳的个数越多
+​	left:值越大离左侧的距离越远，这里是以整个屏幕的百分比进行衡量的</description>
+    </item>
+    
+    <item>
+      <title>给博客添加小游戏界面谷歌恐龙小游戏加强版</title>
+      <link>/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%B0%B7%E6%AD%8C%E6%81%90%E9%BE%99%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%8A%A0%E5%BC%BA%E7%89%88/</link>
+      <pubDate>Thu, 17 Dec 2020 14:02:56 +0000</pubDate>
+      
+      <guid>/posts/%E7%BB%99%E5%8D%9A%E5%AE%A2%E6%B7%BB%E5%8A%A0%E8%B0%B7%E6%AD%8C%E6%81%90%E9%BE%99%E5%B0%8F%E6%B8%B8%E6%88%8F%E5%8A%A0%E5%BC%BA%E7%89%88/</guid>
+      <description>已有的游戏界面演示链接
+https://dinoswords.gg/
+我们要做的就是添加一个引用接口即可
+1.新建游戏界面文件dinoswords  hexo new page dinoswords因为markdown支持html所以
+在博客目录/source/dinoswords/index.md接着生成好的内容填上:
+&amp;lt;main class=&amp;quot;content&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;card&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;card-content&amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;note info&amp;quot;&amp;gt;操作介绍：&amp;lt;br&amp;gt;开始游戏：首先点击屏幕 &amp;lt;br&amp;gt;跳跃：注意是“点击屏幕” ！&amp;lt;br&amp;gt;道具：跳跃后捡到的道具，使用下方对应26字母键盘键&amp;lt;br&amp;gt;支持手机，电脑，等设备玩耍，点击屏幕开始和跳跃。&amp;lt;/div&amp;gt;&amp;lt;hr&amp;gt;&amp;lt;iframe width=&amp;quot;100%&amp;quot; height=&amp;quot;488px&amp;quot; src=&amp;quot;https://dinoswords.gg/&amp;quot; frameborder=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; scrolling=&amp;quot;no&amp;quot; marginwidth=&amp;quot;0&amp;quot; marginheight=&amp;quot;0&amp;quot; &amp;gt;&amp;lt;/iframe&amp;gt;&amp;lt;!-- &amp;lt;iframe width=&amp;quot;100%&amp;quot; height=&amp;quot;200px&amp;quot; src=&amp;quot;https://api.dlizi.com:555/dinogame/index.html&amp;quot; frameborder=&amp;quot;no&amp;quot; border=&amp;quot;0&amp;quot; scrolling=&amp;quot;no&amp;quot; marginwidth=&amp;quot;0&amp;quot; marginheight=&amp;quot;0&amp;quot; &amp;gt;&amp;lt;/iframe&amp;gt; --&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;/main&amp;gt;如果格式不符合要求可自行修改</description>
+    </item>
+    
+    <item>
+      <title>每页文章结尾出增加标签云展示</title>
+      <link>/posts/%E6%AF%8F%E9%A1%B5%E6%96%87%E7%AB%A0%E7%BB%93%E5%B0%BE%E5%87%BA%E5%A2%9E%E5%8A%A0%E6%A0%87%E7%AD%BE%E4%BA%91%E5%B1%95%E7%A4%BA/</link>
+      <pubDate>Fri, 11 Dec 2020 21:01:19 +0000</pubDate>
+      
+      <guid>/posts/%E6%AF%8F%E9%A1%B5%E6%96%87%E7%AB%A0%E7%BB%93%E5%B0%BE%E5%87%BA%E5%A2%9E%E5%8A%A0%E6%A0%87%E7%AD%BE%E4%BA%91%E5%B1%95%E7%A4%BA/</guid>
+      <description>https://blog.csdn.net/cungudafa/article/details/104616500</description>
+    </item>
+    
+    <item>
+      <title>主题博客增加天气插件</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Fri, 11 Dec 2020 20:59:21 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E5%8D%9A%E5%AE%A2%E5%A2%9E%E5%8A%A0%E5%A4%A9%E6%B0%94%E6%8F%92%E4%BB%B6/</guid>
+      <description>效果预览：
+1.注册和风天气账号 官方网址如下https://www.qweather.com/
+2.导入生成的插件代码 博客目录\themes\Sakura\layout_partial\header.ejs 嵌入到代码的最尾部</description>
+    </item>
+    
+    <item>
+      <title>增加文章贡献日历</title>
+      <link>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E8%B4%A1%E7%8C%AE%E6%97%A5%E5%8E%86/</link>
+      <pubDate>Fri, 11 Dec 2020 20:59:21 +0000</pubDate>
+      
+      <guid>/posts/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0%E8%B4%A1%E7%8C%AE%E6%97%A5%E5%8E%86/</guid>
+      <description>https://blog.csdn.net/cungudafa/article/details/106420842</description>
+    </item>
+    
+    <item>
+      <title>动态规划刷题整理</title>
+      <link>/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 10 Dec 2020 20:04:41 +0000</pubDate>
+      
+      <guid>/posts/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E5%88%B7%E9%A2%98%E6%95%B4%E7%90%86/</guid>
+      <description>LeetCode刷题集锦 5. 最长回文子串 题目描述 给定一个字符串 s，找到 s 中最长的回文子串。你可以假设 s 的最大长度为 1000。
+示例 1：输入: &amp;quot;babad&amp;quot;输出: &amp;quot;bab&amp;quot;注意: &amp;quot;aba&amp;quot; 也是一个有效答案。示例 2：输入: &amp;quot;cbbd&amp;quot;输出: &amp;quot;bb&amp;quot;解题思路 ①想到最优子结构
+大字符串是回文，把首尾字符取去掉后小字符串也是回文 aba是回文，取首尾后子串b也是
+②最小子问题
+只有一个字母，必定是回文
+有两个子母且两个字母相等才是回文
+③状态转移方程 最小子问题如何推出大问题 $$ dp(i,j)=\begin{cases} true &amp;amp; i==j只有一个字母 \
+str[j]==str[i] &amp;amp; j-i==1两个子母 \
+dp(i+1,j-1)且str[j]==str[i] &amp;amp;j-i&amp;gt;1 大于两个字母 \end{cases} $$ ④实现动态规划</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-118. 杨辉三角</title>
+      <link>/posts/leetcode-118.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</link>
+      <pubDate>Tue, 11 Aug 2020 20:14:04 +0000</pubDate>
+      
+      <guid>/posts/leetcode-118.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
+      <description>Leetcode-118. 杨辉三角 1.0题目描述 给定一个非负整数 *numRows，*生成杨辉三角的前 numRows 行。
+在杨辉三角中，每个数是它左上方和右上方的数的和。
+示例:
+输入: 5输出:[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]2.0解题思路 和题目描述那个图的过程一样，比较简单
+3.0代码 func generate(numRows int) [][]int {if(numRows &amp;lt;= 0) {return nil}first := []int{1}result := make([][]int, numRows)for i:=0; i&amp;lt;numRows; i++ {result[i] = make([]int, i+1)}result[0] = firstfor i:=1; i&amp;lt;numRows; i++ {next := make([]int, i+1)next[0], next[i] = 1, 1for j :=1; j&amp;lt;i; j++ {next[j] = result[i-1][j-1] + result[i-1][j]}result[i] = next}return result}4.</description>
+    </item>
+    
+    <item>
+      <title>Hexo博客md文件插入图片（以Typora编辑器为例）</title>
+      <link>/posts/hexo%E5%8D%9A%E5%AE%A2md%E6%96%87%E4%BB%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%BB%A5typora%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%BA%E4%BE%8B/</link>
+      <pubDate>Tue, 28 Jul 2020 14:13:54 +0000</pubDate>
+      
+      <guid>/posts/hexo%E5%8D%9A%E5%AE%A2md%E6%96%87%E4%BB%B6%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E4%BB%A5typora%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%BA%E4%BE%8B/</guid>
+      <description>Typora插入Base64图片 在Typora中插入图片常用的处理方法是：
+将本地的图片地址传入 将网络上的图片地址传入 这两种方式都存在一个问题：链接不可用时，图片就展示不出来了！
+解决方法 方法一 首先将图片通过在线转码工具转换成base64的编码，并用以下格式嵌入即可，格式如下：
+![image] (base64) 但是由于这base64编码往往都很长，很占篇幅，因此我们可以给图片编号，并将所有的图片base64编码放在文档的最后即可，格式如下： 在插入图片的地方使用：![image] [图片编号] 在文档最后使用：[图片编号]:base64编码 这样即可完成图片的永久插入！
+———————————————— 版权声明：本文为CSDN博主「听雨眠_sun」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。 原文链接：https://blog.csdn.net/baidu_31492511/java/article/details/90704123
+方法二 图片素材按官方教程说法，可统一放置在source/images目录中，并以 ![](/images/image.jpg) 方式引用
+或者在 _config.yml 打开 post_asset_folder 功能，将当前文章所用的图片放置到source目录下的文章同名资源目录下，以 ![](image.jpg) 方式引用
+————————————————
+作者：Wavky 链接：https://www.jianshu.com/p/925fa86ccc95 来源：简书 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</description>
+    </item>
+    
+  </channel>
+</rss>

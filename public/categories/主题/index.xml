@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>主题 on 网站标题</title>
+    <link>/categories/%E4%B8%BB%E9%A2%98/</link>
+    <description>Recent content in 主题 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 11 Nov 2021 19:38:04 +0000</lastBuildDate><atom:link href="/categories/%E4%B8%BB%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hexo-butterfly-tag-plugins-plus插件样式测试文章</title>
+      <link>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Thu, 11 Nov 2021 19:38:04 +0000</pubDate>
+      
+      <guid>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</guid>
+      <description>参考文章https://akilar.top/posts/615e2dec/ #行内文本text {% u 文本内容 %} {% emp 文本内容 %} {% wavy 文本内容 %} {% del 文本内容 %} {% kbd 文本内容 %} {% psw 文本内容 %}
+#行内文本span
+ 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% span center logo large, Volantis %} {% span center small, A Wonderful Theme for Hexo %} #段落文本p 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% p center logo large, Volantis %} {% p center small, A Wonderful Theme for Hexo %} #提示块 #动态标签  {% tip warning faa-horizontal animated %}warning{% endtip %} {% tip ban faa-flash animated %}ban{% endtip %}</description>
+    </item>
+    
+    <item>
+      <title>gson的常规使用</title>
+      <link>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 03 Sep 2021 00:17:28 +0000</pubDate>
+      
+      <guid>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang 字符串常见处理</title>
+      <link>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 23 Jul 2021 11:20:04 +0000</pubDate>
+      
+      <guid>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</guid>
+      <description>一、截取子串
+</description>
+    </item>
+    
+    <item>
+      <title>文章样式测试</title>
+      <link>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 12 Jul 2021 15:02:36 +0000</pubDate>
+      
+      <guid>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</guid>
+      <description>[toc]
+基本快捷键 1、通用操作 Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。所以以下最基本操作很好理解：
+Command-Z 撤销　Command-X 剪切　Command-C 拷贝（Copy）　Command-V 粘贴　Command-A 全选（All）　Command-S 保存（Save)　Command-F 查找（Find）
+2.截图 Command-Shift-4 截取所选屏幕区域到一个文件　Command-Shift-3 截取全部屏幕到文件　Command-Shift-Control-3 截取全部屏幕到剪贴板　Command-Shift-4 截取所选屏幕区域到一个文件，或追加按空格键仅捕捉一个窗口　Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗
+3、在应用程序中： Command-Option-esc 打开强制退出窗口　Command-H 隐藏（Hide）当前正在运行的应用程序窗口　Command-Option-H 隐藏（Hide）其他应用程序窗口　Command-Q 退出（Quit）最前面的应用程序　Command-Shift-Z 重做，也就是撤销的逆向操作　Command-Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）　Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出
+4、文本处理： Command-右箭头 将光标移至当前行的行尾　Command-B 切换所选文字粗体（Bold）显示　fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除　fn-上箭头 向上滚动一页（Page Up）　fn-下箭头 向下滚动一页（Page Down）　fn-左箭头 滚动至文稿开头（Home）　fn-右箭头 滚动至文稿末尾（End）　Command-右箭头 将光标移至当前行的行尾　Command-左箭头 将光标移至当前行的行首　Command-下箭头 将光标移至文稿末尾　Command-上箭头 将光标移至文稿开头　Option-右箭头 将光标移至下一个单词的末尾　Option-左箭头 将光标移至上一个单词的开头　Control-A 移至行或段落的开头</description>
+    </item>
+    
+    <item>
+      <title>hexo博客推广计划，如何让更多人知道</title>
+      <link>/posts/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E8%AE%A9%E6%9B%B4%E5%A4%9A%E4%BA%BA%E7%9F%A5%E9%81%93/</link>
+      <pubDate>Tue, 06 Jul 2021 21:08:12 +0000</pubDate>
+      
+      <guid>/posts/hexo%E5%8D%9A%E5%AE%A2%E6%8E%A8%E5%B9%BF%E8%AE%A1%E5%88%92%E5%A6%82%E4%BD%95%E8%AE%A9%E6%9B%B4%E5%A4%9A%E4%BA%BA%E7%9F%A5%E9%81%93/</guid>
+      <description>搜索如何将自己的站点加入到百度、谷歌等搜索引擎，让更多的人发现你</description>
+    </item>
+    
+    <item>
+      <title>主题优化增加网页百度统计功能</title>
+      <link>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Fri, 04 Jun 2021 19:56:09 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96%E5%A2%9E%E5%8A%A0%E7%BD%91%E9%A1%B5%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD/</guid>
+      <description>1.开通百度统计账号
+2.获取跟踪代码
+3.将跟踪代码放到head末尾位置 本主题的head路径为themes/Sakura/layout/_partial/head.ejs
+TODO: 继续优化将其变成一个站点配置功能，使用指定的百度提供代码中的key作为区分不同的统计
+# Baidu Analytics IDbaidu_analytics: 上面步骤中记录的百度统计里用户的key值。4.效果截图
+参考代码http://www.jcsama.com/2016/01/25/hexo-baido-analytics/</description>
+    </item>
+    
+    <item>
+      <title>个人博客的分类和标签</title>
+      <link>/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Tue, 25 May 2021 14:12:31 +0000</pubDate>
+      
+      <guid>/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/</guid>
+      <description>分类和标签 只有文章支持分类和标签，您可以在 Front-matter 中设置。在其他系统中，分类和标签听起来很接近，但是在 Hexo 中两者有着明显的差别：分类具有顺序性和层次性，也就是说 Foo, Bar 不等于 Bar, Foo；而标签没有顺序和层次。
+categories:- Diarytags:- PS3- Games 分类方法的分歧
+如果您有过使用 WordPress 的经验，就很容易误解 Hexo 的分类方式。WordPress 支持对一篇文章设置多个分类，而且这些分类可以是同级的，也可以是父子分类。但是 Hexo 不支持指定多个同级分类。下面的指定方法：
+categories:- Diary- Life会使分类Life成为Diary的子分类，而不是并列分类。因此，有必要为您的文章选择尽可能准确的分类。
+如果你需要为文章添加多个分类，可以尝试以下 list 中的方法。
+categories:- [Diary, PlayStation]- [Diary, Games]- [Life]此时这篇文章同时包括三个分类： PlayStation 和 Games 分别都是父分类 Diary 的子分类，同时 Life 是一个没有子分类的分类。</description>
+    </item>
+    
+    <item>
+      <title>JAVA String和StringBuilder常用方法</title>
+      <link>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 08 Apr 2021 16:02:34 +0000</pubDate>
+      
+      <guid>/posts/java-string%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>一、String不可变字符串 1.int compareTo(String other) 比较两字符串大小 2.boolean equals(Object object)比较两字符串是否其内容一致 ==比较运算符比较的是引用位置是否相等，而非其内容
+3.boolean endsWith(String suffix)和Boolean startsWith(String prefix)以指定字符串开始或结尾返回true 4.int indexOf(String str)返回与指定字符串匹配的首个位置 如果还要其他要求，是有函数重载的
+5.int length()字符串长度 6.String toLowerCase()和String toUpperCase()大小写转换 7.String trim()删除原始字符串头部和尾部的空格 更多方法可以参考Java的官网api文档
+二、StringBuilder string问题是每次做字符串拼接都会产生一个新的String对象，这样既耗时又费空间
+使用StringBuilder则可以避免这个问题发生
+1.String toString()转为字符串 2.StringBuilder insert(int offset， String str) 指定位置插入自负传 3.void setCharAt(int i， char c)设置指定位置字符 4.StringBuilder append（String str）追加字符串在尾部 </description>
+    </item>
+    
+    <item>
+      <title>Redis常用命令整理</title>
+      <link>/posts/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 01 Apr 2021 14:59:02 +0000</pubDate>
+      
+      <guid>/posts/redis%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <description>0.前言及Redis的链接 redis缓存数据库，主要存放key-value键值对，其中key为字符串，value可为多种类型字符串、列表、集合、字典
+1.设置字符串 set key valueget key value2.设置列表 lpsuh key childElement // 头部插入lpop key // 头部删除lrang key 0 10 // 从头部开始查询到10// 注：尾部操作则将lpush替换成rpush// 头部插入的下表说明，头部入A、B、C下标: 0、 1、 2元素: A、 B、 C下标: -3、 -2、 -13.设置集合 集合分为无序集合和有序集合(元素含权重)，集合元素个数为2的32次方-1个
+无序集合
+sadd key member // 添加元素smemebers key // 查询所有元素scard key // 获取集合中元素个数sdiff key1 key2 // 差集sinter key1 key2 // 集合的交集运算sunion key1 key2 // 集合的补集有序集合（元素含权重）</description>
+    </item>
+    
+    <item>
+      <title>mac迁移软件经历</title>
+      <link>/posts/mac%E8%BF%81%E7%A7%BB%E8%BD%AF%E4%BB%B6%E7%BB%8F%E5%8E%86/</link>
+      <pubDate>Sat, 20 Mar 2021 11:10:25 +0000</pubDate>
+      
+      <guid>/posts/mac%E8%BF%81%E7%A7%BB%E8%BD%AF%E4%BB%B6%E7%BB%8F%E5%8E%86/</guid>
+      <description>Mac工作软件安装踩坑记录
+1.Idea 先下载idea，在idea里面下载jdk，这样避免配置jdk
+1.1下载idea 1.2在idea内部安装jdk ![使用idea安装jdk](https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img/截屏2021-03-19 下午7.45.35.png)
+1.3修改maven配置 主要解决：解决maven包拉取不下来
+打开一个项目文件，在配置中将原来电脑的setting.xml做替换，更新maven即可
+2.goland 2.1安装goland 2.2在goland中安装go环境 ![截屏2021-03-19 下午7.53.10](/Users/linxuesong/Desktop/截屏2021-03-19 下午7.53.10.png)
+3.邮件 3.1关闭腾讯企业邮箱的安全登录 登录腾讯企业邮箱官网，设置-》账户，将账户安全修改如下：
+3.2mac邮件添加邮箱账户 选填加其他邮箱账户
+电子邮件和密码是公司提供的，确认后进入如下界面
+这个配置的填写参考腾讯邮箱 设置-》客户端设置界面配置tls端口时要先关闭“自动管理链接设置”
+参考博客：使用Mac自带邮箱添加腾讯企业邮箱 https://www.jianshu.com/p/2eb79645d94f</description>
+    </item>
+    
+  </channel>
+</rss>

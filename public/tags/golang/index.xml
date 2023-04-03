@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>golang on 网站标题</title>
+    <link>/tags/golang/</link>
+    <description>Recent content in golang on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Fri, 23 Jul 2021 11:20:04 +0000</lastBuildDate><atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang 字符串常见处理</title>
+      <link>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</link>
+      <pubDate>Fri, 23 Jul 2021 11:20:04 +0000</pubDate>
+      
+      <guid>/posts/golang-%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E8%A7%81%E5%A4%84%E7%90%86/</guid>
+      <description>一、截取子串
+</description>
+    </item>
+    
+    <item>
+      <title>Go性能分析工具</title>
+      <link>/posts/go%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Thu, 17 Jun 2021 20:42:37 +0000</pubDate>
+      
+      <guid>/posts/go%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7/</guid>
+      <description>一、GODEBUG参数 特别方便，无需下载第三方工具，无需修改程序 代码
+分析协程调度情况
+https://segmentfault.com/a/1190000020108079
+二、Trace 特点 无需下载第三方工具，需要修改程序代码
+https://segmentfault.com/a/1190000019736288
+如何用 修改代码,加入trace
+import (&amp;quot;os&amp;quot;&amp;quot;runtime/trace&amp;quot;)func main() {trace.Start(os.Stderr)defer trace.Stop() //一定要这一行执行后才会有trace文件ch := make(chan string)go func() {ch &amp;lt;- &amp;quot;EDDYCJY&amp;quot;}()&amp;lt;-ch}生成跟踪文件：
+$ go run main.go 2&amp;gt; trace.out // 运行生成追踪文件 分析追踪文件
+$ go tool trace trace.</description>
+    </item>
+    
+    <item>
+      <title>Golang日志第三方库的使用</title>
+      <link>/posts/golang%E6%97%A5%E5%BF%97%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Thu, 20 May 2021 10:44:05 +0000</pubDate>
+      
+      <guid>/posts/golang%E6%97%A5%E5%BF%97%E7%AC%AC%E4%B8%89%E6%96%B9%E5%BA%93%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description>1.第三方日志库的对比 2.Zap 2.1简单实例-会把日志打印到控制台 //1.快速创建Zap.logger的方法，使用预先写好的配置创建日志变量//NewExample(Option...)//NewDevelopment(Option...)//NewProductionlogger, _ := zap.NewProduction() defer logger.Sync() // flushes buffer, if any//2.创建日志对象后可以打印日志了，有两种打印日志的方式//2.1效率低一点，但自由度更高sugar := logger.Sugar()sugar.Infow(&amp;quot;failed to fetch URL&amp;quot;,// Structured context as loosely typed key-value pairs.&amp;quot;url&amp;quot;, url,&amp;quot;attempt&amp;quot;, 3,&amp;quot;backoff&amp;quot;, time.Second,)sugar.Infof(&amp;quot;Failed to fetch URL: %s&amp;quot;, url)//2.2效率高一点，要指定类型defer logger.</description>
+    </item>
+    
+  </channel>
+</rss>

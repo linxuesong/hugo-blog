@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>protobuf on 网站标题</title>
+    <link>/tags/protobuf/</link>
+    <description>Recent content in protobuf on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 03 Jun 2021 19:53:54 +0000</lastBuildDate><atom:link href="/tags/protobuf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>protobuf学习整理</title>
+      <link>/posts/protobuf%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</link>
+      <pubDate>Thu, 03 Jun 2021 19:53:54 +0000</pubDate>
+      
+      <guid>/posts/protobuf%E5%AD%A6%E4%B9%A0%E6%95%B4%E7%90%86/</guid>
+      <description>一、ProtoBuf简介 语言平台无关的、灵活、高效、自动化的序列化机制
+类似协议：XML、JSON
+区别点：XML、JSON关注人类可读性，通常用于双方交互的协议；ProtoBuf更关注压缩效率、传输速度，人类可读性差(指序列化之后的文件)二、如何用？ 2.1golang语言 2.1.0环境准备 需要如下两个工具
+1.protoc:可以执行不同语言的api，生成不同语言版本的结构体文件
+2.protoc-gen-go:go版本的生成程序可以生成go语言的结构体
+以上工具不同版本生成的文件是不一样的，所以安需要下载指定版本
+安装最新版本
+1.安装最新的protoc-gen-go, 在gopath路径下执行如下命令go get github.com/golang/protobuf/protoc-gen-go // protoc-gen-go会安到$gopath/bin下,如果自己下载编译，也要放到这个路径下2.安装最新的protobufhttps://github.com/protocolbuffers/protobuf/releases //下载后解压，可以做其他的部分 安装之前的版本
+1.安装之前版本的protoc-gen-go, 在gopath路径下执行如下命令GIT_TAG=&amp;quot;v1.2.0&amp;quot;go get -d -u github.com/golang/protobuf/protoc-gen-gogit -C &amp;quot;$(go env GOPATH)&amp;quot;/src/github.com/golang/protobufcheckout $GIT_TAGgo install github.com/golang/protobuf/protoc-gen-go2.安装之前版本的protobufhttps://github.com/protocolbuffers/protobuf/releases2.2.1准备原协议.proto文件 message xxx {// 字段规则：required -&amp;gt; 字段只能也必须出现 1 次// 字段规则：optional -&amp;gt; 字段可出现 0 次或1次// 字段规则：repeated -&amp;gt; 字段可出现任意多次（包括 0）// 类型：int32、int64、sint32、sint64、string、32-bit .</description>
+    </item>
+    
+  </channel>
+</rss>

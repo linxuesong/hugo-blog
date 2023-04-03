@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on 网站标题</title>
+    <link>/tags/linux/</link>
+    <description>Recent content in linux on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Tue, 25 May 2021 14:12:56 +0000</lastBuildDate><atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux常用命令整理</title>
+      <link>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 25 May 2021 14:12:56 +0000</pubDate>
+      
+      <guid>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <description>Linux常用命令整理 一、文件操作 移动:mv
+复制:cp
+删除:rm
+创建文件夹:mkdir -p参数是即使父目录不存在，递归创建出来文件夹
+查找: find 路径 -name 文件名
+二、进程管理 1.ps命令 ps - aux|(grep 命令名) 显示所有进程信息，连同命令行
+显示结果说明:
+主要参数:
+   USER 用户账号     PID 当前进程ID   CPU 进程占用CPU   MEM 进程占用内存   VSZ 虚拟内存量Kbytes   RSS 物理内存量KBytes   TTY 于哪一终端运作,如果与终端机无关显示?</description>
+    </item>
+    
+  </channel>
+</rss>

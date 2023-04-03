@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>包管理工具 on 网站标题</title>
+    <link>/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 包管理工具 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Wed, 31 Mar 2021 19:34:09 +0000</lastBuildDate><atom:link href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>golang包管理工具介绍</title>
+      <link>/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</link>
+      <pubDate>Wed, 31 Mar 2021 19:34:09 +0000</pubDate>
+      
+      <guid>/posts/golang%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E4%BB%8B%E7%BB%8D/</guid>
+      <description>参考博客
+Go管理工具的使用
+0.没有包管理工具的情况 0.1寻找依赖的路径： 1⃣️在GOROOT目录下查找
+2⃣️在GOPATH/src下面查找包
+0.2获取依赖 go get 依赖地址 // 依赖包会存放到gopath下面两个位置，pkg里面.a文件和src下面的.go文件1.govendor 1.1管理方式 寻找依赖的路径：
+1⃣️在$GOPATH/src/当前包文件/vendor目录
+2⃣️向当前包目录的上级目录查找知道找到src下的vendor
+3⃣️在GOROOT目录下查找
+4⃣️在GOPATH下面查找包
+1.2安装 go get -u github.com/kardianos/govendor安装完成后为方便使用加入到环境变量
+export PATH=&amp;quot;$GOPATH/bin:$PATH&amp;quot;1.3使用 0⃣️如果不是从git上拉取已有vendor.json的项目，而是本地新建项目，则要初始化本地项目
+初始化项目目录，生成vendor目录和vendor.json文件
+govendor init1⃣️下载项目依赖，这里以引入
+依赖为例
+从远程拉去下来依赖并放入当前vendor文件夹，记录到vendor.json,在gopath下不会有依赖包
+govendor fetch &amp;quot;包链接&amp;quot;// 举例：govendor fetch &amp;quot;github.com/labstack/echo/...&amp;quot; //这里三个点表示文件夹下的所有文件，或者echo后面不要有斜杠，标识拉取项目🐻踩坑：i.对于无法从网上下载下里的包，只能从git上自己手动下载，放到vendor下面 ii.有时需要加上三个点标识所有文件，不然会下载下一个空文件夹
+2⃣️提交到git上只需要提交vendor.json即可,不需要把所有的vendor依赖文件夹提交上去
+从git上拉起他人项目，项目中含有vendor.json文件，通过如下命令安装依赖包
+govendor sync1.4其他 常用命令</description>
+    </item>
+    
+  </channel>
+</rss>

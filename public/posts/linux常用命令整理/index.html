@@ -1,0 +1,1750 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+     <meta charset="utf-8">
+     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+     
+     <title>Linux常用命令整理</title>
+     
+     
+     
+       <meta name="baidu-site-verification" content="code-Mh5omtSUnt" />
+     
+     
+     
+     
+       <meta name="google-site-verification" content="-b5rAEo2_d1dn4CdJ27sSIEfxMSzkUiRaDuNU2phVn8" />
+     
+     
+
+     
+     <title itemprop="name">
+        雪華
+        記憶
+    </title>
+     
+     
+     
+
+     
+     
+     <meta http-equiv="x-dns-prefetch-control" content="on">
+     <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+     
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+     
+     <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+     
+     <link rel="stylesheet" href="/css/lib.min.css" media="all">
+     <link rel="stylesheet" href="/css/font.css" media="all">
+     
+     <link rel="stylesheet" href="/css/insight.css" media="all">
+     
+     <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+     
+     <link rel="stylesheet" href="/css/zoom.css" media="all">
+     
+     <link rel="stylesheet" href="/css/tagcloud.css" media="all">
+     
+     
+     <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+
+      
+      <link rel="stylesheet" type="text/css" href="/css/search/algolia.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+      
+      <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css"/>
+     
+     <script>
+       
+      var mashiro_option = new Object();
+      var mashiro_global = new Object(); 
+      mashiro_option.NProgressON = true;
+      var copy_right = new Object(); 
+      copy_right.enable =  false ;
+      copy_right.minCharNumber =  120 ; 
+      copy_right.description = "本文章著作权归作者所有，任何形式的转载都请注明出处。";
+
+      var search = new Object();
+      var algolia = new Object();
+      algolia.enable = "false";
+      algolia.appId = "UMAQ9IJSOT";
+      algolia.indexName = "hugoblog";
+      algolia.apiKey = "0f3b78aed4ad1466e2658a546d1b7e99";
+      algolia.perPage =  20 ;
+      algolia.placeholder = "请输入关键字...";
+      
+      search.algolia = algolia;
+
+
+      
+
+      mashiro_option.search = search;
+      mashiro_option.copy_right = copy_right;
+      mashiro_option.email_domain = "";
+      mashiro_option.email_name = "";
+      mashiro_option.cookie_version_control = "";
+      mashiro_option.qzone_autocomplete = false;
+      mashiro_option.site_name = "雪華記憶";
+      mashiro_option.author_name = "lean";
+      mashiro_option.site_url = "";
+      mashiro_option.v_appId = "<%= theme.v_appId %>";
+      mashiro_option.v_appKey = "<%= theme.v_appKey %>";
+      mashiro_option.mathjax = "<%= theme.mathjax %>";
+      mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+      mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+    
+      
+      
+    
+       
+    </script>
+
+     
+     <script type="text/javascript">
+          var bg ="/imgs/homepage/bgcover/cover(0).jpg,/imgs/homepage/bgcover/cover(1).jpg".split(",");
+          var bgindex = Math.floor(Math.random()*bg.length);
+          if (!!window.ActiveXObject || "ActiveXObject" in window) { 
+              alert('朋友，IE浏览器未适配哦~');
+          }
+     </script>
+
+  
+  <style type="text/css">
+    .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FE9600}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+  
+  
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?d67a00154871861401ec8c26b0bdaf5d";
+    var s = document.getElementsByTagName("script")[0]; 
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/l-lin/font-awesome-animation/dist/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.min.css" media="defer" onload="this.media='all'">
+  <script async src="https://cdn.jsdelivr.net/npm/hexo-butterfly-tag-plugins-plus@latest/lib/carousel-touch.min.js"></script>
+  
+  <meta name="generator" content="Hexo 5.4.0">
+  <link rel="alternate" href="/atom.xml" title="楓の葉小窝" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
+</head>
+
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+    <div class="scrollbar" id="bar"></div>
+    <a href="#" class="cd-top faa-float animated"></a>
+    <section id="main-container">
+    
+    
+<div class="headertop filter-dot" style="height: auto;">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://github.com/linxuesong">
+          <img src="/imgs/avator/avatar%280%29.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+       <p>"Be Water, My Friend."</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="/imgs/other/next-b.svg">
+          </li>
+          
+            
+                
+                  <li>
+                    <a href="http://github.com/linxuesong" target="_blank" class="social-github" title="github">
+                      <img src="/imgs/social/github.png">
+                    </a>                    
+                  </li>
+                
+            
+                
+                  <li>
+                    <a href="https://blog.csdn.net/lsxa123" target="_blank" class="social-github" title="csdn">
+                      <img src="/imgs/social/csdn.png">
+                    </a>                    
+                  </li>
+                
+            
+          
+          <li id="bg-next">
+            <img src="/imgs/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+
+  
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive"></div>
+    <div id="video-add"></div>
+    <div class="video-stu"></div>
+  </div>
+  
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true"></i>
+    </span>
+  </div>
+</div><div id="page" class="site wrapper">
+        
+<header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding"> 
+      <span class="site-title"> 
+        <span class="logolink moe-mashiro"> 
+          <a href="" alt="雪花的记忆">
+            <ruby>
+              <span class="sakuraso">雪華</span>
+              <span class="no">の</span>
+              <span class="shironeko">記憶</span>
+              <rp></rp>
+              <rt class="chinese-font">雪花的记忆</rt>
+              <rp></rp>
+            </ruby> 
+          </a> 
+        </span> 
+      </span>
+    </div>
+
+
+ 
+  
+<div class="searchbox search-form-submit">
+    <i class="iconfont js-toggle-search iconsearch icon-search">
+    </i>
+  </div>
+
+  <div id="show-nav" class="showNav mobile-fit">
+    <div class="line line1">
+    </div>
+    <div class="line line2">
+    </div>
+    <div class="line line3">
+    </div>
+  </div>
+ 
+<div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        
+        <div id="searchbox" class="ins-input-wrapper">
+            
+             <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container">
+                
+                <header class="ins-section-header">Posts</header>
+                 <section id="post_hits"></section> 
+                
+                 
+            </div>
+        </div>
+    </div>
+</div>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@algolia/autocomplete-theme-classic"
+/>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '',
+        CONTENT_URL: '网站的json文件', 
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+     
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-home'></i>
+                    主页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/posts">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-book'></i>
+                    文章
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/categories">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-folder-open'></i>
+                    分类
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/tags">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-tags'></i>
+                    标签
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/about">
+                  <span class="faa-parent animated-hover">
+                    <i class='fa fa-info-circle'></i>
+                    关于
+                  </span>
+                </a>
+                
+              </li>
+                
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+  <div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    
+    <img class="pattern-attachment-img lazyload" style="background-image: url();" src=""
+      data-src="/imgs/postpage/postcover/default.jpg">
+    </img>
+
+    <header class="pattern-header single-header">
+        <h1 class="entry-title">Linux常用命令整理</h1>
+        <p class="entry-census">
+          <span>
+            <a href="https://github.com/linxuesong">
+              <img src="/imgs/avator/avatar%280%29.jpg">
+            </a>
+          </span>
+        <span>
+          <a href="https://github.com/linxuesong">lean</a>
+        </span>
+        <span class="bull">·</span>2021年5月25日<span class="bull">·</span>
+        
+        <span class="post-meta-item">
+          <span class="post-meta-item-icon">
+            <i class="iconfont icon-attention"></i>
+          </span>
+          <span class="waline-pageview-count" data-path="/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"></span>
+          <span class="post-meta-item-text">人看过</span>	
+        <span class="bull">·</span>
+        
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-book"></i>
+            <span class="post-count">852字</span>
+          </span>
+          <span class="bull">·</span>
+        </span>        
+        
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-book"></i>
+            <span class="waline-comment-count" data-path="/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/"></span>
+            <span class="post-count">条评论</span>
+          </span>
+          <span class="bull">·</span>
+        </span>        
+        			
+        <span class="post-time">
+          <span class="post-meta-item-icon">
+            <i class="fa fa-coffee"></i>
+            <span class="post-meta-item-text">预计</span>
+            <span class="post-count">4分钟</span>
+          </span>
+        </span>
+    </header>
+  </div>
+  
+  <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+      <main id="main" class="site-main" role="main">
+        <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+          <div class="toc"></div>
+          
+          <div class="entry-content">
+            <h1 id="linux常用命令整理">Linux常用命令整理</h1>
+<h1 id="一文件操作">一、文件操作</h1>
+<p>移动:mv</p>
+<p>复制:cp</p>
+<p>删除:rm</p>
+<p>创建文件夹:mkdir -p参数是即使父目录不存在，递归创建出来文件夹</p>
+<p>查找: find 路径 -name  文件名</p>
+<h1 id="二进程管理">二、进程管理</h1>
+<h2 id="1ps命令">1.ps命令</h2>
+<p>ps - aux|(grep 命令名) 显示所有进程信息，连同命令行</p>
+<p>显示结果说明:</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img/20210120163959.png" alt="image-20210120163951774"></p>
+<p>主要参数:</p>
+<table>
+<thead>
+<tr>
+<th>USER</th>
+<th>用户账号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PID</td>
+<td>当前进程ID</td>
+</tr>
+<tr>
+<td>CPU</td>
+<td>进程占用CPU</td>
+</tr>
+<tr>
+<td>MEM</td>
+<td>进程占用内存</td>
+</tr>
+<tr>
+<td>VSZ</td>
+<td>虚拟内存量Kbytes</td>
+</tr>
+<tr>
+<td>RSS</td>
+<td>物理内存量KBytes</td>
+</tr>
+<tr>
+<td>TTY</td>
+<td>于哪一终端运作,如果与终端机无关显示?</td>
+</tr>
+<tr>
+<td>STAT</td>
+<td>进程状态<!-- raw HTML omitted -->R运行、S睡眠、T停止、Z僵尸</td>
+</tr>
+<tr>
+<td>START</td>
+<td>启动时间</td>
+</tr>
+<tr>
+<td>TIME</td>
+<td>实际占用CPU运行时间</td>
+</tr>
+<tr>
+<td>COMMAND</td>
+<td>该程序的实际命令</td>
+</tr>
+</tbody>
+</table>
+<h1 id="三文件内容查看及操作">三、文件内容查看及操作</h1>
+<p>tail  -fn100   文件  |grep 内容    循环查看日志文件某内容最新消息</p>
+<p>快速查找匹配文本grep -Frn 匹配内容   文件名</p>
+<p>快速编辑匹配文本sed</p>
+<p>格式化文本awk:  如快速输出每一行的第1个和第4个单词</p>
+<p>awk &lsquo;{if($6==&ldquo;42030&rdquo;) {print} }&rsquo; hdp_teu_spat_im_php_access_info.2021042017.*|grep 23653471544838</p>
+<h2 id="1awk">1.awk</h2>
+<h3 id="11通用格式">1.1通用格式</h3>
+<p>awk'{pattern+action}'   filename</p>
+<p>(其操作为每读取一行执行action一次)</p>
+<h3 id="12参数详情">1.2参数详情</h3>
+<h3 id="13举例">1.3举例：</h3>
+<h4 id="131打印每一行的第一个文本">1.3.1打印每一行的第一个文本</h4>
+<p>awk &lsquo;{print $1}&rsquo;  file1</p>
+<h4 id="132加入初始和结尾的执行语句">1.3.2加入初始和结尾的执行语句</h4>
+<p>awk  &lsquo;BGGEIN{print &ldquo;我是开头&rdquo;}    {print $1}    END{print &ldquo;结尾&rdquo;}&rsquo;</p>
+<p>BEGIN、END后面的语句仅执行一次，中间的语句则每读取一次执行一次</p>
+<h4 id="133加入条件语句if">1.3.3加入条件语句if</h4>
+<p>awk {   if($5!='&ldquo;lin&rdquo;)  {print $5}   }</p>
+<p>过滤每行第5个参数为lin的行，打出其他第5行的参数</p>
+<h2 id="2sed匹配删除替换指定文本">2.Sed匹配删除替换指定文本</h2>
+<h3 id="21通用格式">2.1通用格式</h3>
+<p>sed     -nefri  &lsquo;command&rsquo;   文件内容</p>
+<p>(其操作为每读取一行执行action一次)</p>
+<h3 id="22参数详情">2.2参数详情</h3>
+<p>　<strong>常用选项：</strong>
+　　  -n∶使用安静(silent)模式。在一般 sed 的用法中，所有来自 STDIN的资料一般都会被列出到萤幕上。但如果加上 -n 参数后，则只有经过sed 特殊处理的那一行(或者动作)才会被列出来。
+-e∶直接在指令列模式上进行 sed 的动作编辑；
+-f∶直接将 sed 的动作写在一个档案内， -f filename 则可以执行 filename 内的sed 动作；
+-r∶sed 的动作支援的是延伸型正规表示法的语法。(预设是基础正规表示法语法)
+-i∶直接修改读取的档案内容，而不是由萤幕输出。</p>
+<p>　　<strong>常用命令：</strong>
+a  ∶新增， a 的后面可以接字串，而这些字串会在新的一行出现(目前的下一行)～
+c  ∶取代， c 的后面可以接字串，这些字串可以取代 n1,n2 之间的行！
+d  ∶删除，因为是删除啊，所以 d 后面通常不接任何咚咚；
+　　  i  ∶插入， i 的后面可以接字串，而这些字串会在新的一行出现(目前的上一行)；
+　　  p ∶列印，亦即将某个选择的资料印出。通常 p 会与参数 sed -n 一起运作～
+　　  s ∶取代，可以直接进行取代的工作哩！通常这个 s 的动作可以搭配正规表示法！例如 1,20s/old/new/g 就是啦！</p>
+<h3 id="23举例">2.3举例</h3>
+<p>　　假设我们有一文件名为ab。</p>
+<h4 id="231删除某行">2.3.1删除某行：</h4>
+<pre tabindex="0"><code># sed '1d' ab              #删除第一行 
+# sed '$d' ab              #删除最后一行
+# sed '1,2d' ab           #删除第一行到第二行
+# sed '2,$d' ab           #删除第二行到最后一行
+</code></pre><h4 id="232显示某行">2.3.2显示某行：</h4>
+<pre tabindex="0"><code># sed -n '1p' ab           #显示第一行 
+# sed -n '$p' ab           #显示最后一行
+# sed -n '1,2p' ab        #显示第一行到第二行
+# sed -n '2,$p' ab        #显示第二行到最后一行
+</code></pre><h4 id="233使用模式进行查询">2.3.3使用模式进行查询：</h4>
+<pre tabindex="0"><code># sed -n '/ruby/p' ab    #查询包括关键字ruby所在所有行
+# sed -n '/\$/p' ab        #查询包括关键字$所在所有行，使用反斜线\屏蔽特殊含义
+</code></pre><h4 id="234增加一行或多行字符串">2.3.4增加一行或多行字符串：</h4>
+<p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre tabindex="0"><code># cat ab
+     Hello!
+     ruby is me,welcome to my blog.
+     end
+# sed '1a drink tea' ab  #第一行后增加字符串&quot;drink tea&quot;
+     Hello!
+     drink tea
+     ruby is me,welcome to my blog. 
+     end
+# sed '1,3a drink tea' ab #第一行到第三行后增加字符串&quot;drink tea&quot;
+     Hello!
+     drink tea
+     ruby is me,welcome to my blog.
+     drink tea
+     end
+     drink tea
+# sed '1a drink tea\nor coffee' ab   #第一行后增加多行，使用换行符\n
+     Hello!
+     drink tea
+     or coffee
+     ruby is me,welcome to my blog.
+     end
+</code></pre><h4 id="235代替一行或多行">2.3.5代替一行或多行：</h4>
+<p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre tabindex="0"><code># sed '1c Hi' ab                #第一行代替为Hi
+     Hi
+     ruby is me,welcome to my blog.
+     end
+# sed '1,2c Hi' ab             #第一行到第二行代替为Hi
+     Hi
+     end
+</code></pre><p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<h4 id="236替换一行中的某部分">2.3.6替换一行中的某部分</h4>
+<p>　　格式：sed &rsquo;s/要替换的字符串/新的字符串/g'  （要替换的字符串可以用正则表达式）</p>
+<pre tabindex="0"><code># sed -n '/ruby/p' ab | sed 's/ruby/bird/g'    #替换ruby为bird
+# sed -n '/ruby/p' ab | sed 's/ruby//g'        #删除ruby
+</code></pre><h4 id="237插入">2.3.7插入：</h4>
+<p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre tabindex="0"><code># sed -i '$a bye' ab         #在文件ab中最后一行直接输入&quot;bye&quot;
+# cat ab　　Hello!　　ruby is me,welcome to my blog.　　end　　bye
+</code></pre><p><a href=""><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<h4 id="238删除匹配行">2.3.8删除匹配行：</h4>
+<pre tabindex="0"><code>sed -i '/匹配字符串/d'  filename  （注：若匹配字符串是变量，则需要“”，而不是‘’。记得好像是）
+</code></pre><h4 id="239替换匹配行中的某个字符串">2.3.9替换匹配行中的某个字符串：</h4>
+<pre tabindex="0"><code>sed -i '/匹配字符串/s/替换源字符串/替换目标字符串/g' filename
+</code></pre><h2 id="3grep匹配文本">3.grep匹配文本</h2>
+<p>　Linux系统中grep命令是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹 配的行打印出来。grep全称是Global Regular Expression Print，表示全局正则表达式版本，它的使用权限是所有用户。</p>
+<pre tabindex="0"><code>grep [options]
+</code></pre><p>　　<strong>主要参数</strong>
+　　<strong>[options]主要参数：</strong></p>
+<!-- raw HTML omitted -->
+<p>　　－c：只输出匹配行的计数。</p>
+<!-- raw HTML omitted -->
+<p>　　－I：不区分大 小写(只适用于单字符)。
+　　－h：查询多文件时不显示文件名。
+　　－l：查询多文件时只输出包含匹配字符的文件名。
+　　－n：显示匹配行及 行号。
+　　－s：不显示不存在或无匹配文本的错误信息。
+　　－v：显示不包含匹配文本的所有行。
+　　<strong>pattern正则表达式主要参数：</strong>
+　　\： 忽略正则表达式中特殊字符的原有含义。
+　　^：匹配正则表达式的开始行。
+　　$: 匹配正则表达式的结束行。
+　　&lt;：从匹配正则表达 式的行开始。
+　　&gt;：到匹配正则表达式的行结束。
+　　[ ]：单个字符，如[A]即A符合要求 。
+　　[ - ]：范围，如[A-Z]，即A、B、C一直到Z都符合要求 。
+　　。：所有的单个字符。</p>
+<ul>
+<li>：有字符，长度可以为0。</li>
+</ul>
+<h4 id="52-grep简单使用">5.2 grep简单使用</h4>
+<p>　　显示所有以d开头的文件中包含 test的行:</p>
+<pre tabindex="0"><code>$ grep 'test' d*
+</code></pre><p>　　显示在aa，bb，cc文件中匹配test的行:</p>
+<pre tabindex="0"><code>$ grep 'test' aa bb cc
+</code></pre><p>　　输出匹配行的计数:</p>
+<pre tabindex="0"><code> grep -c &quot;48&quot; data.doc   #输出文档中含有48字符的行数
+</code></pre><p>　　显示匹配行和行数:</p>
+<pre tabindex="0"><code>grep -n &quot;48&quot; data.doc       #显示所有匹配48的行和行号
+</code></pre><p>　　显示非匹配的行:</p>
+<pre tabindex="0"><code>grep -vn &quot;48&quot; data.doc      #输出所有不包含48的行
+</code></pre><p>　　显示非匹配的行:</p>
+<pre tabindex="0"><code>grep -vn &quot;48&quot; data.doc      #输出所有不包含48的行
+</code></pre><p>　　大小写敏感:</p>
+<pre tabindex="0"><code>grep -i &quot;ab&quot; data.doc       #输出所有含有ab或Ab的字符串的行
+</code></pre><h4 id="53-grep正则表达式的应用-注意最好把正则表达式用单引号括起来">5.3 grep正则表达式的应用 (注意：最好把正则表达式用单引号括起来)</h4>
+<pre tabindex="0"><code>grep '[239].' data.doc      #输出所有含有以2,3或9开头的，并且是两个数字的行
+</code></pre><p>　　不匹配测试：</p>
+<pre tabindex="0"><code>grep '^[^48]' data.doc      #不匹配行首是48的行
+</code></pre><p>　　使用扩展模式匹配：</p>
+<pre tabindex="0"><code>grep -E '219|216' data.doc
+</code></pre><p>　　显示所有包含每个字符串至少有5个连续小写字符的字符串的行:</p>
+<pre tabindex="0"><code>$ grep '[a-z]\{5\}' aa
+</code></pre><p>　　如果west被匹配，则es就被存储到内存中，并标记为1，然后搜索任意个字符(.<em>)，这些字符后面紧跟着 另外一个es(\1)，找到就显示该行。如果用egrep或grep -E，就不用”\”号进行转义，直接写成’w(es)t.</em>\1′就可以了:</p>
+<pre tabindex="0"><code>$ grep 'w\(es\)t.*\1' aa
+</code></pre><h4 id="54-正则表达式-符号表示">5.4 正则表达式 符号表示</h4>
+<p>![image-20211018131111242](/Users/linxuesong/Library/Application Support/typora-user-images/image-20211018131111242.png)</p>
+<p>a</p>
+<p>![image-20211018131127344](/Users/linxuesong/Library/Application Support/typora-user-images/image-20211018131127344.png)</p>
+<h1 id="四解压文件">四、解压文件</h1>
+<table>
+<thead>
+<tr>
+<th>文件格式</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>tar</td>
+<td>解压tar - xvf       压缩tar - cvf 压缩目标文件  压缩文件</td>
+</tr>
+<tr>
+<td>tar.gz</td>
+<td>解压tar -zxvf      压缩tar  -czf</td>
+</tr>
+<tr>
+<td>zip</td>
+<td>解压zip  压缩后文件名    压缩unzip<!-- raw HTML omitted -->需要下载zip</td>
+</tr>
+<tr>
+<td>rar</td>
+<td>解压rar  a  [压缩后文件名]  [被压缩文件]   压缩unrar e<!-- raw HTML omitted -->需要下载rar</td>
+</tr>
+</tbody>
+</table>
+<h1 id="五检测网络">五、检测网络</h1>
+<p>netstat -ant        n表示以ip的形势显示而非域名    a显示所有socket默认只显示connected状态的  t监听tcp端口</p>
+<h1 id="六查看磁盘使用情况">六、查看磁盘使用情况</h1>
+<h2 id="1统计磁盘整体情况">1.统计磁盘整体情况</h2>
+<p>df -h</p>
+<h2 id="2统计具体文件夹的磁盘使用情况">2.统计具体文件夹的磁盘使用情况</h2>
+<p>du &ndash;max-depth=1 -h查看当前目录下的每个文件夹的使用情况</p>
+<p>du -sh显示当前目录整体占用情况</p>
+<h1 id="七本机和服务器之间的操作">七、本机和服务器之间的操作</h1>
+<p>​	1.nc</p>
+<pre tabindex="0"><code>目的主机监听端口  nc -l 监听端口&lt;未使用端口&gt;  &gt; 要接收的文件名      举例： nc -l 4444 &gt; cache.tar.gz源主机发起请求   nc  目的主机ip    目的端口 &lt; 要发送的文件         举例： nc  192.168.0.85  4444 &lt; /root/cache.tar.gz
+</code></pre><p>传输过程是 目的主机接受文件完成后回自动关闭监听链接</p>
+<h1 id="八linux输出重定向">八、linux输出重定向</h1>
+<p>关于shell中：&gt;/dev/null 2&gt;&amp;1 详解</p>
+<p>​    shell中可能经常能看到：&gt;/dev/null 2&gt;&amp;1 。命令的结果可以通过%&gt;的形式来定义输出</p>
+<p>​    分解这个组合：“&gt;/dev/null 2&gt;&amp;1” 为五部分。</p>
+<p>​        1：&gt; 代表重定向到哪里，例如：echo &ldquo;123&rdquo; &gt; /home/123.txt
+​        2：/dev/null 代表空设备文件
+​        3：2&gt; 表示stderr标准错误
+​        4：&amp; 表示等同于的意思，2&gt;&amp;1，表示 2 的输出重定向等同于 1
+​        5：1 表示stdout标准输出，系统默认值是1，<strong>所以&quot;&gt;/dev/null&quot;等同于 &ldquo;1&gt;/dev/null&rdquo;</strong></p>
+<p>​    因此，<strong>&gt;/dev/null 2&gt;&amp;1也可以写成 “ 1&gt; /dev/null 2&gt; &amp;1 ”</strong></p>
+<p>那么 <em><strong>&amp;&gt;/dev/null</strong></em> 语句执行过程为：
+1&gt;/dev/null ：首先表示标准输出重定向到空设备文件，也就是不输出任何信息到终端，说白了就是不显示任何信息。
+2&gt;&amp;1 ：接着，标准错误输出重定向 到标准输出，因为之前标准输出已经重定向到了空设备文件，所以标准错误输出也重定向到空设备文件。</p>
+<h1 id="九系统资源统计">九、系统资源统计</h1>
+<h2 id="90综合">9.0综合</h2>
+<h3 id="901-top">9.0.1 top</h3>
+<pre tabindex="0"><code>top
+接收参数
+-p 指定要观察的pid
+
+交互命令
+在 top 执行过程当中可以使用的按键指令:
+数字1 显示所有核的情况
+? :显示在 top 当中可以输入的按键指令;
+P :以 CPU 的使用资源排序显示;
+M :以 Memory 的使用资源排序显示;
+N :以 PID 来排序喔!
+T :由该 Process 使用的 CPU 时间累积 (TIME+) 排序。
+k :给予某个 PID 一个讯号 (signal)
+r :给予某个 PID 重新制订一个 nice 值。
+q :离开 top 软件的按键
+H :显示线程
+</code></pre><p>参数含义</p>
+<p>第一行</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019201914.png" alt="image-20211019195146022"></p>
+<p>目前时间、运行时间、登录人数</p>
+<p>1，5，15分钟每个cpu运行的进程数</p>
+<p>第二行</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019202131.png" alt="image-20211019202130125"></p>
+<p>程序运行总量和个别程序运行状态</p>
+<p>第三行</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019202151.png" alt="image-20211019202149878"></p>
+<p>cpu负载情况, wa表示等待I/O wait比例</p>
+<p>第四五行</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019202206.png" alt="image-20211019202205354"></p>
+<p>swap要尽量少，buffer/cached是 读写磁盘用作缓冲的内存，当内存实在不够用时会释放该部分的内存</p>
+<p>所以实际可用内存= free+buffer+cached</p>
+<p>top下半部分</p>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019202704.png" alt="image-20211019202702503"></p>
+<pre tabindex="0"><code>PID :每个 process 的 ID 啦!
+USER:该 process 所属的使用者;
+PR :Priority 的简写，程序的优先执行顺序，越小越早被执行; NI :Nice 的简写，与 Priority 有关，也是越小越早被执行; %CPU:CPU 的使用率;
+%MEM:内存的使用率;
+TIME+:CPU 使用时间的累加
+</code></pre><h3 id="902-dstat">9.0.2 dstat</h3>
+<pre tabindex="0"><code>//实时的监控cpu、磁盘、网络、IO、内存，甚至还有socket等情况，生成csv表格
+dstat
+-c：显示CPU系统占用，用户占用，空闲，等待，中断，软件中断等信息。
+-C：当有多个CPU时候，此参数可按需分别显示cpu状态，例：-C 0,1 是显示cpu0和cpu1的信息。
+-d：显示磁盘读写数据大小。
+-D hda,total：include hda and total。
+-n：显示网络状态。
+-N eth1,total：有多块网卡时，指定要显示的网卡。
+-l：显示系统负载情况。
+-m：显示内存使用情况。
+-g：显示页面使用情况。
+-p：显示进程状态。
+-s：显示交换分区使用情况。
+-S：类似D/N。
+-r：I/O请求情况。
+-y：系统状态。
+--ipc：显示ipc消息队列，信号等信息。
+--socket：用来显示tcp udp端口状态。
+-a：此为默认选项，等同于-cdngy。
+-v：等同于 -pmgdsc -D total。
+--output 文件：此选项也比较有用，可以把状态信息以csv的格式重定向到指定的文件中，以便日后查看。例：dstat --output /root/dstat.csv &amp; 此时让程序默默的在后台运行并把结果输出到/root/dstat.csv文件中。
+
+</code></pre><p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019201904.png" alt="image-20211019175009173"></p>
+<h2 id="91磁盘">9.1磁盘</h2>
+<pre tabindex="0"><code>iostat 
+[-k -m]显示读写单位
+[-d] 2 每2秒1次
+[-x]可以显示更详细信息
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">选项</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">%user</td>
+<td style="text-align:left">CPU在用户态执行进程的时间百分比。</td>
+</tr>
+<tr>
+<td style="text-align:left">%nice</td>
+<td style="text-align:left">CPU在用户态模式下，用于nice操作，所占用CPU总时间的百分比</td>
+</tr>
+<tr>
+<td style="text-align:left">%system</td>
+<td style="text-align:left">CPU处在内核态执行进程的时间百分比</td>
+</tr>
+<tr>
+<td style="text-align:left">%iowait</td>
+<td style="text-align:left">CPU用于等待I/O操作占用CPU总时间的百分比</td>
+</tr>
+<tr>
+<td style="text-align:left">%steal</td>
+<td style="text-align:left">管理程序(hypervisor)为另一个虚拟进程提供服务而等待虚拟CPU的百分比</td>
+</tr>
+<tr>
+<td style="text-align:left">%idle</td>
+<td style="text-align:left">CPU空闲时间百分比</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>若 %iowait 的值过高，表示硬盘存在I/O瓶颈</li>
+<li>若 %idle 的值高但系统响应慢时，有可能是CPU等待分配内存，此时应加大内存容量</li>
+<li>若 %idle 的值持续低于1，则系统的CPU处理能力相对较低，表明系统中最需要解决的资源是 CPU使用比例<strong>iostat -x</strong>  svctm  %util</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019201918.png" alt="image-20211019173631243"></p>
+<h2 id="92cpu">9.2cpu</h2>
+<h2 id="93网卡流量">9.3网卡流量</h2>
+<pre tabindex="0"><code>// 实时显示网卡流量信息
+nload 
+</code></pre><p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019201924.png" alt="image-20211019173936279"></p>
+<h2 id="94内存">9.4内存</h2>
+<pre tabindex="0"><code>vmstat
+vmstat 3 10 每3秒1次，一共10次，没10不会停
+-S k｜m 以kb、mb单位显示内存
+</code></pre><p><img src="https://raw.githubusercontent.com/linxuesong/TyporaPictures/master/img20211019201924.png" alt="image-20211019174435977"></p>
+<pre tabindex="0"><code>字段说明：
+
+Procs（进程）
+
+r: 运行队列中进程数量，这个值也可以判断是否需要增加CPU。（长期大于1）
+b: 等待IO的进程数量。
+Memory（内存）
+
+swpd: 使用虚拟内存大小，如果swpd的值不为0，但是SI，SO的值长期为0，这种情况不会影响系统性能。
+free: 空闲物理内存大小。
+buff: 用作缓冲的内存大小。
+cache: 用作缓存的内存大小，如果cache的值大的时候，说明cache处的文件数多，如果频繁访问到的文件都能被cache处，那么磁盘的读IO bi会非常小。
+Swap
+
+si: 每秒从交换区写到内存的大小，由磁盘调入内存。
+so: 每秒写入交换区的内存大小，由内存调入磁盘。
+注意：内存够用的时候，这2个值都是0，如果这2个值长期大于0时，系统性能会受到影响，磁盘IO和CPU资源都会被消耗。有些朋友看到空闲内存（free）很少的或接近于0时，就认为内存不够用了，不能光看这一点，还要结合si和so，如果free很少，但是si和so也很少（大多时候是0），那么不用担心，系统性能这时不会受到影响的。
+
+IO（现在的Linux版本块的大小为1kb）
+
+bi: 每秒读取的块数
+bo: 每秒写入的块数
+注意：随机磁盘读写的时候，这2个值越大（如超出1024k)，能看到CPU在IO等待的值也会越大。
+
+system（系统）
+
+in: 每秒中断数，包括时钟中断。
+cs: 每秒上下文切换数。
+注意：上面2个值越大，会看到由内核消耗的CPU时间会越大。
+
+CPU（以百分比表示）
+
+us: 用户进程执行时间百分比(user time)
+us的值比较高时，说明用户进程消耗的CPU时间多，但是如果长期超50%的使用，那么我们就该考虑优化程序算法或者进行加速。
+
+sy: 内核系统进程执行时间百分比(system time)
+sy的值高时，说明系统内核消耗的CPU资源多，这并不是良性表现，我们应该检查原因。
+
+wa: IO等待时间百分比
+wa的值高时，说明IO等待比较严重，这可能由于磁盘大量作随机访问造成，也有可能磁盘出现瓶颈（块操作）。
+
+id: 空闲时间百分比
+</code></pre><p>综合:<strong>top</strong>、、<strong>dstat</strong></p>
+<h1 id="十其他">十、其他</h1>
+<p>1.在终端开发应用程序，如使用文本编辑器打开文本文件  open -a  &lt;应用程序&gt;  &lt;文件名&gt;</p>
+<p>2.打印文件树 方法一：find . -print | sed -e &rsquo;s;[^/]*/;|<strong><strong>;g;s;</strong></strong>|; |;g'    方法二：下载tree命令</p>
+
+          </div>
+          
+          
+          <div class="single-reward">
+            <div class="reward-open">赏
+              <div class="reward-main">
+                <ul class="reward-row">
+                  <li class="alipay-code"><img src="/img/sponsor/AliPayQR.jpg"></li>
+                  <li class="wechat-code"><img src="/img/sponsor/WeChanSQ.jpg"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+          <footer class="post-footer">
+            <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+            <div class="post-share">
+              <div class="social-share sharehidden share-component"></div>
+              <i class="iconfont show-share icon-forward"></i>
+            </div>
+          </footer>
+        </article>
+
+  
+  <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcloud.js') %>"></script>
+  <script type="text/javascript" charset="utf-8" src="<%- url_for('/js/tagcanvas.js') %>"></script>
+    <div class="post-tags">
+      <div class="tag-cloud">
+        <div class="tag-cloud-title">标签云</div>
+        <div class="tag-cloud-tags">
+          
+
+ 
+
+    
+    
+    
+    
+            
+            
+            
+            
+            
+            
+            <a href="/tags/c&#43;&#43;/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                c&#43;&#43;
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/go/" style="font-size: 5.333333333333333px; font-weight: 1066.6666666666665; color: #f66">
+                go
+                <sup><strong><sup>2</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/golang/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                golang
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/hexo/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                hexo
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/java/" style="font-size: 6.333333333333333px; font-weight: 1266.6666666666665; color: #f66">
+                java
+                <sup><strong><sup>5</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/leetcode/" style="font-size: 8.666666666666666px; font-weight: 1733.3333333333333; color: #f66">
+                leetcode
+                <sup><strong><sup>12</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/linux/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                linux
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/mac%E8%BD%AF%E4%BB%B6/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                mac软件
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/markdown/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                markdown
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/nginx/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                nginx
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/protobuf/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                protobuf
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/reids/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                reids
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/sakura/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                sakura
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/string/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                string
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/web/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                web
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E4%B8%BB%E9%A2%98%E7%BE%8E%E5%8C%96/" style="font-size: 9.666666666666668px; font-weight: 1933.3333333333335; color: #f66">
+                主题美化
+                <sup><strong><sup>15</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                包管理工具
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%8D%9A%E5%AE%A2%E5%BD%92%E7%B1%BB/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                博客归类
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                多线程
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E5%BC%82%E5%B8%B8/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                异常
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%82%A6%E8%AF%BB/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                悦读
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%84%9F%E6%82%9F/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                感悟
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 9px; font-weight: 1800; color: #f66">
+                数组
+                <sup><strong><sup>13</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                文件读取
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E7%AE%80%E5%8D%95/" style="font-size: 8.666666666666666px; font-weight: 1733.3333333333333; color: #f66">
+                简单
+                <sup><strong><sup>12</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 5.333333333333333px; font-weight: 1066.6666666666665; color: #f66">
+                算法
+                <sup><strong><sup>2</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/" style="font-size: 5.666666666666667px; font-weight: 1133.3333333333335; color: #f66">
+                资料整理
+                <sup><strong><sup>3</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                软件安装
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+            
+            
+            
+            
+            
+            
+            <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 5px; font-weight: 1000; color: #f66">
+                面试
+                <sup><strong><sup>1</sup></strong></sup>
+            </a>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  
+        
+        <div class="toc" style="background: none;"></div>
+        <section class="post-squares nextprev">
+          
+            
+              <div class="post-nepre half previous">
+            
+              <a href="/posts/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E5%88%86%E7%B1%BB%E5%92%8C%E6%A0%87%E7%AD%BE/" rel="prev">
+                <div class="background">
+                  <img class="lazyload" src="" 
+                  data-src="/imgs/postpage/postcover/default.jpg" 
+                  style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                </div>
+                <span class="label">
+                Previous Post</span>
+                <div class="info">
+                  <h3>个人博客的分类和标签</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+          
+          
+            
+              <div class="post-nepre half next">
+            
+              <a href="/posts/markdown%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/" rel="next">
+                <div class="background">
+                  <img class="lazyload" src="" 
+                  data-src="/imgs/postpage/postcover/default.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)">
+                </div>
+                <span class="label">
+                  Next Post
+                </span>
+                <div class="info">
+                  <h3>MarkDown快速查询转移字符</h3>
+                  <hr>
+                </div>
+              </a>
+            </div>
+          
+        </section>
+
+        
+        
+
+  <div id="waline"></div>
+
+        
+        <section class="author-profile">
+          <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+            <a href="https://github.com/linxuesong" class="profile gravatar"><img src="/imgs/avator/avatar%280%29.jpg" itemprop="image" alt="lean" height="70" width="70"></a>
+            <div class="meta">
+              <span class="title">Author</span>
+              <h3 itemprop="name">
+              <a href="https://github.com/linxuesong" itemprop="url" rel="author">lean</a>
+              </h3>
+            </div>
+          </div>
+          <hr>
+          <p><i class="iconfont icon-write"></i>Be Water, My Friend.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+  
+   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+  
+
+    </div>
+
+      <footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="site-info">
+      <div class="footertext">
+        <div class="img-preload">
+          <img src="/imgs/other/post-loading.svg">
+          <img src="/imgs/other/disqus-preloader.svg">
+        </div>
+        <p style="color: #666666;">&copy 2018</p>
+      </div>
+      
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #ff9999;padding-left: 20px;">
+                  
+                  <i class="fa fa-clock-o" aria-hidden="true"></i>
+                  <span id="time" align="center">载入时间中...</span>
+                  <script>
+                    var now = new Date(); 
+                    function createtime() { 
+                          var grt= new Date("2023-03-01 22:08:46");
+                          now.setTime(now.getTime()+250); 
+                          days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+                          hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+                          if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+                          mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+                          seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+                          snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+                          document.getElementById("time").innerHTML = "小破站在各种灾难中生存了 "+ dnum +" 天 "+hnum + " 小时 " + mnum + " 分 " + snum + " 秒";      
+                      } 
+                      setInterval("createtime()",250);
+                  </script>
+              </span> 
+            </p>
+          </div>
+          <div class="footer-device">
+            <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;padding-left: 20px;">
+                
+                <i class="fa fa-line-chart"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i> 博客全站共: <span class="post-count" style="color:#ff9999;">待支持</span>字
+              </span>
+                
+                
+              <span>
+                <i class="fa book"  aria-hidden="true" style="color: #ff9999;display:inline-block"></i>  
+                <span class="post-count" style="color:#ff9999;">待支持</span>篇文章
+              </span>
+                
+                  <span style="padding-left: 20px;">
+                    <i class="fa fa-user" aria-hidden="true" style="color: #ff9999;display:inline-block"></i>
+                    <span id="busuanzi_container_site_uv">
+                      总访问人数： 
+                      <span class="waline-pageview-count" style="color:#ff9999;"data-path="/" />人
+                    </span>
+                  </span>
+              </span>
+            </p>
+          </div>
+
+
+          
+        
+          <div class="footer-device">
+          <p style="font-family: 'Ubuntu', sans-serif;">
+              <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">lean</a>, Powered by Hugoo, Hosted by Coding Pages</a>
+              </span>
+            </p>
+          </div>
+        
+    </div>
+  </footer>
+  
+  
+  
+  
+
+
+
+
+  <script type="text/javascript" src="/js/lib.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+  <script type="text/javascript" src="/js/zoom.min.js"></script>
+  <script type="text/javascript" src="/js/sakura-app.js"></script>
+  <script src="/js/search.js"></script>
+  
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"> 
+    <script src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/live2d_qianduan/live2d-widget-master/autoload.js"></script>
+    
+      
+    
+      
+    
+    <script src="//instant.page/3.0.0" type="module" defer integrity="sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1"></script>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/meme.js"></script>
+    <canvas class="fireworks" style="position:fixed;left:0;top:0;z-index:99999999;pointer-events:none;"></canvas>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/anime.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/linxuesong/cdn/js/鼠标特效/鼠标点击爆炸烟花特效JS/fireworks.js"></script> 
+    
+      
+
+
+
+
+
+
+  
+  
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+      init({
+        el: '#waline',
+        serverURL: 'www.snowday.cn',
+        reaction:  true ,
+        pageview: true, 
+        comment: true, 
+      });
+    </script>
+  
+  
+  <script src="/js/botui.js"></script>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  
+  
+  <script type="text/javascript">
+     
+    
+    if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"close"},"windowheight":"fixed","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    } else {
+      var Poi = {"pjax":"","movies":{"url": "/vedios","name":"HostPageVedio.mp4","live":"open"},"windowheight":"auto","ajaxurl":"","order":"asc","formpostion":"bottom"};
+    }
+     
+    </script>
+  
+    
+      
+        
+     <script  src="/js/search/algolia/autocomplete.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/algoliasearch/4.16.0/algoliasearch-lite.umd.js" integrity="sha512-0GlicHH3hOwOxa2fHjIdkv0rKFPuPZE+qGSI2HxStLemOkPAJbNRAfw6Rb9WXGp6oYzOv9ZHGZlgHFxjJ7b6RQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/instantsearch.js/4.53.0/instantsearch.production.min.js" integrity="sha512-DvD+hDgJDdTGGsmfrbAQ96+ny9elfbO5vHi5ODzvFvHLmJEjyERWRGitt9s0InNDqiAXOxqnO7tWdStdyL9dOw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <script  src="/js/search/algolia/search.js"></script>
+      
+    <script src="/js/search/fusejsSearch.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.6.2/fuse.min.js" integrity="sha512-Nqw1tH3mpavka9cQCc5zWWEZNfIPdOYyQFjlV1NvflEtQ0/XI6ZQ+H/D3YgJdqSUJlMLAPRj/oXlaHCFbFCjoQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+
+<script>
+  $(document).ready(function() {
+    if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+      if ($(".pattern-center").length > 0) { 
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -400,
+            scrollSmoothOffset: -85
+        });
+      } else {
+        tocbot.init({
+            
+            tocSelector: '.toc', 
+            
+            contentSelector: '.entry-content', 
+            
+            scrollSmooth: true,
+            headingSelector: 'h1, h2, h3, h4, h5', 
+            headingsOffset: -85,
+            scrollSmoothOffset: -85
+        });
+      }
+      var offsetTop = $('.toc').offset().top - 95;
+      window.onscroll = function() {
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (scrollTop >= offsetTop) {
+          $('.toc').addClass('toc-fixed');
+        } else {
+          $('.toc').removeClass('toc-fixed');
+        }
+      }
+    }
+  });
+  </script>
+  
+  
+
+    <script>
+    (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/7e5676fe.js","daovoice");
+      daovoice('init', {
+        app_id: "7e5676fe"
+      });
+      daovoice('update');
+    </script>
+
+   
+  
+  <div class="openNav no-select" style="height: 50px;">
+        <div class="iconflat no-select" style="width: 50px; height: 50px;">
+          <div class="icon"></div>
+        </div>
+        <div class="site-branding search-form-submit">
+          <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+        </div>
+      </div>
+    </section>  
+  <div id="mo-nav" class="">
+  
+  <div class="m-avatar">
+    <img src="/imgs/avator/avatar%280%29.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">雪華</p>
+  
+  <p style="text-align: center; word-spacing: 20px;">
+    
+        
+        <a href="http://github.com/linxuesong" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="http://github.com/linxuesong" class="fa fa-weibo" target="_blank" style="color: #dd4b39; margin-left:20px"></a>
+      
+        <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=954655431&amp;site=qq&amp;menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-home'></i> 主页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/posts">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-book'></i> 文章
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/categories">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-folder-open'></i> 分类
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/tags">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-tags'></i> 标签
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/about">
+          <span class="faa-parent animated-hover">
+            <i class='fa fa-info-circle'></i> 关于
+          </span>
+        </a>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+        
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <style>
+        .aplayer .aplayer-lrc {
+            height: 35px;
+        }
+        .aplayer .aplayer-lrc p{
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18px !important;
+        }
+        .aplayer .aplayer-lrc p.aplayer-lrc-current{
+            color: #FF1493;
+        }
+        .aplayer.aplayer-narrow .aplayer-body{
+            left: -66px !important;
+        }
+        .aplayer.aplayer-fixed .aplayer-lrc {
+            display: none;
+        }
+        .aplayer .aplayer-lrc.aplayer-lrc-hide {
+            display:none !important;
+        }
+        .aplayer.aplayer-fixed .lrc-show {
+            display: block;
+            background: rgba(255, 255, 255, 0.8);
+        }
+    </style>
+    <meting-js
+        id = "2660651585" 
+        server = "netease" 
+        type= "playlist" 
+        fixed = "true" 
+        autoplay = "false" 
+        loop = "all" 
+        order = "random" 
+        preload = "auto" 
+        list-folder = "true" 
+        volume = "0.7" 
+        mutex = "true" 
+        list-max-height = "350px" 
+    >
+    </meting-js>
+    <script>
+    $(function(){
+        $('body').on('click', '.aplayer', function(){
+        if($('.aplayer-button').hasClass('aplayer-play')) {
+            $('.aplayer-lrc').removeClass('lrc-show');
+        } else {
+            $('.aplayer-lrc').addClass('lrc-show');
+        }
+        })
+    });
+    </script>
+
+      
+      
+         
+
+
+
+      
+      
+      <a onclick="switchNightMode()" id="sma"> 
+          <i class="fa fa-moon-o" id="nightMode" aria-hidden="true"></i> 
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themechris') === '1') {
+              document.body.classList.add('themechris');
+          }
+          else if (matchMedia('(prefers-color-scheme: themechris)').matches) {
+              document.body.classList.add('themechris');
+          }
+      </script>
+      <a onclick="switchChrisThemes()" id="switchchristmas">
+          <img class="theme-buttonchrismas" src="/imgs/theme/pendant/christmas-img/7.png" title="圣诞模式">
+      </a>
+        
+      <script>
+          if (localStorage.getItem('themespring') === '1') {
+              document.body.classList.add('themespring');
+          }
+          else if (matchMedia('(prefers-color-scheme: themespring)').matches) {
+              document.body.classList.add('themespring');
+          }
+      </script>
+      <div onclick="switchSpringThemes()" id="switchspring">
+          <img class="theme-button" src="/imgs/theme/pendant/spring-img/3.png" title="春节模式">
+      </div>
+    
+      
+          <div class="denglong">
+          <div class="deng-box">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">喜迎</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+          <div class="deng-box1">
+              <div class="deng">
+                  <div class="xian"></div>
+                  <div class="deng-a">
+                      <div class="deng-b"><div class="deng-t">元旦</div></div>
+                  </div>
+                  <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+              </div>
+          </div>
+      </div>
+      
+      
+      <div class="caishendengsd">        
+          <div class="caishenxiansd">
+              <img class="caishenpicsd" src="/imgs/theme/pendant/christmas-img/2.png">
+          </div>              
+      </div>
+
+      <div class="caishendeng">        
+          <div class="caishenxianleft">
+              <img class="caishenpic fudai" src="/imgs/theme/pendant/spring-img/3.png">
+          </div>            
+      </div>
+         <script>
+         
+         function switchNightMode() {
+              var body = document.body; 
+              if(body.classList.contains('dark')){ 
+                  document.body.classList.remove('dark'); 
+                  localStorage.setItem('dark','0'); 
+                  $('#nightMode').removeClass("fa-lightbulb-o").addClass("fa-moon-o"); 
+                  return; 
+              } else {
+                  document.body.classList.add('dark'); 
+                  localStorage.setItem('dark','1'); 
+                  $('#nightMode').removeClass("fa-moon-o").addClass("fa-lightbulb-o"); 
+                  return; 
+              } 
+         }
+             
+      
+      function switchSpringThemes() {
+          var body = document.body;
+          if(body.classList.contains('themechris')){
+              document.body.classList.remove('themechris');
+              localStorage.setItem('themechris','0');
+              document.body.classList.add('themespring');
+              localStorage.setItem('themespring','1');
+              return;
+          }
+          if(body.classList.contains('themespring')){
+          document.body.classList.remove('themespring');
+          localStorage.setItem('themespring','0');
+          return;
+          } else {
+          document.body.classList.add('themespring');
+          localStorage.setItem('themespring','1');
+          
+          return;
+          }
+      };
+  
+      
+      function switchChrisThemes() {
+          var body = document.body;
+          if(body.classList.contains('themespring')){
+              document.body.classList.remove('themespring');
+              localStorage.setItem('themespring','0');
+              document.body.classList.add('themechris');
+              localStorage.setItem('themechris','1');
+              return;
+          }
+          if(body.classList.contains('themechris')){
+          document.body.classList.remove('themechris');
+          localStorage.setItem('themechris','0');
+          return;
+          } else {
+          document.body.classList.add('themechris');
+          localStorage.setItem('themechris','1');
+          return;
+          }
+      };
+      </script>
+  </body>
+  </html>

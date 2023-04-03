@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sakura on 网站标题</title>
+    <link>/tags/sakura/</link>
+    <description>Recent content in Sakura on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Wed, 12 Aug 2020 14:23:37 +0000</lastBuildDate><atom:link href="/tags/sakura/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hexo-Sakura标签云分类云</title>
+      <link>/posts/hexo-sakura%E6%A0%87%E7%AD%BE%E4%BA%91%E5%88%86%E7%B1%BB%E4%BA%91/</link>
+      <pubDate>Wed, 12 Aug 2020 14:23:37 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E6%A0%87%E7%AD%BE%E4%BA%91%E5%88%86%E7%B1%BB%E4%BA%91/</guid>
+      <description>本文参考博客https://www.sakura521.cn/technology/sakurameihua.html
+添加优美的标签页 效果图如下：
+概览 我们要创建四个文件，修改一个文件,最后新生成一个标签页面
+新建文件1 博客目录\themes\Sakura\layout\tages.ejs ⚠：不是tag是tags
+其内容如下：
+&amp;lt;div class=&amp;quot;blank&amp;quot; style=&amp;quot;padding-top: 75px;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;lt;div class=&amp;quot;pattern-center &amp;quot;&amp;gt;&amp;lt;div class=&amp;quot;pattern-attachment-img&amp;quot;&amp;gt;&amp;lt;% if (page.photos) { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; src=&amp;quot;&amp;lt;%- theme.lazyloadImg %&amp;gt;&amp;quot; data-src=&amp;quot;&amp;lt;%= page.photos %&amp;gt;&amp;quot; class=&amp;quot;lazyload&amp;quot; onerror=&amp;quot;imgError(this,3)&amp;quot; style=&amp;quot;width: 100%; height: 100%; object-fit: cover; pointer-events: none;&amp;quot;&amp;gt;&amp;lt;% } else { %&amp;gt;&amp;lt;img src=&amp;quot;&amp;lt;%= theme.</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura如何写新博客</title>
+      <link>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%86%99%E6%96%B0%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Tue, 11 Aug 2020 20:15:41 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%86%99%E6%96%B0%E5%8D%9A%E5%AE%A2/</guid>
+      <description>Hexo-Sakura如何写新博客 1.创建文章 $ hexo new [layout] &amp;lt;title&amp;gt;//例$ hexo new page &amp;quot;我的页面&amp;quot;//布局有三种：post（文章）、draft（草稿）、page（页面）2.编辑文章样式 在博客根目录/source/_posts下找到生成的博客文件
+根据自己的需要修改，一般添加photo的url tag keywords categories 即可，其他可在布局文件中默认设置，自定义布局过程程如下
+在博客根目录/scaffolds/下有三个布局的文件
+我们根据自己的需求更改
+3.编辑文本内容 使用markdown格式编写内容，期间涉及代码块样式、插入图片等技巧可查看本站其他文章</description>
+    </item>
+    
+    <item>
+      <title>Hexo-Sakura如何博客迁移到不同电脑</title>
+      <link>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91/</link>
+      <pubDate>Tue, 11 Aug 2020 20:10:14 +0000</pubDate>
+      
+      <guid>/posts/hexo-sakura%E5%A6%82%E4%BD%95%E5%8D%9A%E5%AE%A2%E8%BF%81%E7%A7%BB%E5%88%B0%E4%B8%8D%E5%90%8C%E7%94%B5%E8%84%91/</guid>
+      <description>Hexo-Sakura博客迁移前期准备 1.将所有的博客项目文件(可以在执行hexo clean 后，这样文件少一点)上传到GitHub的仓库
+这里是上传到linxuesong / **linxuesong.github.io**的hexo分支
+下面开始迁移：
+步骤一：本地初始化hexo博客环境 详见hexo搭建个人博客教程
+要求：hexo s后可以本地看到默认页面
+步骤二：用我们上传的博客项目文件替换初始化的默认文件 1.下载上传的所有博客项目文件
+2.替换默认文件
+步骤三：启用需插件功能 下载不同功能所需对应的hexo插件
+1.本地搜索功能
+npm install hexo-generator-json-content --save2.启用自定义代码块背景
+npm i -S hexo-prism-plugin如何选用hexo-prism-plugin的代码块样式主题，可以本站搜索
+3.添加RSS订阅的网站
+https://blog.csdn.net/cungudafa/article/details/104320396
+4.添加豆瓣hexo-douban插件生成书单、电影等页面
+npm install hexo-douban --save 然后在博客站点目录下的node_modules文件夹下找到hexo-douban/lib，文件夹下有三个js文件，分别为：books-generator.js 、games-generator.js 、movies-generator.js，用文本编辑器打开这三个文件，并将其文件内容末尾的代码修改为一下内容：
+/* 原文件内容为 layout: [`page`, `post`] ，将其修改为下面的内容*/ layout: [`douban`] 5.添加sitemap站点地图生成插件
+用于谷歌、百度收录本网站
+npm install hexo-generator-sitemap --save6.</description>
+    </item>
+    
+  </channel>
+</rss>

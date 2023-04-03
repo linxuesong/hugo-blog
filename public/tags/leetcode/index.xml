@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeetCode on 网站标题</title>
+    <link>/tags/leetcode/</link>
+    <description>Recent content in LeetCode on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 11 Nov 2021 19:38:04 +0000</lastBuildDate><atom:link href="/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hexo-butterfly-tag-plugins-plus插件样式测试文章</title>
+      <link>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</link>
+      <pubDate>Thu, 11 Nov 2021 19:38:04 +0000</pubDate>
+      
+      <guid>/posts/hexo-butterfly-tag-plugins-plus%E6%8F%92%E4%BB%B6%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95%E6%96%87%E7%AB%A0/</guid>
+      <description>参考文章https://akilar.top/posts/615e2dec/ #行内文本text {% u 文本内容 %} {% emp 文本内容 %} {% wavy 文本内容 %} {% del 文本内容 %} {% kbd 文本内容 %} {% psw 文本内容 %}
+#行内文本span
+ 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% span red, 红色 %}、{% span yellow, 黄色 %}、{% span green, 绿色 %}、{% span cyan, 青色 %}、{% span blue, 蓝色 %}、{% span gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% span center logo large, Volantis %} {% span center small, A Wonderful Theme for Hexo %} #段落文本p 彩色文字 在一段话中方便插入各种颜色的标签，包括：{% p red, 红色 %}、{% p yellow, 黄色 %}、{% p green, 绿色 %}、{% p cyan, 青色 %}、{% p blue, 蓝色 %}、{% p gray, 灰色 %}。 超大号文字 文档「开始」页面中的标题部分就是超大号文字。 {% p center logo large, Volantis %} {% p center small, A Wonderful Theme for Hexo %} #提示块 #动态标签  {% tip warning faa-horizontal animated %}warning{% endtip %} {% tip ban faa-flash animated %}ban{% endtip %}</description>
+    </item>
+    
+    <item>
+      <title>gson的常规使用</title>
+      <link>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Fri, 03 Sep 2021 00:17:28 +0000</pubDate>
+      
+      <guid>/posts/gson%E7%9A%84%E5%B8%B8%E8%A7%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>文章样式测试</title>
+      <link>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Mon, 12 Jul 2021 15:02:36 +0000</pubDate>
+      
+      <guid>/posts/%E6%96%87%E7%AB%A0%E6%A0%B7%E5%BC%8F%E6%B5%8B%E8%AF%95/</guid>
+      <description>[toc]
+基本快捷键 1、通用操作 Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。所以以下最基本操作很好理解：
+Command-Z 撤销　Command-X 剪切　Command-C 拷贝（Copy）　Command-V 粘贴　Command-A 全选（All）　Command-S 保存（Save)　Command-F 查找（Find）
+2.截图 Command-Shift-4 截取所选屏幕区域到一个文件　Command-Shift-3 截取全部屏幕到文件　Command-Shift-Control-3 截取全部屏幕到剪贴板　Command-Shift-4 截取所选屏幕区域到一个文件，或追加按空格键仅捕捉一个窗口　Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗
+3、在应用程序中： Command-Option-esc 打开强制退出窗口　Command-H 隐藏（Hide）当前正在运行的应用程序窗口　Command-Option-H 隐藏（Hide）其他应用程序窗口　Command-Q 退出（Quit）最前面的应用程序　Command-Shift-Z 重做，也就是撤销的逆向操作　Command-Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）　Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出
+4、文本处理： Command-右箭头 将光标移至当前行的行尾　Command-B 切换所选文字粗体（Bold）显示　fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除　fn-上箭头 向上滚动一页（Page Up）　fn-下箭头 向下滚动一页（Page Down）　fn-左箭头 滚动至文稿开头（Home）　fn-右箭头 滚动至文稿末尾（End）　Command-右箭头 将光标移至当前行的行尾　Command-左箭头 将光标移至当前行的行首　Command-下箭头 将光标移至文稿末尾　Command-上箭头 将光标移至文稿开头　Option-右箭头 将光标移至下一个单词的末尾　Option-左箭头 将光标移至上一个单词的开头　Control-A 移至行或段落的开头</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-119.杨辉三角 II</title>
+      <link>/posts/leetcode119.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92-ii/</link>
+      <pubDate>Tue, 01 Sep 2020 20:19:42 +0000</pubDate>
+      
+      <guid>/posts/leetcode119.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92-ii/</guid>
+      <description>LeetCode119. 杨辉三角 II 1.0题目描述 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。
+在杨辉三角中，每个数是它左上方和右上方的数的和。
+示例:
+输入: 3输出: [1,3,3,1]进阶：
+你可以优化你的算法到 O(k) 空间复杂度吗？
+2.0 题目分析 和上一题118联系一起，我们发现二维数组存杨辉三角上一层数组生成下一层数组，现在要求仅用一维数组存储
+如何在一维数组的前提下，使用我们的递推公式
+本层arr[i]=上一层arr[i] + 上一层arr[i-1]
+3.0两种思路对比 3.1正向遍历思维 遍历时
+arr[0] = arr[0]上一层
+本层arr[1] = arr[1]上一层 + arr[0]上一层
+本层arr[2] = arr[2]上一层+arr[1]（公式要求上一层，但这一步已经arr[1]变成本层了）
+所以正向遍历思路就是保存这个上一层的arr[i]
+需要变量个数分析：一次遍历要 保存本层arr[i]、用上一层arr[i-1]
+保存是一个变量cur 用上一层又是一个变量pre
+代码如下
+func getRow(rowIndex int) []int { ret := make([]int, rowIndex+1) for i := 0; i &amp;lt; rowIndex+1; i++ { pre := 0 cur := ret[0] for j:=0; j &amp;lt; i; j++ { ret[j] = pre + cur pre,cur = cur, ret[j+1] } ret[i] = 1 } return ret } 进一步优化如果不用两个变量保存，而是换一种方式呢</description>
+    </item>
+    
+    <item>
+      <title>Leetcode88. 合并两个有序数组</title>
+      <link>/posts/leetcode88-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Wed, 12 Aug 2020 20:19:13 +0000</pubDate>
+      
+      <guid>/posts/leetcode88-%E5%90%88%E5%B9%B6%E4%B8%A4%E4%B8%AA%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84/</guid>
+      <description>Leetcode-88. 合并两个有序数组
+1.问题描述 给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。
+说明:
+初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。 你可以假设 nums1 有足够的空间（空间大小大于或等于 m + n）来保存 nums2 中的元素。
+示例:
+输入: nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3
+输出: [1,2,2,3,5,6]
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/merge-sorted-array 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-66. 加一</title>
+      <link>/posts/leetcode-66-%E5%8A%A0%E4%B8%80/</link>
+      <pubDate>Wed, 12 Aug 2020 17:16:49 +0000</pubDate>
+      
+      <guid>/posts/leetcode-66-%E5%8A%A0%E4%B8%80/</guid>
+      <description>Leetcode-66. 加一
+1.0题目描述 给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。
+最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。
+你可以假设除了整数 0 之外，这个整数不会以零开头。
+示例 1:
+输入: [1,2,3] 输出: [1,2,4] 解释: 输入数组表示数字 123。 示例 2:
+输入: [4,3,2,1] 输出: [4,3,2,2] 解释: 输入数组表示数字 4321。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/plus-one 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+2.0解题思路 这道题比较简单，从后向前遍历找到第一个非9数字，记下标为not9first，该下标之后所有数全为0，本下标元素值+1 对异常情况值溢出做特殊处理
+3.0实现代码 func plusOne(digits []int) []int {oldLen := len(digits)not9first := oldLen-1 // 从后向前非9的第一个数for ; not9first &amp;gt;= 0 &amp;amp;&amp;amp; digits[not9first] == 9; not9first-- {digits[not9first] = 0 // 是9就成0}if(not9first !</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-53. 最大子序和</title>
+      <link>/posts/leetcode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</link>
+      <pubDate>Tue, 11 Aug 2020 20:19:50 +0000</pubDate>
+      
+      <guid>/posts/leetcode-53-%E6%9C%80%E5%A4%A7%E5%AD%90%E5%BA%8F%E5%92%8C/</guid>
+      <description>Leetcode-53. 最大子序和
+题目描述 给定一个整数数组 nums ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。
+示例:
+n&amp;rsquo;j输入: [-2,1,-3,4,-1,2,1,-5,4] 输出: 6 解释: 连续子数组 [4,-1,2,1] 的和最大，为 6。 进阶:
+如果你已经实现复杂度为 O(n) 的解法，尝试使用更为精妙的分治法求解。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/maximum-subarray 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+解法一：暴力方法O(n²) 解题思路 两层遍历，外层遍历所有元素，变量start；内层遍历start~结束元素，变量end
+过程中维持着tmp_sum表示start~end的子序列和
+两层遍历完找到最终的result
+实现代码 func maxSubArray(nums []int) int {length := len(nums)if length == 0 {return 0}start := 0end := 0tmp_sum := 0result := nums[end]for ; start&amp;lt;length; start++ {tmp_sum = 0for end=start ; end&amp;lt;length; end++ {tmp_sum += nums[end]if(tmp_sum &amp;gt; result) {result = tmp_sum}}}return result}解法二：动态规划O(n) 解题思路 暴力方法里有重复的子问题，数组中 和最大的连续子序列</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-35搜索插入位置</title>
+      <link>/posts/leetcode-35%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</link>
+      <pubDate>Tue, 11 Aug 2020 20:19:42 +0000</pubDate>
+      
+      <guid>/posts/leetcode-35%E6%90%9C%E7%B4%A2%E6%8F%92%E5%85%A5%E4%BD%8D%E7%BD%AE/</guid>
+      <description>Leetcode-35搜索插入位置
+题目描述 给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。
+你可以假设数组中无重复元素。
+示例 1:
+输入: [1,3,5,6], 5 输出: 2 示例 2:
+输入: [1,3,5,6], 2 输出: 1 示例 3:
+输入: [1,3,5,6], 7 输出: 4 示例 4:
+输入: [1,3,5,6], 0 输出: 0
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/search-insert-position 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+解题思路 二分法很容易想到，但问题是怎么用，查找目标值是等于target，当low&amp;gt;high还未找到就没有
+类推插入位置或匹配位置就是找顺序第一个 &amp;gt;=tartget 元素的位置
+二分查找最后一定是left=right+1
+如果left左开区间的值一直保持小于target，right右开区间一直保持大于等于target，
+这样————right———————left—————
+[0。。。。right]小于targrt
+[left&amp;hellip;.length-1]大于等于target
+即使边界时也一样
+如果硬用二分查找值 &amp;lt; == &amp;gt; 三个分支匹配可看总结处理起来会很麻烦</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-28. 实现 strStr()</title>
+      <link>/posts/leetcode-28-%E5%AE%9E%E7%8E%B0-strstr/</link>
+      <pubDate>Tue, 11 Aug 2020 20:16:50 +0000</pubDate>
+      
+      <guid>/posts/leetcode-28-%E5%AE%9E%E7%8E%B0-strstr/</guid>
+      <description>Leetcode-28. 实现 strStr() 题目描述 实现 strStr() 函数。
+给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。
+示例 1:
+输入: haystack = &amp;ldquo;hello&amp;rdquo;, needle = &amp;ldquo;ll&amp;rdquo; 输出: 2 示例 2:
+输入: haystack = &amp;ldquo;aaaaa&amp;rdquo;, needle = &amp;ldquo;bba&amp;rdquo; 输出: -1 说明:
+当 needle 是空字符串时，我们应当返回什么值呢？这是一个在面试中很好的问题。
+对于本题而言，当 needle 是空字符串时我们应当返回 0 。这与C语言的 strstr() 以及 Java的 indexOf() 定义相符。</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-27移除元素</title>
+      <link>/posts/leetcode-27%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Tue, 11 Aug 2020 20:16:49 +0000</pubDate>
+      
+      <guid>/posts/leetcode-27%E7%A7%BB%E9%99%A4%E5%85%83%E7%B4%A0/</guid>
+      <description>Leetcode-27移除元素
+题目描述 给你一个数组 nums 和一个值 val，你需要 原地 移除所有数值等于 val 的元素，并返回移除后数组的新长度。
+不要使用额外的数组空间，你必须仅使用 O(1) 额外空间并 原地 修改输入数组。
+元素的顺序可以改变。你不需要考虑数组中超出新长度后面的元素。
+示例 1:
+给定 nums = [3,2,2,3], val = 3,
+函数应该返回新的长度 2, 并且 nums 中的前两个元素均为 2。
+你不需要考虑数组中超出新长度后面的元素。 示例 2:
+给定 nums = [0,1,2,2,3,0,4,2], val = 2,
+函数应该返回新的长度 5, 并且 nums 中的前五个元素为 0, 1, 3, 0, 4。</description>
+    </item>
+    
+    <item>
+      <title>Leetcode-118. 杨辉三角</title>
+      <link>/posts/leetcode-118.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</link>
+      <pubDate>Tue, 11 Aug 2020 20:14:04 +0000</pubDate>
+      
+      <guid>/posts/leetcode-118.-%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92/</guid>
+      <description>Leetcode-118. 杨辉三角 1.0题目描述 给定一个非负整数 *numRows，*生成杨辉三角的前 numRows 行。
+在杨辉三角中，每个数是它左上方和右上方的数的和。
+示例:
+输入: 5输出:[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]2.0解题思路 和题目描述那个图的过程一样，比较简单
+3.0代码 func generate(numRows int) [][]int {if(numRows &amp;lt;= 0) {return nil}first := []int{1}result := make([][]int, numRows)for i:=0; i&amp;lt;numRows; i++ {result[i] = make([]int, i+1)}result[0] = firstfor i:=1; i&amp;lt;numRows; i++ {next := make([]int, i+1)next[0], next[i] = 1, 1for j :=1; j&amp;lt;i; j++ {next[j] = result[i-1][j-1] + result[i-1][j]}result[i] = next}return result}4.</description>
+    </item>
+    
+    <item>
+      <title>LeetCode-26删除数组中重复项</title>
+      <link>/posts/leetcode-26%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E9%A1%B9/</link>
+      <pubDate>Tue, 11 Aug 2020 20:14:04 +0000</pubDate>
+      
+      <guid>/posts/leetcode-26%E5%88%A0%E9%99%A4%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E9%A1%B9/</guid>
+      <description>题目描述 给定一个排序数组，你需要在 原地 删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。
+不要使用额外的数组空间，你必须在 原地 修改输入数组 并在使用 O(1) 额外空间的条件下完成。
+示例 1:
+给定数组 nums = [1,1,2],
+函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。
+你不需要考虑数组中超出新长度后面的元素。 示例 2:
+给定 nums = [0,0,1,1,1,2,2,3,3,4],
+函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。
+你不需要考虑数组中超出新长度后面的元素。
+来源：力扣（LeetCode） 链接：https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+解题思路 双指针法：存放非重复元素的指针(0开始) 寻找下一个非重复元素的指针(1开始)
+寻找指针：遍历数组找到 下一个不重复元素(和已存放的元素不相等)，找到后存入非重复指针
+代码实现 func removeDuplicates(nums []int) int {if(len(nums) == 1) {return 1}//bef最大不重复项 cur当前遍历元素bef := 0for cur := 1; cur &amp;lt; len(nums); cur++ {if(nums[bef] !</description>
+    </item>
+    
+  </channel>
+</rss>

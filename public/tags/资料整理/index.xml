@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>资料整理 on 网站标题</title>
+    <link>/tags/%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/</link>
+    <description>Recent content in 资料整理 on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Tue, 25 May 2021 14:14:02 +0000</lastBuildDate><atom:link href="/tags/%E8%B5%84%E6%96%99%E6%95%B4%E7%90%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>mac快捷键整理</title>
+      <link>/posts/mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 25 May 2021 14:14:02 +0000</pubDate>
+      
+      <guid>/posts/mac%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%B4%E7%90%86/</guid>
+      <description>基本快捷键 1、通用操作 Command是Mac里最重要的修饰键，在大多数情况下相当于Windows下的Ctrl。所以以下最基本操作很好理解：
+Command-Z 撤销　Command-X 剪切　Command-C 拷贝（Copy）　Command-V 粘贴　Command-A 全选（All）　Command-S 保存（Save)　Command-F 查找（Find）
+2.截图 Command-Shift-4 截取所选屏幕区域到一个文件　Command-Shift-3 截取全部屏幕到文件　Command-Shift-Control-3 截取全部屏幕到剪贴板　Command-Shift-4 截取所选屏幕区域到一个文件，或追加按空格键仅捕捉一个窗口　Command-Shift-Control-4 截取所选屏幕区域到剪贴板，或按空格键仅捕捉一个窗
+3、在应用程序中： Command-Option-esc 打开强制退出窗口　Command-H 隐藏（Hide）当前正在运行的应用程序窗口　Command-Option-H 隐藏（Hide）其他应用程序窗口　Command-Q 退出（Quit）最前面的应用程序　Command-Shift-Z 重做，也就是撤销的逆向操作　Command-Tab 在打开的应用程序列表中转到下一个最近使用的应用程序，相当于Windows中（Alt+Tab）　Command-Option-esc 打开“强制退出”窗口，如果有应用程序无响应，可在窗口列表中选择强制退出
+4、文本处理： Command-右箭头 将光标移至当前行的行尾　Command-B 切换所选文字粗体（Bold）显示　fn-Delete 相当于PC全尺寸键盘上的Delete，也就是向后删除　fn-上箭头 向上滚动一页（Page Up）　fn-下箭头 向下滚动一页（Page Down）　fn-左箭头 滚动至文稿开头（Home）　fn-右箭头 滚动至文稿末尾（End）　Command-右箭头 将光标移至当前行的行尾　Command-左箭头 将光标移至当前行的行首　Command-下箭头 将光标移至文稿末尾　Command-上箭头 将光标移至文稿开头　Option-右箭头 将光标移至下一个单词的末尾　Option-左箭头 将光标移至上一个单词的开头　Control-A 移至行或段落的开头</description>
+    </item>
+    
+    <item>
+      <title>MarkDown快速查询转移字符</title>
+      <link>/posts/markdown%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/</link>
+      <pubDate>Tue, 25 May 2021 14:13:33 +0000</pubDate>
+      
+      <guid>/posts/markdown%E5%BF%AB%E9%80%9F%E6%9F%A5%E8%AF%A2%E8%BD%AC%E7%A7%BB%E5%AD%97%E7%AC%A6/</guid>
+      <description>MarkDown快速查询转移字符 公式块部分 举例
+$$dp[i]=\begin{cases}计算式1 &amp;amp;计算式条件 \\换行计算式2 &amp;amp;计算式条件 \\换行\end{cases}$$详细表格
+   公式块 \begin{cases} 内容 \end{cases} 大公式表达式      \big [ //比较大的左中括号    \bigg[ //再大一点    \Big[ //比big大一点    \Bigg[ //比bigg大一点    a_2 a下标2 a^3 a上标3 上标下标    \sum ：∑ \int ：∫ \oint ：∮ \prod：∏ 求和、求导    \alpha： α \beta： β \gamma：γ \Phi ： Φ \Omega：Ω \Delta： Δ \delta： δ 希腊字母    代码块部分 文本部分 表格部分 如果markdown语法对应的表格在hexo上无法显示可以直接插入html代码</description>
+    </item>
+    
+    <item>
+      <title>Linux常用命令整理</title>
+      <link>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</link>
+      <pubDate>Tue, 25 May 2021 14:12:56 +0000</pubDate>
+      
+      <guid>/posts/linux%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E6%95%B4%E7%90%86/</guid>
+      <description>Linux常用命令整理 一、文件操作 移动:mv
+复制:cp
+删除:rm
+创建文件夹:mkdir -p参数是即使父目录不存在，递归创建出来文件夹
+查找: find 路径 -name 文件名
+二、进程管理 1.ps命令 ps - aux|(grep 命令名) 显示所有进程信息，连同命令行
+显示结果说明:
+主要参数:
+   USER 用户账号     PID 当前进程ID   CPU 进程占用CPU   MEM 进程占用内存   VSZ 虚拟内存量Kbytes   RSS 物理内存量KBytes   TTY 于哪一终端运作,如果与终端机无关显示?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,10 @@
+{
+    "scripts": {
+        "index": "hugo-lunr"
+    },
+    "dependencies": {
+        "@algolia/autocomplete-js": "^1.8.3",
+        "algoliasearch": "^4.16.0",
+        "instantsearch.js": "^4.53.0"
+    }
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nginx on 网站标题</title>
+    <link>/tags/nginx/</link>
+    <description>Recent content in nginx on 网站标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh_CN</language>
+    <lastBuildDate>Fri, 26 Feb 2021 14:19:14 +0000</lastBuildDate><atom:link href="/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>编程开发技术学习资源整理</title>
+      <link>/posts/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</link>
+      <pubDate>Fri, 26 Feb 2021 14:19:14 +0000</pubDate>
+      
+      <guid>/posts/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/</guid>
+      <description>0.大纲概览 主要介绍一下，本片文章涉及到的内容
+1.编程语言,含c++、go、java
+1.编程语言语法 1.1 C++ 1.2 Golang ①W3Cschool https://www.w3cschool.cn/yqbmht/7rcvwcqm.html 描述：前几章可以做入门使用，之后几章多了一些网络通信的编程
+②https://draveness.me/golang/入门级学习
+③https://draveness.me/golang/docs/part1-prerequisite/ch01-prepare/golang-debug/ 更加底层的学习go语言，设计到汇编，内容细致，干活多
+1.3 Java 2.Linux命令速查 https://blog.csdn.net/waitig1992/article/details/51884653 描述：通过预览页快速定位到http://www.linuxdaxue.com/，快速定位把
+3.Nginx学习 源码学习：
+https://www.kancloud.cn/digest/understandingnginx/202587 章节式学习，有些枯燥
+https://segmentfault.com/a/1190000016922188 单独对nginx配置文件解析过程进行的分析
+4.算法 https://labuladong.gitbook.io/algo/内容生动，总结力强，是提升效率的好文章，主讲算法刷题套路、算法框架总结</description>
+    </item>
+    
+    <item>
+      <title>nginx编写自定义http模块过程整理</title>
+      <link>/posts/nginx%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89http%E6%A8%A1%E5%9D%97%E8%BF%87%E7%A8%8B%E6%95%B4%E7%90%86/</link>
+      <pubDate>Mon, 21 Dec 2020 17:22:22 +0000</pubDate>
+      
+      <guid>/posts/nginx%E7%BC%96%E5%86%99%E8%87%AA%E5%AE%9A%E4%B9%89http%E6%A8%A1%E5%9D%97%E8%BF%87%E7%A8%8B%E6%95%B4%E7%90%86/</guid>
+      <description>一、整体过程梳理 1.编写nginx_http_module_t变量nginx_http_hello_module
+2.挂载到处理http请求过程种
+3.
+二、具体编写 我们编写过程采用总分的结构，先写整体,再具体每一个成员
+1.定义自定义http模块变量 ngx_http_hello_module 1.1模板结构体ngx_http_module_t成员说明 说明 ♥是重点变量
+ngx_http_module_t ngx_http_hello_module {ngx_uint_t ctx_index; // 该模块在当前类别(http类别，core event mail)中的排名序号 nginx框架用到ngx_uint_t index; // 该模块在所有类别模块中的排名序号 nginx框架用到ngx_uint_t spare0;//一共四个sapre保留变量暂未用ngx_uint_t spare1;ngx_uint_t spare2;ngx_uint_t spare3;ngx_uint_t version; // 模块版本 包含当前变量在内之前的共7个变量可以用提供好的#define NGX_MODULE_V1去填充void *ctx; // 模块的上下文结构 一个非常重要的变量,主要作用:1.设置读取配置文件完成前后的回调函数，①对不同配置值如何处理②设置该模块挂载到http流程的方式③是处理http请求并返回http响应的一个位置，可以以按阶段处理的方式挂在到http处理流程中2.设置不同级别配置项创建方法，供nginx框架遇到模块感兴趣的配置项时调用创建响应的自定义配置项信息结构体 ♥ngx_command_t *commands; // 指令集合,当和配置文件某项匹配后 执行自定义的指令函数 主要作用:遇到配置项文件后执行自定义函数，函数可以①读取配置文件内容；②是一个处理http请求的位置，以按需分配的方式挂载到http处理流程中♥ngx_uint_t type; //模块类型 core event http mail ♥ngx_int_t (*init_master)(ngx_log_t *log); // 初始化master执行ngx_int_t (*init_module)(ngx_cycle_t *cycle); // 初始化module执行ngx_int_t (*init_process)(ngx_cycle_t *cycle); ngx_int_t (*init_thread)(ngx_cycle_t *cycle);void (*exit_thread)(ngx_cycle_t *cycle);void (*exit_process)(ngx_cycle_t *cycle);void (*exit_master)(ngx_cycle_t *cycle); // 退出master执行uintptr_t spare_hook0; // 保留字段未用,可以用提供好的#define NGX_MODULE_V1_PADDING取填充8个变量uintptr_t spare_hook1;uintptr_t spare_hook2;uintptr_t spare_hook3;uintptr_t spare_hook4;uintptr_t spare_hook5;uintptr_t spare_hook6;uintptr_t spare_hook7;}1.</description>
+    </item>
+    
+    <item>
+      <title>nginx安装过程及相关使用命令</title>
+      <link>/posts/nginx%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 21 Dec 2020 17:12:00 +0000</pubDate>
+      
+      <guid>/posts/nginx%E5%AE%89%E8%A3%85%E8%BF%87%E7%A8%8B%E5%8F%8A%E7%9B%B8%E5%85%B3%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>一、安装过程 Nginx安装过程
+这里提供两种方式，快速使用
+如果是ubuntu可以直接用下面命令安装
+ apt install nginx这里详细说一下第二种方式:
+0.前期准备(重要，不然会导致下面第3步失败) 安装所需的gcc和依赖库
+4.1、GCC——GNU编译器集合 ubuntu: apt-get install gcc linux: yum install gcc-c++ 4.2、PCRE库 ubuntu:apt-get install libpcre3 libpcre3-devlinux: yum install -y pcre pcre-devel4.3、zlib库 ubuntu: apt-get install zlib1g zlib1g-devlinux: yum install -y zlib zlib-devel4.4、OpenSSL库 ubuntu:apt-get install openssl openssl-devlinux: yum install -y openssl openssl-devel1.</description>
+    </item>
+    
+  </channel>
+</rss>

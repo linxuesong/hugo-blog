@@ -1,10 +1,65 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on NewBee</title>
-    <link>https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/categories/</link>
-    <description>Recent content in Categories on NewBee</description>
+    <title>Categories on 网站标题</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on 网站标题</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh_CN</language>
+    <lastBuildDate>Thu, 11 Nov 2021 19:38:04 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>主题</title>
+      <link>/categories/%E4%B8%BB%E9%A2%98/</link>
+      <pubDate>Thu, 11 Nov 2021 19:38:04 +0000</pubDate>
+      
+      <guid>/categories/%E4%B8%BB%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术</title>
+      <link>/categories/%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Thu, 11 Nov 2021 19:38:04 +0000</pubDate>
+      
+      <guid>/categories/%E6%8A%80%E6%9C%AF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转载</title>
+      <link>/categories/%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Sat, 20 Mar 2021 11:27:45 +0000</pubDate>
+      
+      <guid>/categories/%E8%BD%AC%E8%BD%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>资源</title>
+      <link>/categories/%E8%B5%84%E6%BA%90/</link>
+      <pubDate>Fri, 26 Feb 2021 14:19:14 +0000</pubDate>
+      
+      <guid>/categories/%E8%B5%84%E6%BA%90/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>生活</title>
+      <link>/categories/%E7%94%9F%E6%B4%BB/</link>
+      <pubDate>Sat, 15 Aug 2020 23:16:53 +0000</pubDate>
+      
+      <guid>/categories/%E7%94%9F%E6%B4%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>期望</title>
+      <link>/categories/%E6%9C%9F%E6%9C%9B/</link>
+      <pubDate>Tue, 11 Aug 2020 20:17:22 +0000</pubDate>
+      
+      <guid>/categories/%E6%9C%9F%E6%9C%9B/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

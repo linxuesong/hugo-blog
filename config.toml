@@ -1,15 +1,22 @@
-baseURL = 'https://my-bucket-vazcuk4-1257434610.cos-website.ap-shanghai.myqcloud.com'
-languageCode = 'en-us'
+baseURL = ''
+languageCode = 'zh_CN'
 
 # website title
 # 网站标题
-title = 'NewBee'
+title = '雪树'
 # theme
 # 主题
-theme = "NewBee"
+theme = "Sakura"
 # default content of website
-# 网站默认语言
-defaultContentLanguage = "en"
+# 修改默认语言（每次打开网站时显示的语言）
+deFaultContentLanguage = 'zh'
+
+#分页器一页大小
+paginate = 5 #可以控制首页展示文章数、一次下拉加载数量
+
+
+
+
 # whether to use robots.txt
 # 是否使用 robots.txt
 enableRobotsTXT = true
@@ -23,15 +30,27 @@ summaryLength = 50
 # 中日韩语言请改为 true
 hasCJKLanguage = false
 
+
+[outputs]
+  home = ["HTML","RSS","Algolia"]
+  section = ["HTML"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
+ 
+[outputFormats.Algolia]
+  mediaType = "application/json"
+  baseName = "algolia_index"
+  isPlainText = true
+
 [author]
-    name = "xioyito"
+    name = "lean"
     description = "Be Water, My Friend."
     # profile photo of author in author card
     # 作者头像
-    image = "/images/author.jpeg"
+    image = "/imgs/avator/avatar(0).jpg"
     # link of followme in author card and footer
     # 作者卡片里 followme 和页脚作者的链接
-    link = "https://github.com/xioyito"
+    link = "https://github.com/linxuesong"
 
 # Taxonomies, Currently, only the following 3 taxonomies are supported
 # If you don't want one of them，delete it in [menus] instead here
@@ -41,107 +60,288 @@ hasCJKLanguage = false
     series = "series"
     
 [params]
+    # Whether to activate the copyright information of the blog and author when copying the post content.
+    # minCharNumber: Approve copyright information by copying at least how many characters.
+    # 是否激活复制文章时追加博客和作者的版权信息.
+    [params.copyright]
+        enable = false
+        minCharNumber = 120 # 至少复制多少个字符就追加版权信息.
+        description = "本文章著作权归作者所有，任何形式的转载都请注明出处。"
+
+    # 代码块相关
+    [params.code]
+        # lang= true # 代码块是否显示名称 不支持配制
+        # copy= true # 代码块是否可复制 不支持配制
+        # shrink= true # 代码块是否可以收缩 不支持配制
+        # break= true # 代码是否折行 不支持配制 
+
     [params.site]
         onlyOneLang = false
         # style of theme: auto, light, dark
-        mode = 'auto'
+        mode = 'auto' #未开通
     # page configuration
     # 页面配置  
-    [params.page]
+    [params.homepage]
+        prefixName= "雪華" #前缀名称 显示在主页顶部导航栏条幅 互动显示
+        middleName= "記憶" #网站整体 无互动显示
+        siteNameRemark="雪花的记忆" #首页导航栏左上角 网站名称备注展示
+     #------------------------CDN,非必要----------------------- ---
+    [params.postpage]
+        defaultPostImg = "/imgs/postpage/postcover/default.jpg" #默认文章图片
+        #图片懒加载时展示进度条
+        lazyloadImg = "/imgs/loader/orange.progress-bar-stripe-loader.svg"
+        loadFailedImg = "/imgs/other/image-404.png"
 
-        # top image in home page, note that the "/" in path is necessary, the same applies below
-        # 主页的顶部图，路径开头”/“是必需的。下同
-        homeTopImg = "/images/home.jpg"
-        # title in home top image, support Markdown
-        # 主页标题，支持Markdown语法
-        homeTitle = "XIOYITO"
-        # font size(px)
-        # 主页标题字号（单位：px）
-        homeTitleFontSize = 40
-        # content in home top image, support Markdown
-        # 主页内容，支持Markdown语法
-        homeContent = "Be Water, My Friend"
-        # font size(px)
-        # 主页内容字号（单位：px）
-        homeContentFontSize = 20
+    # 网站收录 百度谷歌引擎推广接入
+    [params.inclusion]
+    baiduEnable = true
+    baiduContent = "code-Mh5omtSUnt"
+    GoogleEnable = true
+    GoogleContent = "-b5rAEo2_d1dn4CdJ27sSIEfxMSzkUiRaDuNU2phVn8"
+    #搜索功能
+    [params.search]
+        [params.search.fusejs]#暂时无用参考https://fusejs.io/,baseof.html引入
+            enable = true
+            src = "https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"
+        [params.search.algolia]# Algolia Search For more information: https://www.algolia.com
+            enable= false
+            appId= "UMAQ9IJSOT"#<algolia app id>
+            apiKey= "0f3b78aed4ad1466e2658a546d1b7e99"#<algolia api key>
+            indexName= "hugoblog"#<algolia index name>
+            placeholder="请输入关键字..."
+            perPage= 20 #搜索返回结果一页的数量
+        [params.search.InsightSearch] #一个插件
+            enable= false
+    # 主页公告
+    [params.notice] 
+        content = "博客公告测试文本信息"
+        enable = true
+    # 支持数学公式解析
+    [params.mathjax] 
+        enable = true
+    # 首页轮播图片
+    [params.headertop]  
+        bgimgclass = "filter-dot" #可选# 样式 空 原图效果 filter-dim 阴影 filter-grid 横条 filter-dot 点点
+        bgurls = [
+            "/imgs/homepage/bgcover/cover(0).jpg", 
+            "/imgs/homepage/bgcover/cover(1).jpg"
+        ]
+    # 社交媒体 qrcode = "可以加入二维码图片地址链接"
+    [[params.social]]
+        name = "github"
+        url = "http://github.com/linxuesong"
+        img = "/imgs/social/github.png"
+        #qrcode = "可以加入二维码图片地址链接"
+    [[params.social]]
+        name = "csdn"
+        url = "https://blog.csdn.net/lsxa123"
+        img = "/imgs/social/csdn.png"
 
-        # top image in categories terms page
-        # 分类页面的顶部图
-        categoryTopImg = "/images/categories.jpg"
-        # description of categories terms page
-        # 子标题
-        categoryDes = "description of categories page"
-
-        # top image in tags terms page
-        # 标签页面的顶部图
-        tagTopImg = "/images/tag.jpg"
-        # description of tags terms page
-        # 子标题
-        tagDes = "description of tags page"
-
-        # top image in allosts page
-        # 所有文章页面的顶部图
-        allPostsTopImg = "/images/allPosts.jpg"
-        # description of allposts page
-        # 子标题
-        allPostsDes = "description of allPosts page"
-
-        # top image in about page
-        # 关于页面的顶部图
-        aboutTopImg = "/images/about.jpg"
-        # description of about page
-        # 子标题
-        aboutDes = "description of about page"
-
-        # default image for a post without "image" param
-        # 当文章没有设置图片时，将用此图来替代
-        defaultPostImg = "/images/default.jpg"
+    #social  url, img 移动端配置 mobile设备
+    [[params.mobilesocial]]
+        name = "github"
+        url = "http://github.com/linxuesong"
+        fa = "fa-github"
+        color = "333"
+    [[params.mobilesocial]]
+        name = "weibo"
+        url = "http://github.com/linxuesong"
+        fa = "fa-weibo"
+        color = "dd4b39"
+    [[params.mobilesocial]]
+        name = "github"
+        url = "https://wpa.qq.com/msgrd?v=3&uin=954655431&site=qq&menu=yes"
+        fa = "fa-qq"
+        color = "25c6fe"
         
-        # 主页文章最大显示数量
-        maxHomePostCount = 5
-        # 相关文章最大显示数量
-        maxPageRelatedCount = 5
-        # 最新文章最大显示数量
-        maxPageNewestCount = 5
+# 捐赠信息设置
+  # Donate (Sponsor) settings.
+  [params.donate]
+    # 是否开启捐赠按钮，开启后将在每个文章页面底部显示
+    # If true, a donate button will be displayed 
+    # in every article by default.
+    enable = true
+    # 是否开启捐赠方式的动画效果
+    # If true, the donate type title will with animation.
+    #animation: true
+    # 捐赠信息的描述，支持 HTML 语法
+    # Comment for donate and suppport HTML syntax
+    # comment: '<i class="fa-solid fa-mug-hot"></i>请我喝杯咖啡吧 ヾ(^▽^*)))'
+    # 捐赠方式
+    # 用例： `名称:图像地址`
+    # Donate type
+    # Usage: `name:image url`
+    [params.donate.type]
+      paypal= "https://www.paypal.me/linxuesong"
+      alipay= "/img/sponsor/AliPayQR.jpg"
+      wechat= "/img/sponsor/WeChanSQ.jpg"
+      #bitcoin: /images/bitcoin.png
+    [params.daovoice]
+        enable= true
+        appid= "7e5676fe" ##这里替换成你DaoVoice上的appid
 
-    # Valine comment
-    # Valine评论（详情请移步：https://valine.js.org/）
-    [params.valine]
-        # 是否开启Valine评论系统
-        enable = false
-        # appid，具体请参考：https://valine.js.org/configuration.html#appId
-        appid = 'xxxxxxxxxxxxxxxxxxxxxxxx-xxxxxxxx'
-        # appKey，具体请参考：https://valine.js.org/configuration.html#appKey
-        appkey = 'xxxxxxxxxxxxxxxxxxxxxxxx'
-        # 输入框提示文字
-        placeholder = '输入你的评论'
-        # 头像，具体请参考：https://valine.js.org/avatar.html
-        avatar = 'robohash'
-        # 评论时要求的必须填写项，可选值：['nick']或['nick','mail']
-        requiredFields = ['nick']
-        # 文章访问量统计
-        visitor = true
-        # 单页最大评论数目
-        pageSize = 5
+    #网页音乐播放器设置
+    # 参数可以参考https://www.cnblogs.com/imghu/p/15702701.html
+    [params.aplayer]
+        enable = true
+        id= 2660651585 # 歌曲or歌单id
+        server= "netease"
+        type= "playlist" # playlist播放列表
+        fixed= true # 是否开启吸附
+        autoplay= false # 自动播放
+        loop= "all" #
+        order= "random" # 播放顺序
+        preload= "auto"
+        listFolder = "true" #自动展开歌单列表 
+        volume= "0.7"
+        mutex= true
+        listMaxHeight = "350px" # 歌曲列表高度
+
+    # 第三方明月浩空播放器设置
+    # 参数可以参考https://myhkw.cn/
+    [params.myhk]
+        enable = false # 参数功能只有enable有用其他未启用，之后支持
+        id = 123454 #
+        key = 13123 #
+
+
+    # 首页轮播图下的快速启动项目
+    # startdash url, title, desc img
+    [[params.startdash]]
+        url = "/theme-sakura/"
+        title="Sakura"
+        desc="本站 hexo 主题"
+        img="/imgs/startdash/sakura.md.png"
+    [[params.startdash]]
+        url = "http://space.bilibili.com/271849279"
+        title="Bilibili"
+        desc="博主的b站视频"
+        img="/imgs/startdash/bilibili.jpg"
+    [[params.startdash]]
+        url = "/"
+        title="hojun的万事屋"
+        desc="本站 hexo 主题"
+        img="/imgs/startdash/wangshiwu.jpg"
 
     # footer
     # 页面底部配置
     [params.footer]
-        # whether to enable footer
-        enable = true
         # copyright
         copyRight = true
         from = 2022
-        # wheher to enable count of visitor and view
-        visitor = true
         # wheher to enable theme information
-        themeInfo = true
+        siteInfo = true
+    
+        # busuanzi(http://busuanzi.ibruce.info/) website statistics
+        # 不蒜子(http://busuanzi.ibruce.info/) 网站统计
+        totalTraffic= true # 总访问次数
+        totalNumberOfvisitors= true # 总访问人次
+
+        # 建站时间用于计算建站天数
+        siteBuildingTime = "2023-03-01 22:08:46" # 建站时间，格式符合js new Date入参
+
+
+        # 用于首页轮播的视频展示
+        pjax = 1 ## 兼容多类型设备做的参数
+        [params.footer.movies]
+            parentPath= "/vedios" #最后不需要以左滑线结尾
+            # 多个视频文件名用逗号隔开，随机获取。支持的格式目前已知MP4,Flv。其他的可以试下，不保证有用
+            fileName= "HostPageVedio.mp4"
+
+
+
+
+
+
+
+ # ---------------------------------------------------------------
+  # 评论功能设置
+  # Comments Settings
+  # ---------------------------------------------------------------
+
+  # 评论组件设置，最多支持2个显示
+  # Multiple Comment System Support
+  [params.comment]
+    # 开启评论组件
+    # If true, will show comment component in post end.
+    enable= true   
+    # 设置默认使用的评论插件
+    # 可选值：livere | waline | utterances | artalk | giscus
+    # Choose a comment system to be displayed by default.
+    # Available values: livere | waline | utterances | artalk | giscus 
+    active= "waline"
+    # 让用户自己选择使用评论插件留言
+    # 如果设置为 false，将采用 active 参数的那个插件
+    # TODO
+    # Lazyload all comment systems.
+    # lazyload: false
+    # 设置你要显示的2个评论插件，`weight` 数字越小越靠前
+    # `name` 参数名可选值：livere | waline | utterances | artalk | giscus
+    # Modify texts or order for any naves, here are some examples.
+  # Waline 评论插件
+  # 更多配置信息请参考：https://waline.js.org/
+  # Waline comments system
+  # More info seee: https://waline.js.org/
+  [params.comment.waline]
+    pageView= true
+    comment= true
+    placeholder= "请文明发言哟 ヾ(≧▽≦*)o"
+    sofa= "快来发表你的意见吧 (≧∀≦)ゞ"
+    emoji= true
+    imgUploader= false
+    wordLimit= 200
+    requiredMeta= ['nick', 'mail'] # 评论要求参数 nick昵称、mail邮箱
+    reaction= true # 是否开启文章反馈,即文章末尾 
+    reactionText= [ '点赞', '踩一下', '得意', '不屑', '尴尬', '睡觉']
+    reactionTitle= "你认为这篇文章怎么样？"
+    serverURL= "www.snowday.cn"#<your waline server url>
+  # Giscus 评论插件
+  # 更多配置信息请参考：https://giscus.app
+  # Giscus comments system
+  # For more information: https://giscus.app
+#   giscus:
+    # Github 仓库地址，格式：用户名/仓库名称
+    # Github repository owner and name
+    # repo: username/repo-name
+    # Giscus 生成的仓库 Id
+    # Generate repository Id from Giscus
+    # repoId: #<repo-id>
+    # 讨论区的分类名称
+    # Github discussions category
+    # category: Comments
+    # 讨论区分类 ID
+    # Generate category Id from Giscus
+    # categoryId: #<category-id>
+    # 帖子上的反应将会显示在评论前
+    # The reactions for post will be shown before the comments
+    # reactions: false
+    # 将元数据定期被发送到父页面（被嵌入的页面或控制台，用于调试）
+    # Metadata will be sent periodically to the parent window
+    # emit: false
+    # 评论输入框的位置，可选值： top | bottom
+    # Aavilable value: top | bottom
+    # 讨论区帖子标题，可选值： pathname | url | title | og:title | 自定义
+    # Available values: pathname | url | title | og:title | custom
+    # mapping: title
+    # 评论输入框的位置，可选值： top | bottom
+    # Aavilable value: top | bottom
+    # inputPosition: top
+    # 主题可选值： light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
+    # Available values: light | light_high_contrast | light_protanopia | light_tritanopia | dark | dark_high_contrast | dark_protanopia | dark_tritanopia | dark_dimmed | transparent_dark | preferred_color_scheme
+    # theme: preferred_color_scheme
+
+
+
+
+
+
+
 
 
 [menus]
     [[menus.main]]
         # 名称
-        name = "Home"
+        name = "主页"
         # 路径
         url = "/"
         # order weight, more small more close to left, at least 1
@@ -151,22 +351,22 @@ hasCJKLanguage = false
         # 图标，本主题使用的图标来自FontAwesome
         pre = "<i class='fa fa-home'></i>"
     [[menus.main]]
-        name = "Posts"
+        name = "文章"
         url = "/posts"
         weight = 2
         pre = "<i class='fa fa-book'></i>"
     [[menus.main]]
-        name = "Categories"
+        name = "分类"
         url = "/categories"
         weight = 3
         pre = "<i class='fa fa-folder-open'></i>"
     [[menus.main]]
-        name = "Tags"
+        name = "标签"
         url = "/tags"
         weight = 5
         pre = "<i class='fa fa-tags'></i>"        
     [[menus.main]]
-        name = "About"
+        name = "关于"
         url = "/about"
         weight = 6
         pre = "<i class='fa fa-info-circle'></i>"
@@ -183,7 +383,6 @@ hasCJKLanguage = false
         url = "https://www.youtube.com"
         pre = "<i class='fa fa-youtube'></i>"
         weight = 2
-
     # sponsor, maxum 3
     # 赞赏，最多支持3个
     [[menus.sponsor]]
@@ -238,9 +437,9 @@ hasCJKLanguage = false
         lineAnchors = ''
         lineNoStart = 1
         # 显示每一行代码前的序号
-        lineNos = true
+        lineNos = false # 代码块内容添加行号在同一个标签元素中, 必须设置为false 因为sakura-app.js已经有添加行号的逻辑了 见其356、315行
         anchorLineNos = false
-        lineNumbersInTable = true
+        lineNumbersInTable = false # 代码块和代码行号放在两个标签元素中，方便复制代码时略去行号, 必须设置为false
         noClasses = false
         noHl = false
         hl_inline = false
@@ -253,4 +452,44 @@ hasCJKLanguage = false
     # [markup.goldmark]
     #     [markup.goldmark.renderer]
     #         unsafe = true
-  
+
+
+
+    # 配置语言参数。此段代码为新增代码
+[languages] 
+
+    #------------------------CDN,非必要--------------------------
+    [params.libs]
+        [params.libs.css]
+            baguetteBoxCss= "https://nekodeng.gitee.io/libs/MyGallery/css/baguetteBox.css"
+            googlefonts= "https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC"
+            style= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/style.css" #/css/style.css # 
+            lib = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/lib.min.css"
+            font = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/font.css"
+            insight = "/css/insight.css"
+            tags = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/tags.css"
+            fancybox = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/jquery.fancybox.min.css"
+            sharejs = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/css/sharejs.css"
+            tocbot = "https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css"
+            live2d_widget = "https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"
+        [params.libs.js]
+            jquery= "https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"
+            linkcard= "/js/linkcard.js"
+            lib= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/lib.min.js"
+            clipboard= "https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"
+            InsightSearch= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/InsightSearch.js"
+            sakura_app= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/sakura-app.js"  #/js/sakura-app.js
+            busuanzi= "https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"
+            fancybox= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/jquery.fancybox.min.js"
+            echarts= "https://cdn.jsdelivr.net/gh/cungudafa/cdn/js/echarts.min.js"
+            sakura_petal= "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js" #other
+            hititle= "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/hititle.js"
+            KeyBlock = "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/noSomeKey.js" #按键屏蔽,不能F12调试和查看源代码
+            sakura_petals = "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/sakura.js"  #仅在首页花瓣飘落（大内存）
+            snow_petals = "https://cdn.jsdelivr.net/gh/Yafine/cdn@2.5/source/js/snow1.js"
+            piao = "https://cdn.jsdelivr.net/gh/wallleap/cdn@latest/js/piao.js" #飘动彩带
+            live2d_widget = "https://cdn.jsdelivr.net/gh/cungudafa/cdn/live2d-widget/autoload.js"
+            word = "https://cdn.jsdelivr.net/gh/wallleap/cdn/js/shehuizhuyi.js" #点击出现字效
+            love = "https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js" #点击出现爱心
+            cursor = "https://cdn.jsdelivr.net/gh/cungudafa/cdn@2.1.2/js/cursor.js" # 星星跟随坠落(大内存)
+            baguetteBoxJs = "https://nekodeng.gitee.io/libs/MyGallery/js/baguetteBox.js"
